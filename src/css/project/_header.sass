@@ -1,0 +1,148 @@
+.header
+  border-bottom: 1px solid #E4E7EB
+  background-color: #fff
+  left: 0
+  position: fixed
+  top: 0
+  width: 100%
+  z-index: 10
+
+  &__inner
+    align-items: center
+    display: flex
+    height: 60px
+
+    @media(min-width: 1200px)
+      height: 95px
+
+    @media(min-width: 2560px)
+      height: 106px
+
+  &__logo
+    display: block
+    left: 50%
+    position: absolute
+    top: 50%
+    transform: translate(-50%, -50%)
+    width: 33px
+    z-index: 1
+
+    @media(min-width: 1200px)
+      position: static
+      transform: none
+      width: 50px
+
+    @media(min-width: 2560px)
+      width: 55px
+
+  &__logo-image
+
+  &__lang-block
+    align-items: center
+    display: none
+    font-size: 15px
+    font-weight: 500
+    line-height: 1.2
+
+    @media(min-width: 1200px)
+      display: flex
+      margin-left: 35px
+
+    @media(min-width: 2560px)
+      margin-left: 55px
+
+  &__lang
+    color: $grey-color
+    letter-spacing: 0.2px
+    text-decoration: none
+    text-transform: uppercase
+
+    &.is-active
+      color: $text-color
+
+  &__lang-separator
+    background-color: rgba($grey-color, 0.4)
+    display: block
+    height: 10px
+    margin-left: 12px
+    margin-right: 12px
+    width: 1px
+
+  &__menu-toggler
+    margin-right: auto
+
+    @media(min-width: 1200px)
+      display: none
+
+  &__links
+    align-items: center
+    display: flex
+    margin-left: auto
+
+  &__link
+    align-items: center
+    display: flex
+    height: 35px
+    justify-content: center
+    width: 30px
+
+    &--no_mobile
+      @media(max-width: 767px)
+        display: none
+
+    &:not(:last-child)
+      margin-right: 18px
+
+  &__link-icon
+    fill: $button-color
+
+    &--user
+      height: 18px
+      width: 22px
+
+    &--favorite
+      height: 20px
+      width: 22px
+
+    &--cart
+      height: 22px
+      width: 18px
+
+.menu-toggler
+  align-items: center
+  border: none
+  background-color: transparent
+  cursor: pointer
+  display: flex
+  height: 35px
+  padding: 0
+  width: 30px
+
+  &__icon
+    fill: $text-color
+    height: 18px
+    width: 27px
+
+.main-menu
+
+.cart-link
+  position: relative
+
+  &__qnt
+    align-items: center
+    background-color: $button-color
+    border-radius: 50%
+    bottom: 0
+    color: #fff
+    display: flex
+    font-size: 12px
+    font-weight: 500
+    justify-content: center
+    height: 17px
+    left: auto
+    line-height: 17px
+    position: absolute
+    right: 0
+    top: auto
+    width: 17px
+    z-index: 1

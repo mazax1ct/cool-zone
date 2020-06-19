@@ -1,0 +1,177 @@
+body
+  color: $text-color
+  font-family: $main-font
+  font-size: 14px
+  font-weight: 300
+  line-height: 1.28571
+  -webkit-font-smoothing: antialiased
+
+  @media(min-width: 1200px)
+    font-size: 18px
+    line-height: 1.44444
+
+a
+  color: $text-color
+  font-weight: 400
+  text-decoration: underline
+
+h1,.h1,
+h2,.h2,
+h3,.h3,
+h4,.h4,
+h5,.h5,
+h6,.h6
+  font-weight: 500
+  margin-top: 0
+
+h1,.h1
+  font-size: 18px
+  line-height: 1.22222
+  margin-bottom: 5px
+
+  @media(min-width: 1200px)
+    font-size: 24px
+    line-height: 1.16666
+    margin-bottom: 10px
+
+h2,.h2,
+h3,.h3,
+h4,.h4,
+h5,.h5,
+h6,.h6
+  font-size: 14px
+  line-height: 1.28571
+  margin-bottom: 10px
+
+  @media(min-width: 1200px)
+    font-size: 18px
+    line-height: 1.22222
+    margin-bottom: 15px
+
+p,
+ul,
+ol,
+table,
+.table-responsive,
+.select
+  margin-top: 0
+  margin-bottom: 25px
+
+  @media(min-width: 1200px)
+    margin-bottom: 30px
+
+  &:last-child
+    margin-bottom: 0
+
+table
+  border-collapse: collapse
+  border: 1px solid rgba($grey-color, 0.4)
+  font-weight: 400
+  max-width: 100%
+  text-align: left
+  width: 100%
+
+  th
+    font-weight: 500
+
+  th,
+  td
+    border: none
+    border: 1px solid rgba($grey-color, 0.4)
+    padding: 10px
+    vertical-align: top
+
+img
+  height: auto
+  max-width: 100%
+  vertical-align: top
+
+ul,
+ol
+  list-style: none
+  padding: 0
+
+ul,
+ol
+  &:not([class])
+    list-style: none
+    padding: 0
+
+    li
+      &:not(:last-child)
+        margin-bottom: 10px
+
+  &:last-child
+    margin-bottom: 0
+
+ul
+  &:not([class])
+    li
+      padding-left: 21px
+      position: relative
+
+      &::before
+        background-color: $text-color
+        border-radius: 50%
+        content: ''
+        height: 6px
+        left: 0
+        position: absolute
+        top: 0.64285em
+        width: 6px
+
+        @media(min-width: 1200px)
+          top: 0.72222em
+
+ol
+  &:not([class])
+    counter-reset: list
+
+  & > li
+    &::before
+      counter-increment: list
+      content: counter(list) ". "
+      font-weight: 400
+      margin-right: 3px
+
+.incut
+  background-color: $light-grey
+  font-weight: 400
+  line-height: 1.42857
+  margin-top: 35px
+  margin-bottom: 35px
+  padding: 15px
+
+  @media(min-width: 1200px)
+    margin-top: 45px
+    margin-bottom: 45px
+    padding: 30px
+
+.fw_400
+  font-weight: 400
+
+.fw_500
+  font-weight: 500
+
+.fw_600
+  font-weight: 600
+
+b, strong
+  font-weight: 700
+
+.unstyled-list
+  list-style: none
+  padding: 0
+
+  li
+    &:not(:last-child)
+      margin-bottom: 10px
+
+.text-right
+  text-align: right
+
+.text-center
+  text-align: center
+
+.text-left
+  text-align: left

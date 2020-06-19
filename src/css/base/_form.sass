@@ -1,0 +1,29 @@
+.form-label
+  display: block
+
+  &:not(:last-child)
+    margin-bottom: 15px
+
+  &.error
+    .form-label__text
+      color: $red-color
+
+    .input,
+    .textarea
+      border-color: $red-color
+
+  &__text
+    color: $grey-color
+    display: block
+    font-size: 16px
+    font-weight: 400
+    line-height: 20px
+    margin-bottom: 5px
+
+.error-text
+  color: $red-color
+  display: block
+  font-size: 13px
+  font-weight: 400
+  line-height: 14px
+  text-align: right
