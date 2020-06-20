@@ -16,6 +16,10 @@ body
   min-width: 320px
   overflow-wrap: break-word
 
+  &.menu-is-open
+    @media(max-width: 1199px)
+      overflow: hidden
+
 .wrapper
   flex: 1 0 auto
 
@@ -25,7 +29,7 @@ body
   padding-left: 20px
   padding-right: 20px
 
-  @media(min-width: 1440px)
+  @media(min-width: 1400px)
     padding-left: 50px
     padding-right: 50px
 
@@ -40,5 +44,5 @@ body
   @media(min-width: 1200px)
     padding-top: 120px
 
-  @media(min-width: 2560px)
+  @media(min-width: 2500px)
     padding-top: 135px

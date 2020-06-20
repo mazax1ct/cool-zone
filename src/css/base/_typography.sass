@@ -127,12 +127,12 @@ ol
   &:not([class])
     counter-reset: list
 
-  & > li
-    &::before
-      counter-increment: list
-      content: counter(list) ". "
-      font-weight: 400
-      margin-right: 3px
+    & > li
+      &::before
+        counter-increment: list
+        content: counter(list) ". "
+        font-weight: 400
+        margin-right: 3px
 
 .incut
   background-color: $light-grey
