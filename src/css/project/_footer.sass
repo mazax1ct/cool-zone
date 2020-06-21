@@ -1,6 +1,17 @@
 .footer
   border-top: 1px solid #E4E7EB
   flex-shrink: 0
+  position: relative
+
+  &::after
+    content: ''
+    display: none
+    height: 100%
+    left: 0
+    position: absolute
+    top: -1px
+    width: 100%
+    z-index: 2
 
   &__top
     color: $grey-color
@@ -20,8 +31,26 @@
       font-size: 19px
       line-height: 1.26315
 
+  &__top-inner
+    @media(min-width: 768px)
+      display: flex
+      flex-wrap: wrap
+      margin-right: -10px
+      margin-left: -10px
+
   &__logo
+    display: none
+
+    @media(min-width: 1200px)
+      display: block
+      flex: 0 0 16.666667%
+      max-width: 16.666667%
+      padding-right: 10px
+      padding-left: 10px
+
     @media(min-width: 2500px)
+      flex: 0 0 25%
+      max-width: 25%
       text-align: center
 
     img
@@ -29,6 +58,16 @@
         transform: translateX(50%)
 
   &__section
+    @media(min-width: 768px)
+      flex: 0 0 25%
+      max-width: 25%
+      padding-right: 10px
+      padding-left: 10px
+
+    @media(min-width: 1200px)
+      flex: 0 0 16.666667%
+      max-width: 16.666667%
+
     &:not(:last-child)
       margin-bottom: 20px
 
@@ -36,7 +75,7 @@
         margin-bottom: 0
 
     &:last-child
-      margin-top: 10px
+      margin-top: 30px
 
       @media(min-width: 768px)
         margin-top: 0
@@ -48,11 +87,30 @@
       @media(min-width: 2500px)
         transform: none
 
+    &:nth-child(3)
+      @media(min-width: 768px)
+        flex: 0 0 16.666667%
+        max-width: 16.666667%
+
     &:nth-child(4)
+      @media(min-width: 1200px)
+        flex: 0 0 25%
+        max-width: 25%
+
       @media(min-width: 2500px)
+        flex: 0 0 16.666667%
+        max-width: 16.666667%
         transform: translateX(-20px)
 
     &:nth-child(5)
+      @media(min-width: 768px)
+        flex: 0 0 33.333333%
+        max-width: 33.333333%
+
+      @media(min-width: 1200px)
+        flex: 0 0 25%
+        max-width: 25%
+
       @media(min-width: 2500px)
         transform: translateX(35px)
 
@@ -153,7 +211,7 @@
 
     @media(min-width: 1400px)
       margin-top: 26px
-      margin-bottom: 24px
+      margin-bottom: 26px
 
   &__bottom
     background-color: #2F3344
@@ -261,6 +319,7 @@
   &__icon
     fill: $text-color
     height: 28px
+    transition: fill 0.3s
     width: 28px
 
     @media(min-width: 768px)
@@ -269,6 +328,10 @@
 
   &:not(:last-child)
     margin-right: 12px
+
+  &:hover
+    .social-link__icon
+      fill: rgba($text-color, 0.8)
 
   @media(min-width: 768px)
     height: 32px

@@ -1,0 +1,27 @@
+.breadcrumbs
+  display: flex
+  font-size: 12px
+  font-weight: 400
+  flex-wrap: wrap
+  justify-content: center
+  line-height: 14px
+  margin-bottom: 8px
+
+  @media(min-width: 768px)
+    font-size: 14px
+    justify-content: flex-start
+    line-height: 16px
+
+  &__item
+    &:not(:last-child)
+      margin-right: 6px
+
+      &::after
+        content: '/'
+        margin-left: 6px
+
+  &__link
+    text-decoration: none
+
+    &:hover
+      text-decoration: underline

@@ -221,12 +221,135 @@
           <use xlink:href="#favorite" />
         </svg>
       </a>
-      <a class="header__link cart-link" href="cart.html" title="Корзина">
+      <a class="js-cart-open header__link cart-link" href="cart.html" title="Корзина">
         <svg class="header__link-icon header__link-icon--cart" aria-hidden="true">
           <use xlink:href="#cart" />
         </svg>
         <span class="cart-link__qnt">2</span>
       </a>
+    </div>
+    <div class="mini-cart">
+      <button class="js-cart-close mini-cart__close" type="button">
+        <svg class="mini-cart__close-icon" aria-hidden="true">
+          <use xlink:href="#close" />
+        </svg>
+        <span>Моя корзина <span>(3)</span></span>
+      </button>
+      <div class="js-custom-scroll mini-cart__list">
+        <div class="mcart-item">
+          <button class="mcart-item__delete" type="button" title="Удалить">
+            <svg class="mcart-item__delete-icon" aria-hidden="true">
+              <use xlink:href="#delete" />
+            </svg>
+          </button>
+          <p class="mcart-item__title">
+            <a href="#">
+              <span class="mcart-item__image"><img src="images/content/header/img_2.jpg" alt="alt"></span>
+              Полукомбинезон РК2102/3456 Морской
+            </a>
+          </p>
+          <p class="mcart-item__prop"><span class="mcart-item__prop-title">ЦВЕТ:</span> <span class="mcart-item__prop-color">Оранжевый</span></p>
+          <p class="mcart-item__prop">
+            <span class="fw_500">РАЗМЕР:</span>
+            <button class="mcart-item__prop-size" type="button">S</button>
+            <button class="mcart-item__prop-size is-active" type="button">M</button>
+            <button class="mcart-item__prop-size" type="button">L</button>
+            <button class="mcart-item__prop-size" type="button">XL</button>
+          </p>
+          <div class="mcart-item__bottom">
+            <div class="quantity-block">
+              <button class="quantity-block__button" type="button" title="Уменьшить">
+                <svg class="quantity-block__button-icon" aria-hidden="true">
+                  <use xlink:href="#minus" />
+                </svg>
+              </button>
+              <input class="quantity-block__input" type="text" value="1">
+              <button class="quantity-block__button" type="button" title="Увеличить">
+                <svg class="quantity-block__button-icon" aria-hidden="true">
+                  <use xlink:href="#plus" />
+                </svg>
+              </button>
+            </div>
+            <p class="mcart-item__price-block"><span class="mcart-item__price">62 000 ₽</span> <span class="mcart-item__price mcart-item__price--old">75 000 ₽</span></p>
+          </div>
+        </div>
+        <div class="mcart-item">
+          <button class="mcart-item__delete" type="button" title="Удалить">
+            <svg class="mcart-item__delete-icon" aria-hidden="true">
+              <use xlink:href="#delete" />
+            </svg>
+          </button>
+          <p class="mcart-item__title">
+            <a href="#">
+              <span class="mcart-item__image"><img src="images/content/header/img_3.jpg" alt="alt"></span>
+              Утеплённый комбинезон
+            </a>
+          </p>
+          <p class="mcart-item__prop"><span class="mcart-item__prop-title">ЦВЕТ:</span> <span class="mcart-item__prop-color">Красный</span></p>
+          <p class="mcart-item__prop">
+            <span class="fw_500">РАЗМЕР:</span>
+            <button class="mcart-item__prop-size is-active" type="button">M</button>
+          </p>
+          <div class="mcart-item__bottom">
+            <div class="quantity-block">
+              <button class="quantity-block__button" type="button" title="Уменьшить">
+                <svg class="quantity-block__button-icon" aria-hidden="true">
+                  <use xlink:href="#minus" />
+                </svg>
+              </button>
+              <input class="quantity-block__input" type="text" value="1">
+              <button class="quantity-block__button" type="button" title="Увеличить">
+                <svg class="quantity-block__button-icon" aria-hidden="true">
+                  <use xlink:href="#plus" />
+                </svg>
+              </button>
+            </div>
+            <p class="mcart-item__price-block"><span class="mcart-item__price">22 000 ₽</span></p>
+          </div>
+        </div>
+        <div class="mcart-item">
+          <button class="mcart-item__delete" type="button" title="Удалить">
+            <svg class="mcart-item__delete-icon" aria-hidden="true">
+              <use xlink:href="#delete" />
+            </svg>
+          </button>
+          <p class="mcart-item__title">
+            <a href="#">
+              <span class="mcart-item__image"><img src="images/content/header/img_2.jpg" alt="alt"></span>
+              Полукомбинезон РК2102/3456 Морской
+            </a>
+          </p>
+          <p class="mcart-item__prop"><span class="mcart-item__prop-title">ЦВЕТ:</span> <span class="mcart-item__prop-color">Оранжевый</span></p>
+          <p class="mcart-item__prop">
+            <span class="fw_500">РАЗМЕР:</span>
+            <button class="mcart-item__prop-size" type="button">S</button>
+            <button class="mcart-item__prop-size is-active" type="button">M</button>
+            <button class="mcart-item__prop-size" type="button">L</button>
+            <button class="mcart-item__prop-size" type="button">XL</button>
+          </p>
+          <div class="mcart-item__bottom">
+            <div class="quantity-block">
+              <button class="quantity-block__button" type="button" title="Уменьшить">
+                <svg class="quantity-block__button-icon" aria-hidden="true">
+                  <use xlink:href="#minus" />
+                </svg>
+              </button>
+              <input class="quantity-block__input" type="text" value="1">
+              <button class="quantity-block__button" type="button" title="Увеличить">
+                <svg class="quantity-block__button-icon" aria-hidden="true">
+                  <use xlink:href="#plus" />
+                </svg>
+              </button>
+            </div>
+            <p class="mcart-item__price-block"><span class="mcart-item__price">62 000 ₽</span> <span class="mcart-item__price mcart-item__price--old">75 000 ₽</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="mini-cart__summ">
+        <p class="mini-cart__total"><span>Итого</span> <span>22 000 ₽</span></p>
+        <p class="mini-cart__discount"><span>Скидка</span> <span>-13 000 ₽</span></p>
+        <a class="mini-cart__button button button--type_2 button--type_3" href="cart.html">Перейти в корзину</a>
+      </div>
     </div>
   </div>
 </header>

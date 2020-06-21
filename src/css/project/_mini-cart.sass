@@ -1,0 +1,184 @@
+.mini-cart
+  background-color: #fff
+  border: 1px solid #E4E7EB
+  display: none
+  left: auto
+  position: absolute
+  padding: 25px 40px 40px 35px
+  right: 10px
+  top: 100%
+  width: 460px
+  z-index: 1
+
+  &.is-open
+    display: block
+
+  &__close
+    align-items: center
+    background-color: transparent
+    border: none
+    cursor: pointer
+    font-size: 20px
+    font-weight: 500
+    line-height: 30px
+    margin-bottom: 20px
+    padding: 0
+
+  &__close-icon
+    fill: $text-color
+    height: 15px
+    margin-right: 20px
+    width: 15px
+
+  &__list
+    max-height: 344px
+    overflow-y: auto
+    overflow-x: hidden
+    padding-right: 25px
+    margin-right: -25px
+    scrollbar-width: thin
+    scrollbar-color: rgba($text-color, 0.3) $text-color
+
+    &::-webkit-scrollbar
+      height: 2px
+      width: 2px
+
+    &::-webkit-scrollbar-track
+      background: rgba($text-color, 0.3)
+
+    &::-webkit-scrollbar-thumb
+      background: $text-color
+
+    .simplebar-track.simplebar-vertical
+      background-color: rgba($text-color, 0.3)
+      width: 2px
+
+    .simplebar-track.simplebar-vertical .simplebar-scrollbar::before
+      bottom: 0
+      top: 0
+
+    .simplebar-scrollbar::before
+      border-radius: 0
+      background-color: $text-color
+      left: 0
+      opacity: 1
+      right: auto
+      width: 2px
+
+  &__summ
+    border-top: 1px solid #E4E7EB
+    padding-top: 20px
+
+  &__total,
+  &__discount
+    align-items: center
+    display: flex
+    justify-content: space-between
+    line-height: 1
+
+  &__total
+    font-size: 18px
+    font-weight: 500
+    margin-bottom: 10px
+
+  &__discount
+    font-size: 16px
+    font-weight: 400
+    line-height: 18px
+    margin-bottom: 20px
+
+  &__button
+    width: 100%
+
+.mcart-item
+  display: flex
+  flex-direction: column
+  min-height: 142px
+  margin-bottom: 30px
+  position: relative
+  padding-left: 130px
+
+  &__delete
+    background-color: transparent
+    border: none
+    cursor: pointer
+    display: flex
+    height: 20px
+    left: auto
+    position: absolute
+    padding: 0
+    right: 0
+    top: 0
+    width: 20px
+
+    &:hover
+      .mcart-item__delete-icon
+        fill: rgba($grey-color, 0.6)
+
+  &__delete-icon
+    fill: rgba($grey-color, 0.3)
+    height: 19px
+    transition: fill 0.3s
+    width: 19px
+
+  &__title
+    font-size: 15px
+    line-height: 18px
+    margin-bottom: 10px
+
+    a
+      font-weight: 500
+      text-decoration: none
+
+      &:hover
+        text-decoration: underline
+
+  &__image
+    left: 0
+    position: absolute
+    top: 0
+    width: 110px
+
+  &__prop
+    font-size: 14px
+    font-weight: 400
+    line-height: 18px
+    margin-bottom: 10px
+
+  &__prop-title
+    font-weight: 500
+
+  &__prop-color
+    color: $grey-color
+    margin-left: 5px
+
+  &__prop-size
+    background-color: transparent
+    border: none
+    cursor: pointer
+    margin-left: 3px
+    padding: 0 5px
+
+    &.is-active
+      text-decoration: underline
+
+  &__bottom
+    align-items: center
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    margin-top: auto
+
+  &__price-block
+
+  &__price
+    font-size: 16px
+    font-weight: 500
+    line-height: 18px
+
+    &--old
+      font-size: 13px
+      font-weight: 400
+      line-height: 18px
+      margin-left: 10px
+      text-decoration: line-through

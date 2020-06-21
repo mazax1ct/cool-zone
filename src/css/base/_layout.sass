@@ -20,6 +20,13 @@ body
     @media(max-width: 1199px)
       overflow: hidden
 
+  &.overlay
+    .page-content,
+    .footer
+      &::after
+        background-color: rgba($text-color, 0.2)
+        display: block
+
 .wrapper
   flex: 1 0 auto
 
@@ -40,9 +47,35 @@ body
 .page-content
   padding-top: 75px
   padding-bottom: 50px
+  position: relative
+
+  &::after
+    content: ''
+    display: none
+    height: 100%
+    left: 0
+    position: absolute
+    top: 0
+    width: 100%
+    z-index: 2
 
   @media(min-width: 1200px)
     padding-top: 120px
 
   @media(min-width: 2500px)
     padding-top: 135px
+
+.page-top
+  background-color: #fff
+  margin-top: -15px
+  padding-top: 15px
+  position: relative
+  z-index: 3
+
+  @media(min-width: 1200px)
+    margin-top: -25px
+    padding-top: 25px
+
+  @media(min-width: 2500px)
+    margin-top: -30px
+    padding-top: 30px

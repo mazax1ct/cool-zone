@@ -7,10 +7,32 @@
   width: 100%
   z-index: 10
 
+  &.scrolled
+    .header__inner,
+    .main-menu__link,
+    .search-bar__input,
+    .search-bar__submit
+      @media(min-width: 1200px)
+        height: 60px
+
+      @media(min-width: 2500px)
+        height: 60px
+
+    .sub-menu,
+    .search-bar__dropdown
+      @media(min-width: 1200px)
+        top: 60px
+
+    .header__logo
+      @media(min-width: 1200px)
+        height: 36px
+        width: 60px
+
   &__inner
     align-items: center
     display: flex
     height: 60px
+    transition: height 0.3s
 
     @media(min-width: 1200px)
       height: 95px
@@ -28,14 +50,24 @@
     z-index: 1
 
     @media(min-width: 1200px)
+      align-items: flex-end
+      display: flex
+      height: 57px
+      overflow: hidden
       position: static
+      transition: height 0.3s, width 0.3s
       transform: none
+      will-change: all
       width: 50px
 
     @media(min-width: 2500px)
+      height: 63px
       width: 55px
 
   &__logo-image
+    flex-shrink: 0
+    min-width: 100%
+    width: 100%
 
   &__lang-block
     align-items: center
@@ -99,6 +131,7 @@
         height: 100%
         left: 0
         overflow-y: scroll
+        overflow-x: hidden
         position: fixed
         padding-right: 47px
         top: 0
@@ -111,8 +144,15 @@
     display: flex
     justify-content: space-between
     height: 60px
+    left: -100%
     padding-left: 20px
     padding-right: 20px
+    position: relative
+    transition: left 0.3s
+
+    &.is-open
+      @media(max-width: 1199px)
+        left: 0
 
     @media(min-width: 1200px)
       display: none
@@ -124,6 +164,16 @@
 
     .header__lang-block
       display: flex
+
+  &__menu
+    @media(max-width: 1199px)
+      left: -100%
+      position: relative
+      transition: left 0.3s
+
+    &.is-open
+      @media(max-width: 1199px)
+        left: 0
 
   &__links
     align-items: center
@@ -222,6 +272,16 @@
       @media(min-width: 1200px)
         margin-bottom: 0
 
+    &:hover
+      .sub-menu
+        @media(min-width: 1200px)
+          display: block
+
+    &:focus-within
+      .sub-menu
+        @media(min-width: 1200px)
+          display: block
+
   &__link
     background-image: url("data:image/svg+xml,%3Csvg width='11' height='6' viewBox='0 0 11 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 1L5.60465 5L1 1' stroke='%23282828' stroke-linecap='round'/%3E%3C/svg%3E%0A")
     background-repeat: no-repeat
@@ -242,6 +302,7 @@
       height: 95px
       padding-left: 20px
       padding-right: 20px
+      transition: height 0.3s
 
     @media(min-width: 1900px)
       padding-left: 28px
@@ -267,6 +328,7 @@
     position: fixed
     padding-top: 35px
     padding-bottom: 40px
+    transition: top 0.3s
     top: 95px
     width: 100%
     z-index: 1
@@ -423,6 +485,7 @@
     line-height: 20px
     height: 60px
     padding: 20px
+    transition: height 0.3s
     width: 100%
 
     @media(min-width: 1200px)
@@ -430,6 +493,9 @@
 
     @media(min-width: 2500px)
       height: 106px
+
+    &:focus
+      outline: none
 
   &__submit
     align-items: center
@@ -443,6 +509,7 @@
     position: absolute
     padding: 0
     top: 0
+    transition: height 0.3s
     width: 20px
     z-index: 1
 
@@ -460,12 +527,14 @@
 
   &__dropdown
     background-color: #fff
+    border-top: 1px solid #E4E7EB
     box-shadow: 0 10px 20px -5px rgba(#000, 0.15)
     display: none
     left: 0
     padding: 20px
     position: fixed
-    top: 61px
+    top: 60px
+    transition: top 0.3s
     width: 100%
     z-index: 1
 
@@ -476,7 +545,7 @@
       min-height: 215px
       padding-top: 35px
       padding-left: 130px
-      top: 96px
+      top: 95px
 
     @media(min-width: 1400px)
       padding-left: 165px
@@ -485,7 +554,7 @@
       padding-left: 215px
 
     @media(min-width: 2500px)
-      top: 107px
+      top: 106px
 
   &__dropdown-title
     font-size: 15px
@@ -546,7 +615,7 @@
     cursor: pointer
     display: inline-block
     min-height: 30px
-    padding: 3px 15px
+    padding: 4px 15px 3px
 
   &__searched-delete
     align-items: center
