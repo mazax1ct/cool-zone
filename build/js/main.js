@@ -1,10 +1,17 @@
-//функция навешивания класса на шапку
+//функция навешивания класса на шапку и фильтр каталога
 var resize_scroll = function(e) {
   var h = $(".header");
-  if($(window).scrollTop() > h.height()) {
+  if($(window).scrollTop() > h.height()/2) {
     h.addClass("scrolled");
   } else {
     h.removeClass("scrolled");
+  }
+  var f = $(".catalog-topbar");
+  var fOffsetTop = f.offset().top;
+  if(($(window).scrollTop() + $(".header.scrolled").height()) > fOffsetTop) {
+    $(".catalog-topbar__float").addClass('scrolled');
+  } else {
+    $(".catalog-topbar__float").removeClass('scrolled');
   }
 };
 

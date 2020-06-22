@@ -150,7 +150,7 @@
               <a class="header__lang" href="#">EN</a>
             </div>
           </div>
-          <nav class="main-menu">
+          <nav class="header__menu main-menu">
             <ol class="main-menu__list">
               <li class="js-root main-menu__item">
                 <a class="main-menu__link is-active" href="#">Мужское</a>
@@ -474,35 +474,39 @@
             <li class="breadcrumbs__item">Женское</li>
           </ol>
           <h1 class="catalog-title">Женское</h1>
-          <div class="catalog-topbar">
-            <div class="filter-block">
-              <div class="filter-block__buttons">
-                <button class="filter-opener" type="button">
-                  <svg class="filter-opener__icon" aria-hidden="true">
-                    <use xlink:href="#filter" />
-                  </svg>
-                  <span>Фильтры <span>(4)</span></span>
-                </button>
-              </div>
-              <div class="filter">
-                <div class="filter__top">
-                  <button class="filter__close" type="button">
-                    <svg class="filter__close-icon" aria-hidden="true">
-                      <use xlink:href="#close" />
+        </div>
+        <div class="catalog-topbar">
+          <div class="catalog-topbar__float">
+            <div class="catalog-topbar__inner container">
+              <div class="filter-block">
+                <div class="filter-block__buttons">
+                  <button class="filter-opener" type="button">
+                    <svg class="filter-opener__icon" aria-hidden="true">
+                      <use xlink:href="#filter" />
                     </svg>
-                    <span>Фильтры <span>(8)</span></span>
+                    <span>Фильтры <span>(4)</span></span>
                   </button>
-                  <button class="filter__reset" type="button">Сбросить все</button>
+                  <button class="filter-reset" type="button">Сбросить все</button>
+                </div>
+                <div class="filter">
+                  <div class="filter__top">
+                    <button class="filter__close" type="button">
+                      <svg class="filter__close-icon" aria-hidden="true">
+                        <use xlink:href="#close" />
+                      </svg>
+                      <span>Фильтры <span>(8)</span></span>
+                    </button>
+                    <button class="filter__reset" type="button">Сбросить все</button>
+                  </div>
                 </div>
               </div>
-            </div>
-
-            <div class="catalog-sort">
-              <div class="js-catalog-sort-open catalog-sort__value">Сортировать по</div>
-              <div class="catalog-sort__dropdown">
-                <div class="js-catalog-sort catalog-sort__var">Цена по возрастанию</div>
-                <div class="js-catalog-sort catalog-sort__var">Цена по убыванию</div>
-                <div class="js-catalog-sort catalog-sort__var">Бестселлер</div>
+              <div class="catalog-sort">
+                <div class="js-catalog-sort-open catalog-sort__value">Сортировать по</div>
+                <div class="catalog-sort__dropdown">
+                  <div class="js-catalog-sort catalog-sort__var">Цена по возрастанию</div>
+                  <div class="js-catalog-sort catalog-sort__var">Цена по убыванию</div>
+                  <div class="js-catalog-sort catalog-sort__var">Бестселлер</div>
+                </div>
               </div>
             </div>
           </div>
