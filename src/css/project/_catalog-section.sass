@@ -13,6 +13,27 @@
   position: relative
   z-index: 3
 
+.filter-block
+  &__buttons
+    align-items: center
+    display: flex
+
+.filter-opener
+  align-items: center
+  background-color: transparent
+  border: none
+  cursor: pointer
+  font-size: 14px
+  font-weight: 400
+  display: flex
+  padding: 0
+
+  &__icon
+    fill: $text-color
+    height: 13px
+    margin-right: 5px
+    width: 18px
+
 .filter
   display: none
 
@@ -35,7 +56,11 @@
     background-position: 100% 50%
     background-repeat: no-repeat
     cursor: pointer
-    padding: 3px 15px 9px
+    padding: 7px 15px 10px
+
+    @media(min-width: 1200px)
+      padding-top: 10px
+      padding-bottom: 14px
 
   &__dropdown
     background-color: #fff
@@ -43,6 +68,7 @@
     display: none
     left: auto
     position: absolute
+    padding: 5px 0
     right: 0
     top: 100%
     width: auto
@@ -90,10 +116,72 @@
     @media(min-width: 768px)
       padding-left: 10px
       padding-right: 10px
+      width: 25%
 
     @media(min-width: 1200px)
       margin-bottom: 55px
-      width: 25%
+
+    @media(min-width: 2500px)
+      width: 20%
+
+    &--banner
+      display: flex
+      overflow: hidden
+      width: 100%
+
+    &--banner_3
+      @media(min-width: 768px)
+        width: 50%
+
+      @media(min-width: 2500px)
+        width: 60%
+
+    &--banner_2
+      @media(min-width: 768px)
+        width: 50%
+
+      @media(min-width: 2500px)
+        width: 40%
+
+    &--banner_1
+      width: 50%
+
+      @media(min-width: 768px)
+        width: 25%
+
+      @media(min-width: 2500px)
+        width: 20%
+
+      .catalog-banner
+        height: 100%
+        padding-bottom: 0
+
+.banner-wrapper
+  height: 100%
+  overflow: hidden
+  width: 100%
+
+.catalog-banner
+  background-position: 50% 50%
+  background-size: cover
+  background-repeat: no-repeat
+  display: block
+  height: 0
+  overflow: hidden
+  padding-bottom: 86.42857%
+  text-indent: 101%
+  transform: scale(1)
+  transition: transform 0.3s
+  white-space: nowrap
+  width: 100%
+  will-change: transform
+
+  &:hover
+    transform: scale(1.02)
+
+  @media(min-width: 768px)
+    height: 100%
+    padding-bottom: 0
 
 .card
   &:hover
@@ -144,6 +232,7 @@
 
     @media(min-width: 768px)
       left: 12px
+      padding-right: 35px
       top: 12px
 
   &__label
@@ -164,17 +253,16 @@
     background-color: transparent
     border: none
     cursor: pointer
+    display: none
     left: auto
     position: absolute
-    padding: 5px 8px
+    padding: 15px 14px
     right: 0
     top: 0
     z-index: 2
 
-    @media(min-width: 768px)
-      padding: 15px 14px
-
     @media(min-width: 1200px)
+      display: block
       opacity: 0
       transition: opacity 0.3s
 
@@ -194,37 +282,30 @@
 
   &__add-cart
     background-color: rgba(#fff, 0.8)
+    border: none
     border-radius: 2px
-    bottom: 6px
-    font-size: 12px
-    font-weight: 400
-    line-height: 12px
-    left: 6px
+    bottom: 12px
+    cursor: pointer
+    display: none
+    font-size: 14px
+    font-weight: 500
+    line-height: 22px
+    left: 13px
     position: absolute
-    padding-top: 8px
-    padding-bottom: 8px
+    padding: 8px
     top: auto
     text-transform: uppercase
     text-align: center
     text-decoration: none
-    width: calc(100% - 12px)
+    width: calc(100% - 26px)
     z-index: 2
 
     &:hover
       background-color: #fff
       box-shadow: 0 0 4px 0 rgba(#000, 0.05)
 
-    @media(min-width: 375px)
-      line-height: 22px
-
-    @media(min-width: 768px)
-      bottom: 12px
-      font-size: 14px
-      font-weight: 500
-      left: 13px
-      width: calc(100% - 26px)
-
     @media(min-width: 1200px)
+      display: block
       opacity: 0
       transition: opacity 0.3s, background-color 0.3s, box-shadow 0.3s
 

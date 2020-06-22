@@ -11,7 +11,8 @@
   z-index: 1
 
   &.is-open
-    display: block
+    @media(min-width: 1200px)
+      display: block
 
   &__close
     align-items: center
@@ -23,6 +24,14 @@
     line-height: 30px
     margin-bottom: 20px
     padding: 0
+
+    &:hover
+      & > span
+        border-bottom-color: $text-color
+
+    & > span
+      border-bottom: 1px dotted transparent
+      transition: border-color 0.3s
 
   &__close-icon
     fill: $text-color
@@ -125,6 +134,7 @@
     font-size: 15px
     line-height: 18px
     margin-bottom: 10px
+    padding-right: 35px
 
     a
       font-weight: 500

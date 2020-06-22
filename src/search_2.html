@@ -32,19 +32,8 @@
           </ol>
           <h1 class="catalog-title">Женское</h1>
           <div class="catalog-topbar">
-            <div class="filter-block">
-              <div class="filter">
-                <div class="filter__top">
-                  <button class="filter__close" type="button">
-                    <svg class="filter__close-icon" aria-hidden="true">
-                      <use xlink:href="#close" />
-                    </svg>
-                    <span>Фильтры <span>(8)</span></span>
-                  </button>
-                  <button class="filter__reset" type="button">Сбросить все</button>
-                </div>
-              </div>
-            </div>
+            //= template/filter.html
+
             <div class="catalog-sort">
               <div class="js-catalog-sort-open catalog-sort__value">Сортировать по</div>
               <div class="catalog-sort__dropdown">
@@ -75,7 +64,7 @@
                     <use xlink:href="#favorite_2" />
                   </svg>
                 </button>
-                <a class="card__add-cart" href="cart.html">добавить в корзину</a>
+                <button class="js-fast-look card__add-cart" type="button" data-src="#fast-look">добавить в корзину</button>
               </div>
               <p class="card__colors">
                 <img src="images/content/catalog/colors/img_1.jpg" alt="Серый">
@@ -103,7 +92,218 @@
                     <use xlink:href="#favorite_2" />
                   </svg>
                 </button>
-                <a class="card__add-cart" href="cart.html">добавить в корзину</a>
+                <button class="js-fast-look card__add-cart" type="button" data-src="#fast-look">добавить в корзину</button>
+              </div>
+              <p class="card__colors">
+                <img src="images/content/catalog/colors/img_1.jpg" alt="Серый">
+                <img src="images/content/catalog/colors/img_2.jpg" alt="Черный">
+              </p>
+              <p class="card__title"><a href="catalog-detail.html">Базовый комплект термобелья</a></p>
+              <p class="card__price-block">
+                <span class="card__price">15 000 ₽</span>
+                <span class="card__price card__price--old">20 000 ₽</span>
+              </p>
+            </div>
+          </div>
+          <div class="catalog-list__item catalog-list__item--banner catalog-list__item--banner_3">
+            <div class="banner-wrapper"><a class="catalog-banner" href="#" style="background-image: url('images/content/catalog/banner_3.jpg')" title="Тайтл">Тайтл</a></div>
+          </div>
+          <div class="catalog-list__item">
+            <div class="card">
+              <div class="card__top">
+                <a class="card__image-block" href="catalog-detail.html">
+                  <img class="card__image" src="images/content/catalog/img_1.jpg" alt="alt">
+                  <img class="card__image card__image--second" src="images/content/catalog/img_2.jpg" alt="alt">
+                </a>
+                <p class="card__labels">
+                  <span class="card__label">limited</span>
+                  <span class="card__label">sale</span>
+                  <span class="card__label">new</span>
+                </p>
+                <button class="card__fav" type="button" title="Добавить в избранное">
+                  <svg class="card__fav-icon" aria-hidden="true">
+                    <use xlink:href="#favorite_2" />
+                  </svg>
+                </button>
+                <button class="js-fast-look card__add-cart" type="button" data-src="#fast-look">добавить в корзину</button>
+              </div>
+              <p class="card__colors">
+                <img src="images/content/catalog/colors/img_1.jpg" alt="Серый">
+                <img src="images/content/catalog/colors/img_2.jpg" alt="Черный">
+              </p>
+              <p class="card__title"><a href="catalog-detail.html">Базовый комплект термобелья</a></p>
+              <p class="card__price-block">
+                <span class="card__price">15 000 ₽</span>
+                <span class="card__price card__price--old">20 000 ₽</span>
+              </p>
+            </div>
+          </div>
+          <div class="catalog-list__item catalog-list__item--banner catalog-list__item--banner_1">
+            <div class="banner-wrapper"><a class="catalog-banner" href="#" style="background-image: url('images/content/catalog/banner_1.jpg')" title="Тайтл">Тайтл</a></div>
+          </div>
+          <div class="catalog-list__item">
+            <div class="card">
+              <div class="card__top">
+                <a class="card__image-block" href="catalog-detail.html">
+                  <img class="card__image" src="images/content/catalog/img_2.jpg" alt="alt">
+                  <img class="card__image card__image--second" src="images/content/catalog/img_1.jpg" alt="alt">
+                </a>
+                <p class="card__labels">
+                  <span class="card__label">limited</span>
+                </p>
+                <button class="card__fav is-active" type="button" title="Убрать из избранного">
+                  <svg class="card__fav-icon" aria-hidden="true">
+                    <use xlink:href="#favorite_2" />
+                  </svg>
+                </button>
+                <button class="js-fast-look card__add-cart" type="button" data-src="#fast-look">добавить в корзину</button>
+              </div>
+              <p class="card__colors">
+                <img src="images/content/catalog/colors/img_1.jpg" alt="Серый">
+                <img src="images/content/catalog/colors/img_2.jpg" alt="Черный">
+              </p>
+              <p class="card__title"><a href="catalog-detail.html">Базовый комплект термобелья</a></p>
+              <p class="card__price-block">
+                <span class="card__price">15 000 ₽</span>
+                <span class="card__price card__price--old">20 000 ₽</span>
+              </p>
+            </div>
+          </div>
+          <div class="catalog-list__item">
+            <div class="card">
+              <div class="card__top">
+                <a class="card__image-block" href="catalog-detail.html">
+                  <img class="card__image" src="images/content/catalog/img_2.jpg" alt="alt">
+                  <img class="card__image card__image--second" src="images/content/catalog/img_1.jpg" alt="alt">
+                </a>
+                <p class="card__labels">
+                  <span class="card__label">limited</span>
+                </p>
+                <button class="card__fav is-active" type="button" title="Убрать из избранного">
+                  <svg class="card__fav-icon" aria-hidden="true">
+                    <use xlink:href="#favorite_2" />
+                  </svg>
+                </button>
+                <button class="js-fast-look card__add-cart" type="button" data-src="#fast-look">добавить в корзину</button>
+              </div>
+              <p class="card__colors">
+                <img src="images/content/catalog/colors/img_1.jpg" alt="Серый">
+                <img src="images/content/catalog/colors/img_2.jpg" alt="Черный">
+              </p>
+              <p class="card__title"><a href="catalog-detail.html">Базовый комплект термобелья</a></p>
+              <p class="card__price-block">
+                <span class="card__price">15 000 ₽</span>
+                <span class="card__price card__price--old">20 000 ₽</span>
+              </p>
+            </div>
+          </div>
+          <div class="catalog-list__item">
+            <div class="card">
+              <div class="card__top">
+                <a class="card__image-block" href="catalog-detail.html">
+                  <img class="card__image" src="images/content/catalog/img_1.jpg" alt="alt">
+                  <img class="card__image card__image--second" src="images/content/catalog/img_2.jpg" alt="alt">
+                </a>
+                <p class="card__labels">
+                  <span class="card__label">limited</span>
+                  <span class="card__label">sale</span>
+                  <span class="card__label">new</span>
+                </p>
+                <button class="card__fav" type="button" title="Добавить в избранное">
+                  <svg class="card__fav-icon" aria-hidden="true">
+                    <use xlink:href="#favorite_2" />
+                  </svg>
+                </button>
+                <button class="js-fast-look card__add-cart" type="button" data-src="#fast-look">добавить в корзину</button>
+              </div>
+              <p class="card__colors">
+                <img src="images/content/catalog/colors/img_1.jpg" alt="Серый">
+                <img src="images/content/catalog/colors/img_2.jpg" alt="Черный">
+              </p>
+              <p class="card__title"><a href="catalog-detail.html">Базовый комплект термобелья</a></p>
+              <p class="card__price-block">
+                <span class="card__price">15 000 ₽</span>
+                <span class="card__price card__price--old">20 000 ₽</span>
+              </p>
+            </div>
+          </div>
+          <div class="catalog-list__item">
+            <div class="card">
+              <div class="card__top">
+                <a class="card__image-block" href="catalog-detail.html">
+                  <img class="card__image" src="images/content/catalog/img_2.jpg" alt="alt">
+                  <img class="card__image card__image--second" src="images/content/catalog/img_1.jpg" alt="alt">
+                </a>
+                <p class="card__labels">
+                  <span class="card__label">limited</span>
+                </p>
+                <button class="card__fav is-active" type="button" title="Убрать из избранного">
+                  <svg class="card__fav-icon" aria-hidden="true">
+                    <use xlink:href="#favorite_2" />
+                  </svg>
+                </button>
+                <button class="js-fast-look card__add-cart" type="button" data-src="#fast-look">добавить в корзину</button>
+              </div>
+              <p class="card__colors">
+                <img src="images/content/catalog/colors/img_1.jpg" alt="Серый">
+                <img src="images/content/catalog/colors/img_2.jpg" alt="Черный">
+              </p>
+              <p class="card__title"><a href="catalog-detail.html">Базовый комплект термобелья</a></p>
+              <p class="card__price-block">
+                <span class="card__price">15 000 ₽</span>
+                <span class="card__price card__price--old">20 000 ₽</span>
+              </p>
+            </div>
+          </div>
+          <div class="catalog-list__item catalog-list__item--banner catalog-list__item--banner_2">
+            <div class="banner-wrapper"><a class="catalog-banner" href="#" style="background-image: url('images/content/catalog/banner_2.jpg')" title="Тайтл">Тайтл</a></div>
+          </div>
+          <div class="catalog-list__item">
+            <div class="card">
+              <div class="card__top">
+                <a class="card__image-block" href="catalog-detail.html">
+                  <img class="card__image" src="images/content/catalog/img_1.jpg" alt="alt">
+                  <img class="card__image card__image--second" src="images/content/catalog/img_2.jpg" alt="alt">
+                </a>
+                <p class="card__labels">
+                  <span class="card__label">limited</span>
+                  <span class="card__label">sale</span>
+                  <span class="card__label">new</span>
+                </p>
+                <button class="card__fav" type="button" title="Добавить в избранное">
+                  <svg class="card__fav-icon" aria-hidden="true">
+                    <use xlink:href="#favorite_2" />
+                  </svg>
+                </button>
+                <button class="js-fast-look card__add-cart" type="button" data-src="#fast-look">добавить в корзину</button>
+              </div>
+              <p class="card__colors">
+                <img src="images/content/catalog/colors/img_1.jpg" alt="Серый">
+                <img src="images/content/catalog/colors/img_2.jpg" alt="Черный">
+              </p>
+              <p class="card__title"><a href="catalog-detail.html">Базовый комплект термобелья</a></p>
+              <p class="card__price-block">
+                <span class="card__price">15 000 ₽</span>
+                <span class="card__price card__price--old">20 000 ₽</span>
+              </p>
+            </div>
+          </div>
+          <div class="catalog-list__item">
+            <div class="card">
+              <div class="card__top">
+                <a class="card__image-block" href="catalog-detail.html">
+                  <img class="card__image" src="images/content/catalog/img_2.jpg" alt="alt">
+                  <img class="card__image card__image--second" src="images/content/catalog/img_1.jpg" alt="alt">
+                </a>
+                <p class="card__labels">
+                  <span class="card__label">limited</span>
+                </p>
+                <button class="card__fav is-active" type="button" title="Убрать из избранного">
+                  <svg class="card__fav-icon" aria-hidden="true">
+                    <use xlink:href="#favorite_2" />
+                  </svg>
+                </button>
+                <button class="js-fast-look card__add-cart" type="button" data-src="#fast-look">добавить в корзину</button>
               </div>
               <p class="card__colors">
                 <img src="images/content/catalog/colors/img_1.jpg" alt="Серый">
@@ -126,7 +326,7 @@
 
   //= template/footer.html
 
-  
+  //= template/fast-look.html
 
   //= template/scripts.html
 </body>

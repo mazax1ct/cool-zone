@@ -1,0 +1,351 @@
+.fast-look
+  background-color: #fff
+  display: none
+  max-width: 1115px
+  position: relative
+  padding: 0
+  width: 100%
+
+  &__inner
+    @media(min-width: 768px)
+      display: flex
+
+  @media(min-width: 2500px)
+    max-width: 1369px
+
+  &__slider
+    height: 100%
+
+  &__slider-nav
+    align-items: center
+    bottom: 0
+    background-color: rgba(#fff, 0.65)
+    display: flex
+    height: 65px
+    justify-content: center
+    left: auto
+    position: absolute
+    right: 0
+    top: auto
+    width: 220px
+    z-index: 1
+
+    @media(min-width: 2500px)
+      height: 82px
+
+    .swiper-button-prev,
+    .swiper-button-next
+      height: 34px
+      margin-top: 0
+      position: static
+      width: 34px
+
+      @media(min-width: 2500px)
+        height: 44px
+        width: 44px
+
+      &::after
+        position: absolute
+        height: 1px
+        overflow: hidden
+        clip: rect(0 0 0 0)
+        width: 1px
+
+      .icon
+        fill: $button-color
+        height: 17px
+        width: 17px
+
+        @media(min-width: 2500px)
+          height: 22px
+          width: 22px
+
+    .swiper-pagination-progressbar
+      background-color: rgba($button-color, 0.25)
+      height: 2px
+      overflow: hidden
+      position: relative
+      width: 110px
+
+    .swiper-pagination-progressbar-fill
+      background-color: $button-color
+
+  &__close
+    align-items: center
+    background-color: transparent
+    border: none
+    cursor: pointer
+    display: flex
+    height: 40px
+    justify-content: center
+    left: auto
+    padding: 0
+    position: absolute
+    right: 10px
+    top: 10px
+    width: 40px
+    z-index: 1
+
+    &:hover
+      .fast-look__close-icon
+        fill: $text-color
+
+  &__close-icon
+    fill: $grey-color
+    height: 17px
+    transition: fill 0.3s
+    width: 17px
+
+  &__images
+    @media(min-width: 768px)
+      min-width: 44.88330%
+      width: 44.88330%
+
+    @media(min-width: 2500px)
+      min-width: 42.00146%
+      width: 42.00146%
+
+  &__info
+    flex-grow: 1
+    padding: 55px 95px 55px 65px
+
+    @media(min-width: 2500px)
+      padding: 75px 100px 75px 120px
+
+  &__title
+    font-size: 25px
+    font-weight: 600
+    line-height: 1.2
+    margin-bottom: 10px
+
+    @media(min-width: 2500px)
+      font-size: 30px
+      line-height: 1.16666
+      margin-bottom: 15px
+
+    a
+      font-weight: 600
+      text-decoration: none
+
+      &:hover
+        text-decoration: underline
+
+  &__price-block
+    margin-bottom: 16px
+
+    @media(min-width: 2500px)
+      margin-bottom: 20px
+
+  &__price
+    font-size: 20px
+    font-weight: 500
+    line-height: 25px
+
+    @media(min-width: 2500px)
+      font-size: 24px
+      line-height: 28px
+
+    &--old
+      font-size: 15px
+      font-weight: 400
+      margin-left: 10px
+      text-decoration: line-through
+
+      @media(min-width: 2500px)
+        font-size: 20px
+        line-height: 24px
+
+  &__preview-text
+    font-size: 18px
+    line-height: 22px
+
+    @media(min-width: 2500px)
+      font-size: 20px
+      line-height: 28px
+
+    p
+      &:not(:last-child)
+        margin-bottom: 10px
+
+        @media(min-width: 2500px)
+          margin-bottom: 15px
+
+  &__bottom
+    border-top: 1px solid #E4E7EB
+    margin-top: 25px
+    padding-top: 25px
+
+    @media(min-width: 2500px)
+      margin-top: 30px
+      padding-top: 30px
+
+  &__prop
+    color: $grey-color
+    font-size: 15px
+    font-weight: 400
+    line-height: 18px
+    margin-bottom: 12px
+
+    @media(min-width: 2500px)
+      font-size: 18px
+      line-height: 24px
+      margin-bottom: 15px
+
+  &__prop-title
+    color: $text-color
+    font-weight: 500
+
+  &__colors
+    display: flex
+    flex-wrap: wrap
+    margin-bottom: 22px
+
+  &__color
+    cursor: pointer
+    display: block
+    height: 28px
+    margin-right: 8px
+    margin-bottom: 8px
+    position: relative
+    width: 28px
+
+    @media(min-width: 2500px)
+      height: 36px
+      width: 36px
+
+    input[type="radio"]
+      position: absolute
+      height: 1px
+      overflow: hidden
+      clip: rect(0 0 0 0)
+      width: 1px
+
+      &:checked + .fast-look__color-image
+        border-color: $text-color
+
+  &__color-image
+    border: 2px solid transparent
+    border-radius: 50%
+    display: block
+    height: 28px
+    padding: 2px
+    width: 28px
+
+    @media(min-width: 2500px)
+      height: 36px
+      width: 36px
+
+    img
+      border-radius: 50px
+
+  &__size-title-block
+    align-items: center
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    margin-bottom: 15px
+
+    @media(min-width: 2500px)
+      margin-bottom: 20px
+
+    a
+      font-size: 14px
+      font-weight: 500
+      line-height: 16px
+
+      @media(min-width: 2500px)
+        font-size: 18px
+        line-height: 22px
+
+  &__size-title
+    font-weight: 15px
+    font-weight: 500
+    line-height: 18px
+    text-transform: uppercase
+
+    @media(min-width: 2500px)
+      font-size: 18px
+      line-height: 24px
+
+  &__sizes
+    display: flex
+    flex-wrap: wrap
+    margin-bottom: 37px
+
+  &__size
+    display: block
+    font-size: 18px
+    line-height: 22px
+    margin-right: 8px
+    margin-bottom: 8px
+    width: 40px
+
+    input[type="radio"]
+      position: absolute
+      height: 1px
+      overflow: hidden
+      clip: rect(0 0 0 0)
+      width: 1px
+
+      &:disabled + .fast-look__size-text
+        color: rgba($grey-color, 0.5)
+        cursor: default
+
+      &:checked + .fast-look__size-text
+        font-weight: 600
+
+  &__size-text
+    cursor: pointer
+    font-weight: 400
+    display: block
+    text-align: center
+    width: 40px
+
+  &__buttons
+    align-items: center
+    display: flex
+    margin-bottom: 25px
+
+  &__add-cart
+    flex-grow: 1
+
+  &__favorite
+    align-items: center
+    background-color: transparent
+    border: none
+    cursor: pointer
+    display: flex
+    height: 54px
+    justify-content: center
+    padding: 0
+    width: 60px
+
+    &.is-active
+      .fast-look__favorite-icon
+        fill: $text-color
+
+  &__favorite-icon
+    fill: none
+    height: 23px
+    stroke: $text-color
+    width: 26px
+
+  &__to-detail
+    background-image: url("data:image/svg+xml,%3Csvg width='6' height='9' viewBox='0 0 6 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.16602 1L4.37435 4.4186L1.16602 8' stroke='%23282828' stroke-linecap='round'/%3E%3C/svg%3E%0A")
+    background-position: 100% 90%
+    background-repeat: no-repeat
+    display: inline-block
+    font-size: 18px
+    line-height: 16px
+    padding-right: 12px
+    text-decoration: none
+    vertical-align: top
+
+    @media(min-width: 2500px)
+      font-size: 20px
+
+    &:hover
+      text-decoration: underline
+
+  .fancybox-close-small
+    display: none

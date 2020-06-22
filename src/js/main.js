@@ -18,6 +18,9 @@ function contentOverlay () {
   $('body').toggleClass('overlay');
 }
 
+//переменная для слайдера быстрого просмотра
+var fastLookSlider;
+
 $(document).ready(function () {
   //запуск функции навешивания класса на шапку
   resize_scroll();
@@ -30,19 +33,27 @@ $(document).ready(function () {
       sub.slideToggle();
       return true;
     });
-  } else {
-    /*$('.js-root').hover(
-      function() {
-        $(this).find('.sub-menu').stop(true, true).slideDown(400);
-      }, function() {
-        $(this).find('.sub-menu').stop(true, true).slideUp(400);
-      }
-    );*/
   }
 
   //кастомный скролл в мини-корзине
   $('.js-custom-scroll').each(function(index, element) {
     new SimpleBar(element, { autoHide: false })
+  });
+
+  //слайдер в попапе быстрого просмотра
+  fastLookSlider = new Swiper ('.js-fast-look-slider', {
+    direction: 'horizontal',
+    loop: true,
+
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'progressbar',
+    },
+
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    }
   });
 });
 
@@ -124,5 +135,32 @@ $(document).on('click', '.js-catalog-sort', function () {
   $('.catalog-sort__var').removeClass('is-active');
   $(this).addClass('is-active');
   $('.catalog-sort__value').text($(this).text());
+  return false;
+});
+
+//попап быстрого просмотра
+$(document).on('click', '.js-fast-look', function () {
+  $.fancybox.open(
+    [
+      {
+    		src  : $(this).attr('data-src'),
+        opts: {
+          hash: false,
+          arrows: false,
+          infobar: false,
+          modal: true,
+      		afterShow: function() {
+            fastLookSlider.update();
+      		}
+        }
+    	}
+    ], {
+    	loop : false
+  });
+});
+
+//закрытие попапа
+$(document).on('click', '.js-popup-close', function () {
+  $.fancybox.close();
   return false;
 });
