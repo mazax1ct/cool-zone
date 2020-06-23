@@ -18,11 +18,14 @@
   &__float
     background-color: #fff
 
+    &:not([class*="scrolled"])
+      margin-right: 0
+
     &.scrolled
       left: 0
       position: fixed
+      right: 0
       top: 60px
-      width: 100%
       z-index: 9
 
   &__inner
@@ -162,6 +165,11 @@
     padding-bottom: 30px
     top: 100%
     width: 480px
+
+  @media(min-width: 1900px)
+    left: -100px
+    padding-left: 100px
+    width: 530px
 
   &__inner
     @media(min-width: 1200px)
@@ -604,6 +612,8 @@
       transition: opacity 0.3s
 
     &.is-active
+      opacity: 1
+
       .card__fav-icon
         fill: $text-color
 

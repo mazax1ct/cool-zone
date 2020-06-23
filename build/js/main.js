@@ -155,7 +155,6 @@ $(document).on('click', '.js-fast-look', function () {
           hash: false,
           arrows: false,
           infobar: false,
-          modal: true,
       		afterShow: function() {
             fastLookSlider.update();
       		}
