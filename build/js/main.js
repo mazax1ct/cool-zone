@@ -171,3 +171,25 @@ $(document).on('click', '.js-popup-close', function () {
   $.fancybox.close();
   return false;
 });
+
+//открытие/закрытие фильтра
+$(document).on('click', '.js-filter-toggler', function () {
+  contentOverlay ();
+  $(this).toggleClass('is-active');
+  $('body').toggleClass('filter-is-open');
+  $('.filter-block').toggleClass('is-open');
+  if($('body').width() > 1199) {
+    var f = $(".catalog-topbar");
+    var fOffsetTop = f.offset().top;
+    $('.filter').height($(window).height() - fOffsetTop - 50 - 30);
+    console.log($(window).height(), fOffsetTop);
+  }
+  return false;
+});
+
+//открытие/закрытие раздела фильтра
+$(document).on('click', '.js-filter-section-toggler', function () {
+  $(this).toggleClass('is-active');
+  $(this).parent().next('.filter__section-dropdown').slideToggle();
+  return false;
+});

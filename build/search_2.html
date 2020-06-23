@@ -480,24 +480,208 @@
             <div class="catalog-topbar__inner container">
               <div class="filter-block">
                 <div class="filter-block__buttons">
-                  <button class="filter-opener" type="button">
-                    <svg class="filter-opener__icon" aria-hidden="true">
+                  <button class="js-filter-toggler filter-toggler" type="button">
+                    <svg class="filter-toggler__icon filter-toggler__icon--open" aria-hidden="true">
                       <use xlink:href="#filter" />
+                    </svg>
+                    <svg class="filter-toggler__icon filter-toggler__icon--close" aria-hidden="true">
+                      <use xlink:href="#close" />
                     </svg>
                     <span>Фильтры <span>(4)</span></span>
                   </button>
                   <button class="filter-reset" type="button">Сбросить все</button>
                 </div>
                 <div class="filter">
-                  <div class="filter__top">
-                    <button class="filter__close" type="button">
-                      <svg class="filter__close-icon" aria-hidden="true">
-                        <use xlink:href="#close" />
-                      </svg>
-                      <span>Фильтры <span>(8)</span></span>
-                    </button>
-                    <button class="filter__reset" type="button">Сбросить все</button>
-                  </div>
+                  <form class="js-custom-scroll filter__inner" action="">
+                    <div class="filter__section">
+                      <div class="filter__title-block">
+                        <p class="js-filter-section-toggler filter__title">Категории</p>
+                        <button class="filter__reset" type="button">Сбросить</button>
+                      </div>
+                      <div class="filter__section-dropdown">
+                        <ol class="filter-menu">
+                          <li class="filter-menu__item"><a class="filter-menu__link" href="#">Комбинезоны</a></li>
+                          <li class="filter-menu__item"><a class="filter-menu__link is-active" href="#">Куртки</a></li>
+                          <li class="filter-menu__item"><a class="filter-menu__link" href="#">Брюки</a></li>
+                          <li class="filter-menu__item"><a class="filter-menu__link" href="#">Термобелье</a></li>
+                          <li class="filter-menu__item"><a class="filter-menu__link" href="#">Пончо и лайкры</a></li>
+                          <li class="filter-menu__item">
+                            <a class="filter-menu__link" href="#">Аксессуары</a>
+                            <ol class="filter-menu">
+                              <li class="filter-menu__item"><a class="filter-menu__link" href="#">Балаклавы</a></li>
+                              <li class="filter-menu__item"><a class="filter-menu__link" href="#">Шапки</a></li>
+                              <li class="filter-menu__item"><a class="filter-menu__link" href="#">Термоноски</a></li>
+                              <li class="filter-menu__item"><a class="filter-menu__link" href="#">Ремни</a></li>
+                              <li class="filter-menu__item"><a class="filter-menu__link" href="#">Наклейки</a></li>
+                              <li class="filter-menu__item"><a class="filter-menu__link" href="#">Средства по уходу</a></li>
+                              <li class="filter-menu__item"><a class="filter-menu__link" href="#">Варежки перчатки</a></li>
+                              <li class="filter-menu__item"><a class="filter-menu__link" href="#">Маски</a></li>
+                              <li class="filter-menu__item"><a class="filter-menu__link" href="#">Шлема</a></li>
+                            </ol>
+                          </li>
+                        </ol>
+                      </div>
+                    </div>
+                    <div class="filter__section">
+                      <label class="checkbox-label" for="best">
+                        <input id="best" type="checkbox" name="best" value="Y"/>
+                        <span class="checkbox-icon"></span>
+                        <span class="checkbox-text">Бестселлер</span>
+                      </label>
+                    </div>
+                    <div class="filter__section">
+                      <div class="filter__title-block">
+                        <p class="js-filter-section-toggler filter__title">Размер</p>
+                        <button class="filter__reset" type="button">Сбросить</button>
+                      </div>
+                      <div class="filter__section-dropdown">
+                        <div class="filter__sizes">
+                          <label class="filter__size" for="size_xxs">
+                            <input id="size_xxs" type="checkbox" name="size" value="xxs">
+                            <span class="filter__size-text">XXS</span>
+                          </label>
+                          <label class="filter__size" for="size_xs">
+                            <input id="size_xs" type="checkbox" name="size" value="xs">
+                            <span class="filter__size-text">XS</span>
+                          </label>
+                          <label class="filter__size" for="size_s">
+                            <input id="size_s" type="checkbox" name="size" value="s">
+                            <span class="filter__size-text">S</span>
+                          </label>
+                          <label class="filter__size" for="size_m">
+                            <input id="size_m" type="checkbox" name="size" value="m">
+                            <span class="filter__size-text">M</span>
+                          </label>
+                          <label class="filter__size" for="size_l">
+                            <input id="size_l" type="checkbox" name="size" value="l">
+                            <span class="filter__size-text">L</span>
+                          </label>
+                          <label class="filter__size" for="size_xl">
+                            <input id="size_xl" type="checkbox" name="size" value="xl">
+                            <span class="filter__size-text">XL</span>
+                          </label>
+                          <label class="filter__size" for="size_xxl">
+                            <input id="size_xxl" type="checkbox" name="size" value="xxl">
+                            <span class="filter__size-text">XXL</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="filter__section">
+                      <div class="filter__title-block">
+                        <p class="js-filter-section-toggler filter__title">Цвет</p>
+                        <button class="filter__reset" type="button">Сбросить</button>
+                      </div>
+                      <div class="filter__section-dropdown">
+                        <div class="filter__colors">
+                          <label class="filter__color" for="color_1">
+                            <input id="color_1" type="checkbox" name="color" value="1" checked>
+                            <span class="filter__color-image"><img src="images/content/catalog/colors/img_3.jpg" alt="Фиолетовый"></span>
+                          </label>
+                          <label class="filter__color" for="color_2">
+                            <input id="color_2" type="checkbox" name="color" value="2">
+                            <span class="filter__color-image"><img src="images/content/catalog/colors/img_4.jpg" alt="Оранжевый"></span>
+                          </label>
+                          <label class="filter__color" for="color_3">
+                            <input id="color_3" type="checkbox" name="color" value="3">
+                            <span class="filter__color-image"><img src="images/content/catalog/colors/img_5.jpg" alt="Черно-зелёный"></span>
+                          </label>
+                          <label class="filter__color" for="color_4">
+                            <input id="color_4" type="checkbox" name="color" value="4" checked>
+                            <span class="filter__color-image"><img src="images/content/catalog/colors/img_3.jpg" alt="Фиолетовый"></span>
+                          </label>
+                          <label class="filter__color" for="color_5">
+                            <input id="color_5" type="checkbox" name="color" value="5">
+                            <span class="filter__color-image"><img src="images/content/catalog/colors/img_4.jpg" alt="Оранжевый"></span>
+                          </label>
+                          <label class="filter__color" for="color_6">
+                            <input id="color_6" type="checkbox" name="color" value="6">
+                            <span class="filter__color-image"><img src="images/content/catalog/colors/img_5.jpg" alt="Черно-зелёный"></span>
+                          </label>
+                          <label class="filter__color" for="color_7">
+                            <input id="color_7" type="checkbox" name="color" value="7" checked>
+                            <span class="filter__color-image"><img src="images/content/catalog/colors/img_3.jpg" alt="Фиолетовый"></span>
+                          </label>
+                          <label class="filter__color" for="color_8">
+                            <input id="color_8" type="checkbox" name="color" value="8">
+                            <span class="filter__color-image"><img src="images/content/catalog/colors/img_4.jpg" alt="Оранжевый"></span>
+                          </label>
+                          <label class="filter__color" for="color_9">
+                            <input id="color_9" type="checkbox" name="color" value="9">
+                            <span class="filter__color-image"><img src="images/content/catalog/colors/img_5.jpg" alt="Черно-зелёный"></span>
+                          </label>
+                          <label class="filter__color" for="color_10">
+                            <input id="color_10" type="checkbox" name="color" value="10" checked>
+                            <span class="filter__color-image"><img src="images/content/catalog/colors/img_3.jpg" alt="Фиолетовый"></span>
+                          </label>
+                          <label class="filter__color" for="color_11">
+                            <input id="color_11" type="checkbox" name="color" value="1">
+                            <span class="filter__color-image"><img src="images/content/catalog/colors/img_4.jpg" alt="Оранжевый"></span>
+                          </label>
+                          <label class="filter__color" for="color_12">
+                            <input id="color_12" type="checkbox" name="color" value="12">
+                            <span class="filter__color-image"><img src="images/content/catalog/colors/img_5.jpg" alt="Черно-зелёный"></span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="filter__section">
+                      <div class="filter__title-block">
+                        <p class="js-filter-section-toggler filter__title">Утеплитель</p>
+                        <button class="filter__reset" type="button">Сбросить</button>
+                      </div>
+                      <div class="filter__section-dropdown">
+                        <ol class="unstyled-list">
+                          <li>
+                            <label class="filter__prop" for="prop_1">
+                              <input id="prop_1" type="checkbox" name="prop" value="1">
+                              <span class="filter__prop-text">15000 мм/10000 гр/м2/24ч</span>
+                            </label>
+                          </li>
+                          <li>
+                            <label class="filter__prop" for="prop_2">
+                              <input id="prop_2" type="checkbox" name="prop" value="2">
+                              <span class="filter__prop-text">18000 мм/10000 гр/м2/24ч</span>
+                            </label>
+                          </li>
+                          <li>
+                            <label class="filter__prop" for="prop_3">
+                              <input id="prop_3" type="checkbox" name="prop" value="3">
+                              <span class="filter__prop-text">22000 мм/10000 гр/м2/24ч</span>
+                            </label>
+                          </li>
+                          <li>
+                            <label class="filter__prop" for="prop_4">
+                              <input id="prop_4" type="checkbox" name="prop" value="4">
+                              <span class="filter__prop-text">5000 мм/10000 гр/м2/24ч</span>
+                            </label>
+                          </li>
+                          <li>
+                            <label class="filter__prop" for="prop_5">
+                              <input id="prop_5" type="checkbox" name="prop" value="5">
+                              <span class="filter__prop-text">30000 мм/10000 гр/м2/24ч</span>
+                            </label>
+                          </li>
+                        </ol>
+                      </div>
+                    </div>
+                    <div class="filter__section">
+                      <label class="checkbox-label" for="sale">
+                        <input id="best" type="checkbox" name="sale" value="Y"/>
+                        <span class="checkbox-icon"></span>
+                        <span class="checkbox-text">SALE</span>
+                      </label>
+                    </div>
+                    <div class="filter__section">
+                      <div class="filter__title-block">
+                        <p class="js-filter-section-toggler filter__title">Цена</p>
+                        <button class="filter__reset" type="button">Сбросить</button>
+                      </div>
+                      <div class="filter__section-dropdown">
+                        <input class="js-filter-range-slider" type="text" name="filter_price" value="" />
+                      </div>
+                    </div>
+                  </form>
                 </div>
               </div>
               <div class="catalog-sort">
@@ -925,7 +1109,7 @@
               <span class="fast-look__size-text">XXS</span>
             </label>
             <label class="fast-look__size" for="size_xs">
-              <input id="size_xs" type="radio" name="size" value="XS" disabled>
+              <input id="size_xs" type="radio" name="size" value="xs" disabled>
               <span class="fast-look__size-text">XS</span>
             </label>
             <label class="fast-look__size" for="size_s">
@@ -968,6 +1152,19 @@
   <script type="text/javascript" src="js/jquery.fancybox.min.js"></script>
   <script type="text/javascript" src="js/swiper.min.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
+
+  <script type="text/javascript" src="js/ion.rangeSlider.min.js"></script>
+  <script>
+    $(".js-filter-range-slider").ionRangeSlider({
+      skin: 'round',
+      type: "double",
+      min: 350,
+      max: 62000,
+      from: 350,
+      to: 62000,
+      grid: false
+    });
+  </script>
 </body>
 
 </html>

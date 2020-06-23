@@ -27,6 +27,13 @@ body
         background-color: rgba($text-color, 0.2)
         display: block
 
+  &.filter-is-open
+    overflow: hidden
+
+    .page-top
+      @media(max-width: 1199px)
+        z-index: 11
+
 .wrapper
   flex: 1 0 auto
 
