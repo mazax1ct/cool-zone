@@ -567,7 +567,9 @@
       z-index: 1
 
   &__labels
+    align-items: flex-start
     display: flex
+    flex-direction: column
     flex-wrap: wrap
     left: 5px
     margin-bottom: 0
@@ -663,14 +665,18 @@
 
     img
       border-radius: 50%
+      flex-shrink: 0
+      height: 8px
       margin-right: 5px
       margin-bottom: 5px
       width: 8px
 
       @media(min-width: 768px)
+        height: 10px
         width: 10px
 
       @media(min-width: 2500px)
+        height: 12px
         width: 12px
 
   &__title
