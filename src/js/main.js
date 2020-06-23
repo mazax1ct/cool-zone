@@ -6,12 +6,14 @@ var resize_scroll = function(e) {
   } else {
     h.removeClass("scrolled");
   }
-  var f = $(".catalog-topbar");
-  var fOffsetTop = f.offset().top;
-  if(($(window).scrollTop() + $(".header.scrolled").height()) > fOffsetTop) {
-    $(".catalog-topbar__float").addClass('scrolled');
-  } else {
-    $(".catalog-topbar__float").removeClass('scrolled');
+  if($(".catalog-topbar").length) {
+    var f = $(".catalog-topbar");
+    var fOffsetTop = f.offset().top;
+    if(($(window).scrollTop() + $(".header.scrolled").height()) > fOffsetTop) {
+      $(".catalog-topbar__float").addClass('scrolled');
+    } else {
+      $(".catalog-topbar__float").removeClass('scrolled');
+    }
   }
 };
 
@@ -27,6 +29,15 @@ function contentOverlay () {
 
 //переменная для слайдера быстрого просмотра
 var fastLookSlider;
+
+//переменная для проверки открытия корзины
+var cartOpen = false;
+
+//переменная для проверки открытия фильтра
+var filterOpen = false;
+
+//переменная для проверки открытия сортировки
+var sortOpen = false;
 
 $(document).ready(function () {
   //запуск функции навешивания класса на шапку
@@ -110,15 +121,89 @@ $(document).on('click', '.js-search-option', function () {
 
 //открытие корзины
 $(document).on('mouseover', '.js-cart-open', function () {
+  if(filterOpen == true || sortOpen == true) { //закрываем сортировку и фильтр
+    $('body').removeClass('overlay cart-is-open filter-is-open');
+    $('.catalog-sort').removeClass('is-open');
+    $('.js-filter-toggler').removeClass('is-active');
+    $('.filter-block').removeClass('is-open');
+    filterOpen = false;
+    sortOpen = false;
+  }
+  cartOpen = true;
   $('.mini-cart').addClass('is-open');
-  $('body').addClass('overlay');
+  $('body').addClass('overlay cart-is-open');
   return false;
 });
 
 //закрытие корзины
 $(document).on('click', '.js-cart-close', function () {
   $('.mini-cart').removeClass('is-open');
-  contentOverlay();
+  $('body').removeClass('overlay cart-is-open');
+  cartOpen = false;
+  return false;
+});
+
+//сортировка в каталоге
+$(document).on('click', '.js-catalog-sort-open', function () {
+  if(filterOpen == true || cartOpen == true) { //закрываем корзину и фильтр
+    $('body').removeClass('overlay cart-is-open filter-is-open');
+    $('.js-filter-toggler').removeClass('is-active');
+    $('.filter-block').removeClass('is-open');
+    $('.mini-cart').removeClass('is-open');
+    filterOpen = false;
+    cartOpen = false;
+  }
+  if(sortOpen == false) {
+    $('body').addClass('overlay');
+    $('.catalog-sort').addClass('is-open');
+    sortOpen = true;
+  } else {
+    $('body').removeClass('overlay');
+    $('.catalog-sort').removeClass('is-open');
+    sortOpen = false;
+  }
+  return false;
+});
+
+$(document).on('click', '.js-catalog-sort', function () {
+  $('.catalog-sort__var').removeClass('is-active');
+  $(this).addClass('is-active');
+  $('.catalog-sort__value').text($(this).text());
+  return false;
+});
+
+//открытие/закрытие фильтра
+$(document).on('click', '.js-filter-toggler', function () {
+  if(cartOpen == true || sortOpen == true) { //закрываем корзину и сортировку
+    $('.mini-cart').removeClass('is-open');
+    $('.catalog-sort').removeClass('is-open');
+    $('body').removeClass('overlay cart-is-open');
+    cartOpen = false;
+    sortOpen = false;
+  }
+  if(filterOpen == false) {
+    $('body').addClass('overlay filter-is-open');
+    $('.js-filter-toggler').addClass('is-active');
+    $('.filter-block').addClass('is-open');
+    if($('body').width() > 1199) {
+      var f = $(".catalog-topbar");
+      var fOffsetTop = f.offset().top;
+      $('.filter').height($(window).height() - fOffsetTop - 50 - 30);
+    }
+    filterOpen = true;
+  } else {
+    $('body').removeClass('overlay filter-is-open');
+    $('.js-filter-toggler').removeClass('is-active');
+    $('.filter-block').removeClass('is-open');
+    filterOpen = false;
+  }
+  return false;
+});
+
+//открытие/закрытие раздела фильтра
+$(document).on('click', '.js-filter-section-toggler', function () {
+  $(this).toggleClass('is-active');
+  $(this).parent().next('.filter__section-dropdown').slideToggle();
   return false;
 });
 
@@ -129,20 +214,6 @@ $(document).on('click', '.js-footer-dropdown-toggler', function () {
     $(this).next('.footer__section-dropdown').slideToggle();
     return false;
   }
-});
-
-//сортировка в каталоге
-$(document).on('click', '.js-catalog-sort-open', function () {
-  contentOverlay ();
-  $('.catalog-sort').toggleClass('is-open');
-  return false;
-});
-
-$(document).on('click', '.js-catalog-sort', function () {
-  $('.catalog-sort__var').removeClass('is-active');
-  $(this).addClass('is-active');
-  $('.catalog-sort__value').text($(this).text());
-  return false;
 });
 
 //попап быстрого просмотра
@@ -168,27 +239,5 @@ $(document).on('click', '.js-fast-look', function () {
 //закрытие попапа
 $(document).on('click', '.js-popup-close', function () {
   $.fancybox.close();
-  return false;
-});
-
-//открытие/закрытие фильтра
-$(document).on('click', '.js-filter-toggler', function () {
-  contentOverlay ();
-  $(this).toggleClass('is-active');
-  $('body').toggleClass('filter-is-open');
-  $('.filter-block').toggleClass('is-open');
-  if($('body').width() > 1199) {
-    var f = $(".catalog-topbar");
-    var fOffsetTop = f.offset().top;
-    $('.filter').height($(window).height() - fOffsetTop - 50 - 30);
-    console.log($(window).height(), fOffsetTop);
-  }
-  return false;
-});
-
-//открытие/закрытие раздела фильтра
-$(document).on('click', '.js-filter-section-toggler', function () {
-  $(this).toggleClass('is-active');
-  $(this).parent().next('.filter__section-dropdown').slideToggle();
   return false;
 });
