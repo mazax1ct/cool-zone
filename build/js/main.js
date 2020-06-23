@@ -143,6 +143,15 @@ $(document).on('click', '.js-cart-close', function () {
   return false;
 });
 
+//закрытие корзины
+$(document).on('mouseover', '.page-content, .main-menu', function () {
+  if(cartOpen == true) {
+    $('.mini-cart').removeClass('is-open');
+    $('body').removeClass('overlay cart-is-open');
+    cartOpen = false;
+  }
+});
+
 //сортировка в каталоге
 $(document).on('click', '.js-catalog-sort-open', function () {
   if(filterOpen == true || cartOpen == true) { //закрываем корзину и фильтр
