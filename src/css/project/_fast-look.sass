@@ -257,6 +257,9 @@
         font-size: 18px
         line-height: 22px
 
+      &:hover
+        color: $grey-color
+
   &__size-title
     font-weight: 15px
     font-weight: 500
@@ -280,6 +283,9 @@
     margin-bottom: 8px
     width: 40px
 
+    &:hover
+      color: $grey-color
+
     input[type="radio"]
       position: absolute
       height: 1px
@@ -292,6 +298,7 @@
         cursor: default
 
       &:checked + .fast-look__size-text
+        color: $text-color
         font-weight: 600
 
   &__size-text
@@ -299,6 +306,7 @@
     font-weight: 400
     display: block
     text-align: center
+    transition: color 0.3s
     width: 40px
 
   &__buttons
@@ -320,14 +328,17 @@
     padding: 0
     width: 60px
 
+    &:hover,
     &.is-active
       .fast-look__favorite-icon
-        fill: $text-color
+        fill: $grey-color
+        stroke: $grey-color
 
   &__favorite-icon
-    fill: none
+    fill: transparent
     height: 23px
     stroke: $text-color
+    transition: fill 0.3s, stroke 0.3s
     width: 26px
 
   &__to-detail
@@ -343,9 +354,6 @@
 
     @media(min-width: 2500px)
       font-size: 20px
-
-    &:hover
-      text-decoration: underline
 
   .fancybox-close-small
     display: none

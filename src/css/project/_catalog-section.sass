@@ -141,7 +141,11 @@
   line-height: 18px
   margin-left: 30px
   padding: 8px 0
+  transition: color 0.3s
   text-decoration: underline
+
+  &:hover
+    color: $grey-color
 
   @media(min-width: 1200px)
     display: block
@@ -253,7 +257,11 @@
     font-size: 13px
     font-weight: 400
     padding: 0
+    transition: color 0.3s
     text-decoration: underline
+
+    &:hover
+      color: $grey-color
 
     @media(min-width: 1200px)
       font-size: 15px
@@ -272,6 +280,10 @@
     line-height: 20px
     margin-right: 18px
     margin-bottom: 5px
+    transition: color 0.3s
+
+    &:hover
+      color: $grey-color
 
     input[type="checkbox"]
       position: absolute
@@ -334,6 +346,10 @@
     cursor: pointer
     font-weight: 400
     position: relative
+    transition: color 0.3s
+
+    &:hover
+      color: $grey-color
 
     @media(min-width: 1200px)
       font-size: 16px
@@ -371,6 +387,7 @@
     text-decoration: none
 
     &.is-active
+      color: $text-color
       font-weight: 500
 
   .filter-menu
@@ -429,15 +446,16 @@
     color: $grey-color
     cursor: pointer
     padding: 3px 15px 9px
-    transition: background-color 0.3s
+    transition: color 0.3s
 
     @media(min-width: 768px)
       padding-left: 30px
       padding-right: 30px
 
-    &:hover
-      background-color: rgba($grey-color, 0.1)
+    @media(min-width: 1200px)
+      font-size: 16px
 
+    &:hover,
     &.is-active
       color: $text-color
 
@@ -516,13 +534,13 @@
   padding-bottom: 86.42857%
   text-indent: 101%
   transform: scale(1)
-  transition: transform 0.3s
+  transition: transform 3s
   white-space: nowrap
   width: 100%
   will-change: transform
 
   &:hover
-    transform: scale(1.02)
+    transform: scale(1.03)
 
   @media(min-width: 768px)
     height: 100%
@@ -534,9 +552,10 @@
       opacity: 1
 
     .card__fav,
-    .card__add-cart
+    .card__add-cart-block
       @media(min-width: 1200px)
         opacity: 1
+        transition: 250ms ease-out opacity 250ms
 
   &__top
     margin-bottom: 6px
@@ -562,7 +581,7 @@
       opacity: 0
       position: absolute
       top: 0
-      transition: opacity 0.3s
+      transition: opacity 1s
       width: 100%
       z-index: 1
 
@@ -608,6 +627,11 @@
     top: 0
     z-index: 2
 
+    &:hover
+      .card__fav-icon
+        fill: $grey-color
+        stroke: $grey-color
+
     @media(min-width: 1200px)
       display: block
       opacity: 0
@@ -617,46 +641,55 @@
       opacity: 1
 
       .card__fav-icon
-        fill: $text-color
+        fill: $grey-color
+        stroke: $grey-color
 
   &__fav-icon
-    fill: none
+    fill: transparent
     height: 17px
     stroke: $text-color
+    transition: fill 0.3s, stroke 0.3s
     width: 19px
 
     @media(min-width: 768px)
       height: 21px
       width: 23px
 
-  &__add-cart
-    background-color: rgba(#fff, 0.8)
-    border: none
-    border-radius: 2px
+  &__add-cart-block
     bottom: 12px
-    cursor: pointer
     display: none
-    font-size: 14px
-    font-weight: 500
-    line-height: 22px
-    left: 13px
+    left: 0
     position: absolute
-    padding: 8px
+    padding-left: 13px
+    padding-right: 13px
     top: auto
-    text-transform: uppercase
-    text-align: center
-    text-decoration: none
-    width: calc(100% - 26px)
+    width: 100%
     z-index: 2
-
-    &:hover
-      background-color: #fff
-      box-shadow: 0 0 4px 0 rgba(#000, 0.05)
 
     @media(min-width: 1200px)
       display: block
       opacity: 0
-      transition: opacity 0.3s, background-color 0.3s, box-shadow 0.3s
+      transition: opacity 100ms ease-in
+
+  &__add-cart
+    background-color: rgba(#fff, 0.8)
+    border: none
+    border-radius: 2px
+    cursor: pointer
+    display: block
+    font-size: 14px
+    font-weight: 500
+    line-height: 22px
+    padding: 8px
+    text-transform: uppercase
+    text-align: center
+    text-decoration: none
+    transition: background-color 0.3s, box-shadow 0.3s
+    width: 100%
+
+    &:hover
+      background-color: #fff
+      box-shadow: 0 0 4px 0 rgba(#000, 0.05)
 
   &__colors
     display: flex
@@ -706,9 +739,23 @@
     font-weight: 600
     line-height: 18px
 
+    @media(min-width: 1200px)
+      font-size: 16px
+      line-height: 20px
+
+    @media(min-width: 1900px)
+      font-size: 18px
+
     &--old
       font-size: 12px
       font-weight: 400
       line-height: 14px
       margin-left: 10px
       text-decoration: line-through
+
+      @media(min-width: 1200px)
+        font-size: 14px
+        line-height: 20px
+
+      @media(min-width: 1900px)
+        font-size: 16px

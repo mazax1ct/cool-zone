@@ -7,6 +7,11 @@
   position: relative
   padding-left: 27px
 
+  &:hover
+    .checkbox-icon,
+    .radio-icon
+      border-color: $button-color
+
   &:not(:last-child)
     margin-bottom: 12px
 
@@ -33,6 +38,7 @@
   position: absolute
   top: 0.71428em
   transform: translateY(-50%)
+  transition: background-color 0.3s, border-color 0.3s
   text-align: center
   width: 14px
 
@@ -43,14 +49,15 @@
   border-radius: 50%
 
 input[type="checkbox"]:checked + .checkbox-icon
-  background-image: url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 12 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='none' d='M1 5L4.33333 8.5L11 1.5' stroke='%23282828' stroke-width='2'/%3E%3C/svg%3E%0A")
-  border-color: $text-color
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 12 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='none' d='M1 5L4.33333 8.5L11 1.5' stroke='%23ffffff' stroke-width='2'/%3E%3C/svg%3E%0A")
+  background-color: $button-color
+  border-color: $button-color
 
 input[type="radio"]:checked + .radio-icon
-  border-color: $text-color
+  border-color: $button-color
 
 input[type="radio"]:checked + .radio-icon:before
-  background-color: $text-color
+  background-color: $button-color
   border-radius: 50%
   content: ''
   height: 6px
@@ -74,6 +81,12 @@ input[type="radio"]:disabled ~ .radio-icon,
 input[type="radio"].disabled ~ .radio-icon
   cursor: default
   opacity: 0.5
+
+input[type="checkbox"]:disabled ~ .checkbox-icon,
+input[type="checkbox"].disabled ~ .checkbox-icon,
+input[type="radio"]:disabled ~ .radio-icon,
+input[type="radio"].disabled ~ .radio-icon
+  border-color: rgba($grey-color, 0.3)
 
 input[type="checkbox"]:focus ~ .checkbox-text,
 input[type="radio"]:focus ~ .radio-text,

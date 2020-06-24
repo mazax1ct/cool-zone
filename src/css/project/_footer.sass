@@ -3,16 +3,6 @@
   flex-shrink: 0
   position: relative
 
-  &::after
-    content: ''
-    display: none
-    height: 100%
-    left: 0
-    position: absolute
-    top: -1px
-    width: 100%
-    z-index: 2
-
   &__top
     color: $grey-color
     font-weight: 400
@@ -116,10 +106,6 @@
 
     a
       text-decoration: none
-
-      &:hover,
-      &:focus
-        text-decoration: underline
 
   &__section-title
     color: $text-color
@@ -302,7 +288,8 @@
 
     &:hover,
     &:focus
-      text-decoration: underline
+      color: $text-color
+      text-decoration: none
 
 .social-links
   align-items: center

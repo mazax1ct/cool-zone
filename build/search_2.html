@@ -335,7 +335,7 @@
               <use xlink:href="#favorite" />
             </svg>
           </a>
-          <a class="js-cart-open header__link cart-link" href="cart.html" title="Корзина">
+          <a class="js-cart-open header__link cart-link" href="#" title="Корзина">
             <svg class="header__link-icon header__link-icon--cart" aria-hidden="true">
               <use xlink:href="#cart" />
             </svg>
@@ -497,10 +497,10 @@
                   <form class="js-custom-scroll filter__inner" action="">
                     <div class="filter__section">
                       <div class="filter__title-block">
-                        <p class="js-filter-section-toggler filter__title">Категории</p>
+                        <p class="js-filter-section-toggler filter__title is-active">Категории</p>
                         <button class="filter__reset" type="button">Сбросить</button>
                       </div>
-                      <div class="filter__section-dropdown">
+                      <div class="filter__section-dropdown" style="display: block">
                         <ol class="filter-menu">
                           <li class="filter-menu__item"><a class="filter-menu__link" href="#">Комбинезоны</a></li>
                           <li class="filter-menu__item"><a class="filter-menu__link is-active" href="#">Куртки</a></li>
@@ -533,37 +533,37 @@
                     </div>
                     <div class="filter__section">
                       <div class="filter__title-block">
-                        <p class="js-filter-section-toggler filter__title">Размер</p>
+                        <p class="js-filter-section-toggler filter__title is-active">Размер</p>
                         <button class="filter__reset" type="button">Сбросить</button>
                       </div>
-                      <div class="filter__section-dropdown">
+                      <div class="filter__section-dropdown" style="display: block">
                         <div class="filter__sizes">
-                          <label class="filter__size" for="size_xxs">
-                            <input id="size_xxs" type="checkbox" name="size" value="xxs">
+                          <label class="filter__size" for="size_xxs_">
+                            <input id="size_xxs_" type="checkbox" name="size_" value="xxs">
                             <span class="filter__size-text">XXS</span>
                           </label>
-                          <label class="filter__size" for="size_xs">
-                            <input id="size_xs" type="checkbox" name="size" value="xs">
+                          <label class="filter__size" for="size_xs_">
+                            <input id="size_xs_" type="checkbox" name="size_" value="xs">
                             <span class="filter__size-text">XS</span>
                           </label>
-                          <label class="filter__size" for="size_s">
-                            <input id="size_s" type="checkbox" name="size" value="s">
+                          <label class="filter__size" for="size_s_">
+                            <input id="size_s_" type="checkbox" name="size_" value="s">
                             <span class="filter__size-text">S</span>
                           </label>
-                          <label class="filter__size" for="size_m">
-                            <input id="size_m" type="checkbox" name="size" value="m">
+                          <label class="filter__size" for="size_m_">
+                            <input id="size_m_" type="checkbox" name="size_" value="m">
                             <span class="filter__size-text">M</span>
                           </label>
-                          <label class="filter__size" for="size_l">
-                            <input id="size_l" type="checkbox" name="size" value="l">
+                          <label class="filter__size" for="size_l_">
+                            <input id="size_l_" type="checkbox" name="size_" value="l">
                             <span class="filter__size-text">L</span>
                           </label>
-                          <label class="filter__size" for="size_xl">
-                            <input id="size_xl" type="checkbox" name="size" value="xl">
+                          <label class="filter__size" for="size_xl_">
+                            <input id="size_xl_" type="checkbox" name="size_" value="xl">
                             <span class="filter__size-text">XL</span>
                           </label>
-                          <label class="filter__size" for="size_xxl">
-                            <input id="size_xxl" type="checkbox" name="size" value="xxl">
+                          <label class="filter__size" for="size_xxl_">
+                            <input id="size_xxl_" type="checkbox" name="size_" value="xxl">
                             <span class="filter__size-text">XXL</span>
                           </label>
                         </div>
@@ -571,10 +571,10 @@
                     </div>
                     <div class="filter__section">
                       <div class="filter__title-block">
-                        <p class="js-filter-section-toggler filter__title">Цвет</p>
+                        <p class="js-filter-section-toggler filter__title is-active">Цвет</p>
                         <button class="filter__reset" type="button">Сбросить</button>
                       </div>
-                      <div class="filter__section-dropdown">
+                      <div class="filter__section-dropdown" style="display: block">
                         <div class="filter__colors">
                           <label class="filter__color" for="color_1">
                             <input id="color_1" type="checkbox" name="color" value="1" checked>
@@ -629,10 +629,10 @@
                     </div>
                     <div class="filter__section">
                       <div class="filter__title-block">
-                        <p class="js-filter-section-toggler filter__title">Утеплитель</p>
+                        <p class="js-filter-section-toggler filter__title is-active">Утеплитель</p>
                         <button class="filter__reset" type="button">Сбросить</button>
                       </div>
-                      <div class="filter__section-dropdown">
+                      <div class="filter__section-dropdown" style="display: block">
                         <ol class="unstyled-list">
                           <li>
                             <label class="filter__prop" for="prop_1">
@@ -676,10 +676,10 @@
                     </div>
                     <div class="filter__section">
                       <div class="filter__title-block">
-                        <p class="js-filter-section-toggler filter__title">Цена</p>
+                        <p class="js-filter-section-toggler filter__title is-active">Цена</p>
                         <button class="filter__reset" type="button">Сбросить</button>
                       </div>
-                      <div class="filter__section-dropdown">
+                      <div class="filter__section-dropdown" style="display: block">
                         <input class="js-filter-range-slider" type="text" name="filter_price" value="" />
                       </div>
                     </div>
@@ -717,7 +717,7 @@
                     <use xlink:href="#favorite_2" />
                   </svg>
                 </button>
-                <button class="js-fast-look card__add-cart" type="button" data-src="#fast-look">добавить в корзину</button>
+                <div class="card__add-cart-block"><button class="js-fast-look card__add-cart" type="button" data-src="#fast-look">добавить в корзину</button></div>
               </div>
               <p class="card__colors">
                 <img src="images/content/catalog/colors/img_1.jpg" alt="Серый">
@@ -745,7 +745,7 @@
                     <use xlink:href="#favorite_2" />
                   </svg>
                 </button>
-                <button class="js-fast-look card__add-cart" type="button" data-src="#fast-look">добавить в корзину</button>
+                <div class="card__add-cart-block"><button class="js-fast-look card__add-cart" type="button" data-src="#fast-look">добавить в корзину</button></div>
               </div>
               <p class="card__colors">
                 <img src="images/content/catalog/colors/img_1.jpg" alt="Серый">
@@ -778,7 +778,7 @@
                     <use xlink:href="#favorite_2" />
                   </svg>
                 </button>
-                <button class="js-fast-look card__add-cart" type="button" data-src="#fast-look">добавить в корзину</button>
+                <div class="card__add-cart-block"><button class="js-fast-look card__add-cart" type="button" data-src="#fast-look">добавить в корзину</button></div>
               </div>
               <p class="card__colors">
                 <img src="images/content/catalog/colors/img_1.jpg" alt="Серый">
@@ -809,7 +809,7 @@
                     <use xlink:href="#favorite_2" />
                   </svg>
                 </button>
-                <button class="js-fast-look card__add-cart" type="button" data-src="#fast-look">добавить в корзину</button>
+                <div class="card__add-cart-block"><button class="js-fast-look card__add-cart" type="button" data-src="#fast-look">добавить в корзину</button></div>
               </div>
               <p class="card__colors">
                 <img src="images/content/catalog/colors/img_1.jpg" alt="Серый">
@@ -837,7 +837,7 @@
                     <use xlink:href="#favorite_2" />
                   </svg>
                 </button>
-                <button class="js-fast-look card__add-cart" type="button" data-src="#fast-look">добавить в корзину</button>
+                <div class="card__add-cart-block"><button class="js-fast-look card__add-cart" type="button" data-src="#fast-look">добавить в корзину</button></div>
               </div>
               <p class="card__colors">
                 <img src="images/content/catalog/colors/img_1.jpg" alt="Серый">
@@ -867,7 +867,7 @@
                     <use xlink:href="#favorite_2" />
                   </svg>
                 </button>
-                <button class="js-fast-look card__add-cart" type="button" data-src="#fast-look">добавить в корзину</button>
+                <div class="card__add-cart-block"><button class="js-fast-look card__add-cart" type="button" data-src="#fast-look">добавить в корзину</button></div>
               </div>
               <p class="card__colors">
                 <img src="images/content/catalog/colors/img_1.jpg" alt="Серый">
@@ -895,7 +895,7 @@
                     <use xlink:href="#favorite_2" />
                   </svg>
                 </button>
-                <button class="js-fast-look card__add-cart" type="button" data-src="#fast-look">добавить в корзину</button>
+                <div class="card__add-cart-block"><button class="js-fast-look card__add-cart" type="button" data-src="#fast-look">добавить в корзину</button></div>
               </div>
               <p class="card__colors">
                 <img src="images/content/catalog/colors/img_1.jpg" alt="Серый">
@@ -928,7 +928,7 @@
                     <use xlink:href="#favorite_2" />
                   </svg>
                 </button>
-                <button class="js-fast-look card__add-cart" type="button" data-src="#fast-look">добавить в корзину</button>
+                <div class="card__add-cart-block"><button class="js-fast-look card__add-cart" type="button" data-src="#fast-look">добавить в корзину</button></div>
               </div>
               <p class="card__colors">
                 <img src="images/content/catalog/colors/img_1.jpg" alt="Серый">
@@ -956,7 +956,7 @@
                     <use xlink:href="#favorite_2" />
                   </svg>
                 </button>
-                <button class="js-fast-look card__add-cart" type="button" data-src="#fast-look">добавить в корзину</button>
+                <div class="card__add-cart-block"><button class="js-fast-look card__add-cart" type="button" data-src="#fast-look">добавить в корзину</button></div>
               </div>
               <p class="card__colors">
                 <img src="images/content/catalog/colors/img_1.jpg" alt="Серый">
@@ -1089,16 +1089,16 @@
         <div class="fast-look__bottom">
           <p class="fast-look__prop"><span class="fast-look__prop-title">ЦВЕТ:</span> <span class="fast-look__prop-color">Фиолетовый</span></p>
           <div class="fast-look__colors">
-            <label class="fast-look__color" for="color_1">
-              <input id="color_1" type="radio" name="color" value="1" checked>
+            <label class="fast-look__color" for="color_1_">
+              <input id="color_1_" type="radio" name="color_" value="1" checked>
               <span class="fast-look__color-image"><img src="images/content/catalog/colors/img_3.jpg" alt="Фиолетовый"></span>
             </label>
-            <label class="fast-look__color" for="color_2">
-              <input id="color_2" type="radio" name="color" value="2">
+            <label class="fast-look__color" for="color_2_">
+              <input id="color_2_" type="radio" name="color_" value="2">
               <span class="fast-look__color-image"><img src="images/content/catalog/colors/img_4.jpg" alt="Оранжевый"></span>
             </label>
-            <label class="fast-look__color" for="color_3">
-              <input id="color_3" type="radio" name="color" value="3">
+            <label class="fast-look__color" for="color_3_">
+              <input id="color_3_" type="radio" name="color_" value="3">
               <span class="fast-look__color-image"><img src="images/content/catalog/colors/img_5.jpg" alt="Черно-зелёный"></span>
             </label>
           </div>
