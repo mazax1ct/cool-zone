@@ -3,12 +3,19 @@
   border-top: 1px solid #E4E7EB
   display: none
   left: auto
+  opacity: 0
   position: absolute
   padding: 25px 40px 40px 35px
   right: 0
+  transition: opacity 0.3s, transform 0.3s
+  transform: translateY(-15px)
   top: 100%
   width: 460px
   z-index: 1
+
+  &.fadeIn
+    transform: translateY(0)
+    opacity: 1
 
   &.is-open
     @media(min-width: 1200px)

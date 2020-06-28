@@ -32,11 +32,8 @@
     display: flex
     justify-content: space-between
 
-.filter-block
-  @media(min-width: 1200px)
-    position: relative
-
-  &.is-open
+.filter-is-open
+  .filter-block
     @media(max-width: 1199px)
       background-color: rgba(#282828, 0.2)
       display: block
@@ -50,33 +47,45 @@
       width: 100%
       z-index: 11
 
+  .filter-block__buttons
+    @media(max-width: 1199px)
+      background-color: #fff
+      height: 60px
+      left: -100%
+      padding-left: 20px
+      padding-right: 20px
+      position: relative
+
+    &::after
+      @media(min-width: 1200px)
+        border-bottom: 1px solid #E4E7EB
+        content: ''
+        height: 1px
+        left: 0
+        position: absolute
+        top: 100%
+        width: 320px
+        z-index: 1
+
+  .filter-reset
+    display: block
+
+.filter-block
+  @media(min-width: 1200px)
+    position: relative
+
+  &.is-open
     .filter-block__buttons
       @media(max-width: 1199px)
-        background-color: #fff
-        height: 60px
-        padding-left: 20px
-        padding-right: 20px
-
-      &::after
-        @media(min-width: 1200px)
-          border-bottom: 1px solid #E4E7EB
-          content: ''
-          height: 1px
-          left: 0
-          position: absolute
-          top: 100%
-          width: 320px
-          z-index: 1
-
-    .filter-reset
-      display: block
-
-    .filter
-      display: block
+        left: 0
 
   &__buttons
     align-items: center
     display: flex
+
+    @media(max-width: 1199px)
+      position: relative
+      transition: left 0.3s
 
 .filter-toggler
   align-items: center
@@ -160,20 +169,38 @@
   padding-left: 20px
   padding-right: 20px
 
+  @media(max-width: 1199px)
+    left: -100%
+    position: relative
+    transition: left 0.3s
+
   @media(min-width: 1200px)
     height: calc(100vh - 110px)
     left: -50px
+    opacity: 0
     position: absolute
     padding-left: 50px
     padding-right: 110px
     padding-bottom: 30px
     top: 100%
+    transition: opacity 0.3s, transform 0.3s
+    transform: translateY(-15px)
     width: 480px
 
   @media(min-width: 1900px)
     left: -100px
     padding-left: 100px
     width: 530px
+
+  &.fadeIn
+    @media(max-width: 1199px)
+      display: block
+      height: auto !important
+      left: 0
+
+    @media(min-width: 1200px)
+      transform: translateY(0)
+      opacity: 1
 
   &__inner
     @media(min-width: 1200px)
@@ -367,6 +394,9 @@
   .checkbox-label
     @media(min-width: 1200px)
       font-size: 16px
+
+  .simplebar-horizontal
+    display: none
 
 .filter-menu
   list-style: none
