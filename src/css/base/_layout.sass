@@ -24,16 +24,16 @@ body
     .page-content,
     .footer
       &::after
-        @media(min-width: 1200px)
-          display: block
+        //@media(min-width: 1200px)
+        display: block
 
   &.overlay.overlay-fadeIn
     .page-content,
     .page-top,
     .footer
       &::after
-        @media(min-width: 1200px)
-          opacity: 1
+        //@media(min-width: 1200px)
+        opacity: 1
 
   &.filter-is-open
     @media(max-width: 1199px)
@@ -45,6 +45,13 @@ body
 
     .filter
       display: block
+
+    .page-content,
+    .page-top,
+    .footer
+      &::after
+        @media(max-width: 1199px)
+          display: none
 
   &.cart-is-open
     .mini-cart
@@ -60,18 +67,18 @@ body
 .page-top,
 .footer
   &::after
-    @media(min-width: 1200px)
-      background-color: rgba($text-color, 0.2)
-      content: ''
-      display: none
-      height: 100%
-      left: 0
-      opacity: 0
-      position: absolute
-      transition: opacity 0.3s
-      top: 0
-      width: 100%
-      z-index: 2
+    //@media(min-width: 1200px)
+    background-color: rgba($text-color, 0.2)
+    content: ''
+    display: none
+    height: 100%
+    left: 0
+    opacity: 0
+    position: absolute
+    transition: opacity 0.3s
+    top: 0
+    width: 100%
+    z-index: 2
 
 .page-top
   &::after
