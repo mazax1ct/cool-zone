@@ -16,6 +16,9 @@ body
   min-width: 320px
   overflow-wrap: break-word
 
+  &.grey-bg
+    background-color: #F8F8F9
+
   &.menu-is-open
     @media(max-width: 1199px)
       overflow: hidden
@@ -24,7 +27,6 @@ body
     .page-content,
     .footer
       &::after
-        //@media(min-width: 1200px)
         display: block
 
   &.overlay.overlay-fadeIn
@@ -32,7 +34,6 @@ body
     .page-top,
     .footer
       &::after
-        //@media(min-width: 1200px)
         opacity: 1
 
   &.filter-is-open
@@ -67,7 +68,6 @@ body
 .page-top,
 .footer
   &::after
-    //@media(min-width: 1200px)
     background-color: rgba($text-color, 0.2)
     content: ''
     display: none
@@ -133,3 +133,27 @@ body
   @media(min-width: 2500px)
     margin-top: -30px
     padding-top: 30px
+
+.two-cols
+  @media(min-width: 768px)
+    display: flex
+    flex-wrap: wrap
+    margin-left: -20px
+    margin-right: -20px
+
+  &__col
+    margin-bottom: 20px
+
+    @media(min-width: 768px)
+      margin-bottom: 0
+      padding-left: 20px
+      padding-right: 20px
+      width: 50%
+
+    &--type_2
+      @media(min-width: 768px)
+        width: 60%
+
+    &--type_3
+      @media(min-width: 768px)
+        width: 40%

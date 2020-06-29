@@ -6,6 +6,7 @@ var resize_scroll = function(e) {
   } else {
     h.removeClass("scrolled");
   }
+
   if($(".catalog-topbar").length) {
     var f = $(".catalog-topbar");
     var fOffsetTop = f.offset().top;
@@ -15,16 +16,22 @@ var resize_scroll = function(e) {
       $(".catalog-topbar__float").removeClass('scrolled');
     }
   }
+
+  /*if($(".detail__buttons").length) {
+    var f = $(".detail__buttons");
+    var fOffsetTop = f.offset().top + f.innerHeight() - $(window).height();
+    if($(window).scrollTop() > fOffsetTop) {
+      $(".detail__buttons-inner").addClass('scrolled');
+    } else {
+      $(".detail__buttons-inner").removeClass('scrolled');
+    }
+    console.log(fOffsetTop);
+  }*/
 };
 
 //проверка на тач-устройства
 function isTouchDevice () {
     return true == ("ontouchstart" in window || window.DocumentTouch && document instanceof DocumentTouch);
-}
-
-//оверлей контентной области
-function contentOverlay () {
-  $('body').toggleClass('overlay');
 }
 
 //переменная для слайдера быстрого просмотра
@@ -120,27 +127,29 @@ $(document).on('click', '.js-search-option', function () {
 });
 
 $(document).on('mouseover', '.js-cart-open', function () {
-  if(filterOpen == true || sortOpen == true) { //закрываем сортировку и фильтр
-    $('.catalog-sort').removeClass('is-open');
-    $('.js-filter-toggler').removeClass('is-active');
-    $('.filter').removeClass('fadeIn');
-    setTimeout(function() {
-      $('body').removeClass('filter-is-open');
-      filterOpen = false;
-    },300);
-    sortOpen = false;
-  }
-  if(cartOpen == false) {
-    $('body').addClass('overlay cart-is-open');
-    setTimeout(function() {
-      $('body').addClass('overlay-fadeIn');
+  if($('body').width() > 1199) {
+    if(filterOpen == true || sortOpen == true) {
+      $('.catalog-sort').removeClass('is-open');
+      $('.js-filter-toggler').removeClass('is-active');
+      $('.filter').removeClass('fadeIn');
       setTimeout(function() {
-        $('.mini-cart').addClass('fadeIn');
-        cartOpen = true;
+        $('body').removeClass('filter-is-open');
+        filterOpen = false;
       },300);
-    },100);
+      sortOpen = false;
+    }
+    if(cartOpen == false) {
+      $('body').addClass('overlay cart-is-open');
+      setTimeout(function() {
+        $('body').addClass('overlay-fadeIn');
+        setTimeout(function() {
+          $('.mini-cart').addClass('fadeIn');
+          cartOpen = true;
+        },300);
+      },100);
+    }
+    return false;
   }
-  return false;
 });
 
 $(document).on('click', '.js-cart-close', function () {

@@ -1,0 +1,575 @@
+.detail
+  @media(min-width: 1200px)
+    display: flex
+    margin-left: -20px
+    margin-right: -20px
+    margin-top: 23px
+
+  @media(min-width: 1400px)
+    margin-left: -50px
+    margin-right: -50px
+
+  @media(min-width: 1900px)
+    margin-left: -100px
+    margin-right: -100px
+
+  &__images
+    margin-left: -20px
+    margin-right: -20px
+    margin-bottom: 30px
+    position: relative
+
+    @media(min-width: 1200px)
+      margin-left: 0
+      margin-right: 0
+      margin-bottom: 0
+      min-width: 60.55555%
+      width: 60.55555%
+
+    @media(min-width: 2500px)
+      min-width: 57.34375%
+      width: 57.34375%
+
+    .swiper-button-prev,
+    .swiper-button-next
+      background-color: transparent
+      border: none
+      cursor: pointer
+      height: 34px
+      margin-top: 0
+      padding: 0
+      position: static
+      width: 34px
+
+      @media(min-width: 2500px)
+        height: 44px
+        width: 44px
+
+      &::after
+        position: absolute
+        height: 1px
+        overflow: hidden
+        clip: rect(0 0 0 0)
+        width: 1px
+
+      .icon
+        fill: $button-color
+        height: 17px
+        width: 17px
+
+        @media(min-width: 2500px)
+          height: 22px
+          width: 22px
+
+    .swiper-pagination-progressbar
+      background-color: rgba($button-color, 0.25)
+      height: 2px
+      overflow: hidden
+      position: relative
+      width: 110px
+
+      @media(min-width: 2500px)
+        width: 150px
+
+    .swiper-pagination-progressbar-fill
+      background-color: $button-color
+
+  &__slider-nav-block
+    bottom: 0
+    display: flex
+    left: 0
+    position: absolute
+    top: auto
+    width: 100%
+    z-index: 1
+
+  &__video-button
+    align-items: center
+    background-color: $button-color
+    color: #fff
+    display: flex
+    font-size: 12px
+    font-weight: 500
+    height: 45px
+    line-height: 16px
+    letter-spacing: 1.2px
+    padding-left: 18px
+    padding-right: 18px
+    text-decoration: none
+
+    @media(min-width: 1200px)
+      flex-direction: column
+      font-size: 14px
+      height: 65px
+      letter-spacing: 1.5px
+      justify-content: center
+
+    @media(min-width: 2500px)
+      font-size: 18px
+      height: 82px
+      line-height: 20px
+
+    &:hover
+      color: rgba(#fff, 0.75)
+
+      .detail__video-button-icon
+        fill: rgba(#fff, 0.75)
+
+  &__video-button-icon
+    fill: #fff
+    height: 13px
+    margin-right: 5px
+    transition: fill 0.3s
+    width: 12px
+
+    @media(min-width: 1200px)
+      height: 17px
+      margin-right: 0
+      margin-bottom: 4px
+      width: 16px
+
+    @media(min-width: 2500px)
+      height: 20px
+      margin-bottom: 6px
+      width: 19px
+
+  &__slider-nav
+    align-items: center
+    background-color: rgba(#fff, 0.65)
+    display: flex
+    flex-grow: 1
+    justify-content: space-between
+    padding-left: 5px
+    padding-right: 5px
+
+    @media(min-width: 1200px)
+      height: 65px
+      left: 50%
+      position: absolute
+      padding-left: 20px
+      padding-right: 20px
+      transform: translateX(-50%)
+      width: 220px
+
+    @media(min-width: 2500px)
+      height: 82px
+      padding-left: 30px
+      padding-right: 30px
+      width: 300px
+
+  &__labels
+    align-items: flex-start
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+    left: 5px
+    margin-bottom: 0
+    position: absolute
+    top: 5px
+    z-index: 2
+
+    @media(min-width: 768px)
+      left: 12px
+      top: 12px
+
+  &__label
+    background-color: #fff
+    font-size: 12px
+    font-weight: 400
+    line-height: 14px
+    margin-right: 4px
+    margin-bottom: 4px
+    padding: 2px 4px
+
+    @media(min-width: 768px)
+      font-size: 18px
+      line-height: 20px
+      padding: 3px 5px
+
+  &__info
+    @media(min-width: 1200px)
+      display: flex
+      flex-direction: column
+      padding-left: 50px
+      padding-right: 50px
+      min-width: 39.44445%
+      width: 39.44445%
+
+    @media(min-width: 1400px)
+      padding-left: 5.90277%
+      padding-right: 3.47222%
+
+    @media(min-width: 1900px)
+      padding-top: 30px
+
+    @media(min-width: 2500px)
+      min-width: 42.65625%
+      padding-left: 8.51562%
+      padding-right: 11.64062%
+      width: 42.65625%
+
+  &__art
+    color: $grey-color
+    font-size: 12px
+    line-height: 18px
+    margin-bottom: 2px
+
+    @media(min-width: 1200px)
+      font-size: 14px
+      margin-bottom: 5px
+
+    @media(min-width: 2500px)
+      font-size: 16px
+      line-height: 20px
+
+  &__title
+    font-weight: 600
+    margin-bottom: 6px
+
+    @media(min-width: 1200px)
+      font-size: 24px
+      line-height: 1.25
+      margin-bottom: 15px
+
+    @media(min-width: 2500px)
+      font-size: 30px
+      line-height: 1.16666
+
+  &__price-block
+    margin-bottom: 25px
+
+    @media(min-width: 1200px)
+      margin-bottom: 40px
+
+  &__price
+    font-size: 20px
+    font-weight: 500
+    line-height: 28px
+
+    @media(min-width: 2500px)
+      font-size: 24px
+
+    &--old
+      font-size: 15px
+      font-weight: 400
+      line-height: 24px
+      margin-left: 18px
+      text-decoration: line-through
+
+      @media(min-width: 2500px)
+        font-size: 20px
+
+  &__colors-title
+    font-size: 15px
+    font-weight: 500
+    line-height: 18px
+    margin-bottom: 12px
+
+    @media(min-width: 2500px)
+      font-size: 18px
+      line-height: 24px
+
+    span
+      color: $grey-color
+      font-weight: 400
+
+  &__colors
+    display: flex
+    flex-wrap: wrap
+    margin-left: -4px
+    margin-right: -4px
+    margin-bottom: 12px
+
+    @media(min-width: 1200px)
+      margin-bottom: 25px
+
+    @media(min-width: 2500px)
+      margin-bottom: 32px
+
+  &__color
+    cursor: pointer
+    display: block
+    height: 28px
+    margin-right: 4px
+    margin-left: 4px
+    margin-bottom: 8px
+    position: relative
+    width: 28px
+
+    @media(min-width: 2500px)
+      height: 34px
+      width: 34px
+
+    input[type="radio"]
+      position: absolute
+      height: 1px
+      overflow: hidden
+      clip: rect(0 0 0 0)
+      width: 1px
+
+      &:checked + .detail__color-image
+        border-color: $text-color
+
+  &__color-image
+    border: 2px solid transparent
+    border-radius: 50%
+    display: block
+    height: 28px
+    padding: 2px
+    width: 28px
+
+    @media(min-width: 2500px)
+      height: 34px
+      width: 34px
+
+    img
+      border-radius: 50%
+
+  &__sizes-title
+    align-items: center
+    display: flex
+    font-size: 15px
+    font-weight: 500
+    justify-content: space-between
+    line-height: 18px
+    margin-bottom: 15px
+
+    @media(min-width: 2500px)
+      font-size: 18px
+      line-height: 24px
+      margin-bottom: 20px
+
+    a
+      font-size: 14px
+      font-weight: 500
+      line-height: 16px
+
+      @media(min-width: 2500px)
+        font-size: 18px
+        line-height: 22px
+
+  &__sizes
+    display: flex
+    flex-wrap: wrap
+    margin-bottom: 18px
+
+    @media(min-width: 1200px)
+      margin-bottom: 35px
+
+    @media(min-width: 2500px)
+      margin-bottom: 45px
+
+  &__size
+    display: block
+    font-size: 18px
+    line-height: 22px
+    margin-bottom: 5px
+    transition: color 0.3s
+
+    &:not(:last-child)
+      margin-right: 25px
+
+      @media(min-width: 1200px)
+        margin-right: 30px
+
+      @media(min-width: 2500px)
+        margin-right: 35px
+
+    &:hover
+      color: $grey-color
+
+    input[type="radio"]
+      position: absolute
+      height: 1px
+      overflow: hidden
+      clip: rect(0 0 0 0)
+      width: 1px
+
+      &:disabled + .detail__size-text
+        color: rgba($grey-color, 0.5)
+        cursor: default
+
+      &:checked + .detail__size-text
+        font-weight: 600
+
+  &__size-text
+    cursor: pointer
+    font-weight: 400
+    display: block
+    text-align: center
+
+  &__buttons
+    //height: 62px
+    //margin-bottom: 13px
+    margin-bottom: 25px
+
+    @media(min-width: 1200px)
+      //height: auto
+      margin-bottom: 35px
+
+    @media(min-width: 2500px)
+      margin-bottom: 45px
+
+  &__buttons-inner
+    align-items: center
+    display: flex
+    //padding-top: 8px
+    //padding-bottom: 8px
+
+    //@media(min-width: 1200px)
+      padding-top: 0
+      padding-bottom: 0
+
+    //&.scrolled
+      @media(max-width: 1199px)
+        background-color: rgba(#fff, 0.75)
+        bottom: 0
+        left: 0
+        position: fixed
+        padding-left: 20px
+        padding-right: 20px
+        right: 0
+        top: auto
+        z-index: 1
+
+  &__add-cart
+    flex-grow: 1
+    height: 46px
+    padding-top: 10px
+
+    @media(min-width: 1200px)
+      height: 54px
+
+  &__favorite
+    align-items: center
+    background-color: transparent
+    border: none
+    cursor: pointer
+    display: flex
+    height: 46px
+    justify-content: flex-end
+    padding: 0
+    width: 46px
+
+    @media(min-width: 1200px)
+      height: 54px
+      width: 54px
+
+    &:hover,
+    &.is-active
+      .detail__favorite-icon
+        fill: $grey-color
+        stroke: $grey-color
+
+  &__favorite-icon
+    fill: transparent
+    height: 23px
+    stroke: $text-color
+    transition: fill 0.3s, stroke 0.3s
+    width: 26px
+
+  &__features
+    color: rgba($text-color, 0.8)
+    font-size: 15px
+    font-weight: 400
+    line-height: 22px
+    margin-bottom: 20px
+
+    @media(min-width: 1200px)
+      border-top: 1px solid #E4E7EB
+      font-size: 16px
+      padding-top: 30px
+
+    @media(min-width: 2500px)
+      font-size: 18px
+      padding-top: 35px
+
+    li
+      background-image: url("data:image/svg+xml,%3Csvg width='15' height='11' viewBox='0 0 15 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 4.5L5.68 9L14 1' stroke='%23525252' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E%0A")
+      background-repeat: no-repeat
+      background-position: 0 50%
+      padding-left: 33px
+
+      &:not(:first-child)
+        margin-top: 10px
+
+      &:nth-child(2),
+      &:nth-child(3)
+        @media(max-width: 1199px)
+          display: none
+
+  &__tabs-nav
+    background-color: #fff
+    display: flex
+    font-size: 15px
+    justify-content: center
+    line-height: 18px
+    margin-left: auto
+    margin-right: auto
+    max-width: 575px
+    width: 100%
+
+    @media(min-width: 1200px)
+      margin-top: auto
+
+    @media(min-width: 1400px)
+      font-size: 18px
+      padding-left: 8px
+      padding-right: 8px
+
+    @media(min-width: 2500px)
+      font-size: 20px
+      padding-left: 30px
+      padding-right: 30px
+
+  &__tabs-nav-button
+    background-color: #fff
+    color: $grey-color
+    display: block
+    padding: 16px 9px
+    text-decoration: none
+    white-space: nowrap
+
+    @media(min-width: 1200px)
+      padding: 20px 25px
+
+    @media(min-width: 2500px)
+      padding: 32px 35px
+
+    &:hover,
+    &.is-active
+      color: $text-color
+
+    &.is-active
+      font-weight: 500
+
+.detail-tabs
+  margin-left: -20px
+  margin-right: -20px
+
+  @media(min-width: 1400px)
+    margin-left: -50px
+    margin-right: -50px
+
+  @media(min-width: 1900px)
+    margin-left: -100px
+    margin-right: -100px
+
+.detail-tab
+  background-color: #fff
+  display: none
+  padding-top: 30px
+  padding-left: 20px
+  padding-right: 20px
+  padding-bottom: 50px
+
+  @media(min-width: 1200px)
+    padding-left: 100px
+    padding-right: 100px
+
+  @media(min-width: 2500px)
+    padding-left: 300px
+    padding-right: 300px
+
+  &.is-active
+    display: block

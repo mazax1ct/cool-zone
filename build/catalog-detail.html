@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="css/style.css"/>
 </head>
 
-<body>
+<body class="grey-bg">
   <svg aria-hidden="true" style="width: 0px; height: 0px; overflow: hidden; position: absolute;" xmlns="http://www.w3.org/2000/svg">
     <symbol id="burger" viewBox="0 0 27 18">
       <g>
@@ -472,524 +472,174 @@
     </header>
 
     <div class="page-content">
-      <div class="page-top">
-        <div class="container">
-          <ol class="breadcrumbs">
-            <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="main.html">Главная</a></li>
-            <li class="breadcrumbs__item">Женское</li>
-          </ol>
-          <h1 class="catalog-title">Женское</h1>
-        </div>
-        <div class="catalog-topbar">
-          <div class="catalog-topbar__float compensate-for-scrollbar">
-            <div class="catalog-topbar__inner container">
-              <div class="filter-block">
-                <div class="filter-block__buttons">
-                  <button class="js-filter-toggler filter-toggler" type="button">
-                    <svg class="filter-toggler__icon filter-toggler__icon--open" aria-hidden="true">
-                      <use xlink:href="#filter" />
-                    </svg>
-                    <svg class="filter-toggler__icon filter-toggler__icon--close" aria-hidden="true">
-                      <use xlink:href="#close" />
-                    </svg>
-                    <span>Фильтры <span>(4)</span></span>
-                  </button>
-                  <button class="filter-reset" type="button">Сбросить все</button>
-                </div>
-                <div class="filter-block__inner">
-                  <div class="filter">
-                    <div class="filter__buttons">
-                      <button class="js-filter-toggler filter-toggler" type="button">
-                        <svg class="filter-toggler__icon filter-toggler__icon--open" aria-hidden="true">
-                          <use xlink:href="#filter" />
-                        </svg>
-                        <svg class="filter-toggler__icon filter-toggler__icon--close" aria-hidden="true">
-                          <use xlink:href="#close" />
-                        </svg>
-                        <span>Фильтры <span>(4)</span></span>
-                      </button>
-                      <button class="filter-reset" type="button">Сбросить все</button>
-                    </div>
-                    <form class="js-custom-scroll filter__inner" action="">
-                      <div class="filter__section">
-                        <div class="filter__title-block">
-                          <p class="js-filter-section-toggler filter__title is-active">Категории</p>
-                          <button class="filter__reset" type="button">Сбросить</button>
-                        </div>
-                        <div class="filter__section-dropdown" style="display: block">
-                          <ol class="filter-menu">
-                            <li class="filter-menu__item"><a class="filter-menu__link" href="#">Комбинезоны</a></li>
-                            <li class="filter-menu__item"><a class="filter-menu__link is-active" href="#">Куртки</a></li>
-                            <li class="filter-menu__item"><a class="filter-menu__link" href="#">Брюки</a></li>
-                            <li class="filter-menu__item"><a class="filter-menu__link" href="#">Термобелье</a></li>
-                            <li class="filter-menu__item"><a class="filter-menu__link" href="#">Пончо и лайкры</a></li>
-                            <li class="filter-menu__item">
-                              <a class="filter-menu__link" href="#">Аксессуары</a>
-                              <ol class="filter-menu">
-                                <li class="filter-menu__item"><a class="filter-menu__link" href="#">Балаклавы</a></li>
-                                <li class="filter-menu__item"><a class="filter-menu__link" href="#">Шапки</a></li>
-                                <li class="filter-menu__item"><a class="filter-menu__link" href="#">Термоноски</a></li>
-                                <li class="filter-menu__item"><a class="filter-menu__link" href="#">Ремни</a></li>
-                                <li class="filter-menu__item"><a class="filter-menu__link" href="#">Наклейки</a></li>
-                                <li class="filter-menu__item"><a class="filter-menu__link" href="#">Средства по уходу</a></li>
-                                <li class="filter-menu__item"><a class="filter-menu__link" href="#">Варежки перчатки</a></li>
-                                <li class="filter-menu__item"><a class="filter-menu__link" href="#">Маски</a></li>
-                                <li class="filter-menu__item"><a class="filter-menu__link" href="#">Шлема</a></li>
-                              </ol>
-                            </li>
-                          </ol>
-                        </div>
-                      </div>
-                      <div class="filter__section">
-                        <label class="checkbox-label" for="best">
-                          <input id="best" type="checkbox" name="best" value="Y"/>
-                          <span class="checkbox-icon"></span>
-                          <span class="checkbox-text">Бестселлер</span>
-                        </label>
-                      </div>
-                      <div class="filter__section">
-                        <div class="filter__title-block">
-                          <p class="js-filter-section-toggler filter__title is-active">Размер</p>
-                          <button class="filter__reset" type="button">Сбросить</button>
-                        </div>
-                        <div class="filter__section-dropdown" style="display: block">
-                          <div class="filter__sizes">
-                            <label class="filter__size" for="size_xxs_">
-                              <input id="size_xxs_" type="checkbox" name="size_" value="xxs">
-                              <span class="filter__size-text">XXS</span>
-                            </label>
-                            <label class="filter__size" for="size_xs_">
-                              <input id="size_xs_" type="checkbox" name="size_" value="xs">
-                              <span class="filter__size-text">XS</span>
-                            </label>
-                            <label class="filter__size" for="size_s_">
-                              <input id="size_s_" type="checkbox" name="size_" value="s">
-                              <span class="filter__size-text">S</span>
-                            </label>
-                            <label class="filter__size" for="size_m_">
-                              <input id="size_m_" type="checkbox" name="size_" value="m">
-                              <span class="filter__size-text">M</span>
-                            </label>
-                            <label class="filter__size" for="size_l_">
-                              <input id="size_l_" type="checkbox" name="size_" value="l">
-                              <span class="filter__size-text">L</span>
-                            </label>
-                            <label class="filter__size" for="size_xl_">
-                              <input id="size_xl_" type="checkbox" name="size_" value="xl">
-                              <span class="filter__size-text">XL</span>
-                            </label>
-                            <label class="filter__size" for="size_xxl_">
-                              <input id="size_xxl_" type="checkbox" name="size_" value="xxl">
-                              <span class="filter__size-text">XXL</span>
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="filter__section">
-                        <div class="filter__title-block">
-                          <p class="js-filter-section-toggler filter__title is-active">Цвет</p>
-                          <button class="filter__reset" type="button">Сбросить</button>
-                        </div>
-                        <div class="filter__section-dropdown" style="display: block">
-                          <div class="filter__colors">
-                            <label class="filter__color" for="color_1">
-                              <input id="color_1" type="checkbox" name="color" value="1" checked>
-                              <span class="filter__color-image"><img src="images/content/catalog/colors/img_3.jpg" alt="Фиолетовый"></span>
-                            </label>
-                            <label class="filter__color" for="color_2">
-                              <input id="color_2" type="checkbox" name="color" value="2">
-                              <span class="filter__color-image"><img src="images/content/catalog/colors/img_4.jpg" alt="Оранжевый"></span>
-                            </label>
-                            <label class="filter__color" for="color_3">
-                              <input id="color_3" type="checkbox" name="color" value="3">
-                              <span class="filter__color-image"><img src="images/content/catalog/colors/img_5.jpg" alt="Черно-зелёный"></span>
-                            </label>
-                            <label class="filter__color" for="color_4">
-                              <input id="color_4" type="checkbox" name="color" value="4" checked>
-                              <span class="filter__color-image"><img src="images/content/catalog/colors/img_3.jpg" alt="Фиолетовый"></span>
-                            </label>
-                            <label class="filter__color" for="color_5">
-                              <input id="color_5" type="checkbox" name="color" value="5">
-                              <span class="filter__color-image"><img src="images/content/catalog/colors/img_4.jpg" alt="Оранжевый"></span>
-                            </label>
-                            <label class="filter__color" for="color_6">
-                              <input id="color_6" type="checkbox" name="color" value="6">
-                              <span class="filter__color-image"><img src="images/content/catalog/colors/img_5.jpg" alt="Черно-зелёный"></span>
-                            </label>
-                            <label class="filter__color" for="color_7">
-                              <input id="color_7" type="checkbox" name="color" value="7" checked>
-                              <span class="filter__color-image"><img src="images/content/catalog/colors/img_3.jpg" alt="Фиолетовый"></span>
-                            </label>
-                            <label class="filter__color" for="color_8">
-                              <input id="color_8" type="checkbox" name="color" value="8">
-                              <span class="filter__color-image"><img src="images/content/catalog/colors/img_4.jpg" alt="Оранжевый"></span>
-                            </label>
-                            <label class="filter__color" for="color_9">
-                              <input id="color_9" type="checkbox" name="color" value="9">
-                              <span class="filter__color-image"><img src="images/content/catalog/colors/img_5.jpg" alt="Черно-зелёный"></span>
-                            </label>
-                            <label class="filter__color" for="color_10">
-                              <input id="color_10" type="checkbox" name="color" value="10" checked>
-                              <span class="filter__color-image"><img src="images/content/catalog/colors/img_3.jpg" alt="Фиолетовый"></span>
-                            </label>
-                            <label class="filter__color" for="color_11">
-                              <input id="color_11" type="checkbox" name="color" value="1">
-                              <span class="filter__color-image"><img src="images/content/catalog/colors/img_4.jpg" alt="Оранжевый"></span>
-                            </label>
-                            <label class="filter__color" for="color_12">
-                              <input id="color_12" type="checkbox" name="color" value="12">
-                              <span class="filter__color-image"><img src="images/content/catalog/colors/img_5.jpg" alt="Черно-зелёный"></span>
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="filter__section">
-                        <div class="filter__title-block">
-                          <p class="js-filter-section-toggler filter__title is-active">Утеплитель</p>
-                          <button class="filter__reset" type="button">Сбросить</button>
-                        </div>
-                        <div class="filter__section-dropdown" style="display: block">
-                          <ol class="unstyled-list">
-                            <li>
-                              <label class="filter__prop" for="prop_1">
-                                <input id="prop_1" type="checkbox" name="prop" value="1">
-                                <span class="filter__prop-text">15000 мм/10000 гр/м2/24ч</span>
-                              </label>
-                            </li>
-                            <li>
-                              <label class="filter__prop" for="prop_2">
-                                <input id="prop_2" type="checkbox" name="prop" value="2">
-                                <span class="filter__prop-text">18000 мм/10000 гр/м2/24ч</span>
-                              </label>
-                            </li>
-                            <li>
-                              <label class="filter__prop" for="prop_3">
-                                <input id="prop_3" type="checkbox" name="prop" value="3">
-                                <span class="filter__prop-text">22000 мм/10000 гр/м2/24ч</span>
-                              </label>
-                            </li>
-                            <li>
-                              <label class="filter__prop" for="prop_4">
-                                <input id="prop_4" type="checkbox" name="prop" value="4">
-                                <span class="filter__prop-text">5000 мм/10000 гр/м2/24ч</span>
-                              </label>
-                            </li>
-                            <li>
-                              <label class="filter__prop" for="prop_5">
-                                <input id="prop_5" type="checkbox" name="prop" value="5">
-                                <span class="filter__prop-text">30000 мм/10000 гр/м2/24ч</span>
-                              </label>
-                            </li>
-                          </ol>
-                        </div>
-                      </div>
-                      <div class="filter__section">
-                        <label class="checkbox-label" for="sale">
-                          <input id="sale" type="checkbox" name="sale" value="Y"/>
-                          <span class="checkbox-icon"></span>
-                          <span class="checkbox-text">SALE</span>
-                        </label>
-                      </div>
-                      <div class="filter__section">
-                        <div class="filter__title-block">
-                          <p class="js-filter-section-toggler filter__title is-active">Цена</p>
-                          <button class="filter__reset" type="button">Сбросить</button>
-                        </div>
-                        <div class="filter__section-dropdown" style="display: block">
-                          <input class="js-filter-range-slider" type="text" name="filter_price" value="" />
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-              <div class="catalog-sort">
-                <div class="js-catalog-sort-open catalog-sort__value">Сортировать по</div>
-                <div class="catalog-sort__dropdown">
-                  <div class="js-catalog-sort catalog-sort__var">Цена по возрастанию</div>
-                  <div class="js-catalog-sort catalog-sort__var">Цена по убыванию</div>
-                  <div class="js-catalog-sort catalog-sort__var">Бестселлер</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       <div class="container">
-        <div class="catalog-list">
-          <div class="catalog-list__item">
-            <div class="card">
-              <div class="card__top">
-                <a class="card__image-block" href="catalog-detail.html">
-                  <img class="card__image" src="images/content/catalog/img_1.jpg" alt="alt">
-                  <img class="card__image card__image--second" src="images/content/catalog/img_2.jpg" alt="alt">
+        <ol class="breadcrumbs">
+          <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="main.html">Главная</a></li>
+          <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="search_2.html">Мужское</a></li>
+          <li class="breadcrumbs__item">Полукомбинезон РК2102/34 Морской</li>
+        </ol>
+        <div class="detail">
+          <div class="detail__images">
+            <div class="js-detail-slider swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/content/catalog/detail/img_1.jpg" alt="alt"></div>
+                <div class="swiper-slide"><img src="images/content/catalog/detail/img_2.jpg" alt="alt"></div>
+                <div class="swiper-slide"><img src="images/content/catalog/detail/img_1.jpg" alt="alt"></div>
+                <div class="swiper-slide"><img src="images/content/catalog/detail/img_2.jpg" alt="alt"></div>
+              </div>
+              <div class="detail__slider-nav-block">
+                <a class="detail__video-button" href="#">
+                  <svg class="detail__video-button-icon" aria-hidden="true">
+                    <use xlink:href="#video" />
+                  </svg>
+                  ВИДЕО
                 </a>
-                <p class="card__labels">
-                  <span class="card__label">limited</span>
-                  <span class="card__label">sale</span>
-                  <span class="card__label">new</span>
-                </p>
-                <button class="card__fav" type="button" title="Добавить в избранное">
-                  <svg class="card__fav-icon" aria-hidden="true">
+                <div class="detail__slider-nav">
+                  <button class="swiper-button-prev">
+                    <svg class="icon" aria-hidden="true">
+                      <use xlink:href="#slider_prev" />
+                    </svg>
+                  </button>
+                  <div class="swiper-pagination"></div>
+                  <button class="swiper-button-next">
+                    <svg class="icon" aria-hidden="true">
+                      <use xlink:href="#slider_next" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <p class="detail__labels">
+              <span class="detail__label">limited</span>
+              <span class="detail__label">sale</span>
+              <span class="detail__label">new</span>
+            </p>
+          </div>
+          <div class="detail__info">
+            <p class="detail__art">Артикул: 123456</p>
+            <h1 class="detail__title">Полукомбинезон РК2102/34 Морской</h1>
+            <p class="detail__price-block"><span class="detail__price">12 000 ₽</span> <span class="detail__price--old">15 000 ₽</span></p>
+            <p class="detail__colors-title">ЦВЕТ: <span>Фиолетовый</span></p>
+            <div class="detail__colors">
+              <label class="detail__color" for="color_1">
+                <input id="color_1" type="radio" name="color" value="1" checked>
+                <span class="detail__color-image"><img src="images/content/catalog/colors/img_3.jpg" alt="Фиолетовый"></span>
+              </label>
+              <label class="detail__color" for="color_2">
+                <input id="color_2" type="radio" name="color" value="2">
+                <span class="detail__color-image"><img src="images/content/catalog/colors/img_4.jpg" alt="Оранжевый"></span>
+              </label>
+              <label class="detail__color" for="color_3">
+                <input id="color_3" type="radio" name="color" value="3">
+                <span class="detail__color-image"><img src="images/content/catalog/colors/img_5.jpg" alt="Черно-зелёный"></span>
+              </label>
+            </div>
+            <p class="detail__sizes-title"><span>РАЗМЕРЫ</span> <a href="#">Таблица размеров</a></p>
+            <div class="detail__sizes">
+              <label class="detail__size" for="size_xxs_">
+                <input id="size_xxs_" type="radio" name="size_" value="xxs">
+                <span class="detail__size-text">XXS</span>
+              </label>
+              <label class="detail__size" for="size_xs_">
+                <input id="size_xs_" type="radio" name="size_" value="xs">
+                <span class="detail__size-text">XS</span>
+              </label>
+              <label class="detail__size" for="size_s_">
+                <input id="size_s_" type="radio" name="size_" value="s">
+                <span class="detail__size-text">S</span>
+              </label>
+              <label class="detail__size" for="size_m_">
+                <input id="size_m_" type="radio" name="size_" value="m">
+                <span class="detail__size-text">M</span>
+              </label>
+              <label class="detail__size" for="size_l_">
+                <input id="size_l_" type="radio" name="size_" value="l">
+                <span class="detail__size-text">L</span>
+              </label>
+              <label class="detail__size" for="size_xl_">
+                <input id="size_xl_" type="radio" name="size_" value="xl">
+                <span class="detail__size-text">XL</span>
+              </label>
+              <label class="detail__size" for="size_xxl_">
+                <input id="size_xxl_" type="radio" name="size_" value="xxl">
+                <span class="detail__size-text">XXL</span>
+              </label>
+            </div>
+            <div class="detail__buttons">
+              <div class="detail__buttons-inner">
+                <a class="detail__add-cart button button--type_2 button--type_3" href="javascript:void(0)">Добавить в корзину</a>
+                <button class="detail__favorite" type="button" title="Добавить в избранное">
+                  <svg class="detail__favorite-icon" aria-hidden="true">
                     <use xlink:href="#favorite_2" />
                   </svg>
                 </button>
-                <div class="card__add-cart-block"><button class="js-fast-look card__add-cart" type="button" data-src="#fast-look">добавить в корзину</button></div>
               </div>
-              <p class="card__colors">
-                <img src="images/content/catalog/colors/img_1.jpg" alt="Серый">
-                <img src="images/content/catalog/colors/img_2.jpg" alt="Черный">
-              </p>
-              <p class="card__title"><a href="catalog-detail.html">Базовый комплект термобелья</a></p>
-              <p class="card__price-block">
-                <span class="card__price">15 000 ₽</span>
-                <span class="card__price card__price--old">20 000 ₽</span>
-              </p>
             </div>
-          </div>
-          <div class="catalog-list__item">
-            <div class="card">
-              <div class="card__top">
-                <a class="card__image-block" href="catalog-detail.html">
-                  <img class="card__image" src="images/content/catalog/img_2.jpg" alt="alt">
-                  <img class="card__image card__image--second" src="images/content/catalog/img_1.jpg" alt="alt">
-                </a>
-                <p class="card__labels">
-                  <span class="card__label">limited</span>
-                </p>
-                <button class="card__fav is-active" type="button" title="Убрать из избранного">
-                  <svg class="card__fav-icon" aria-hidden="true">
-                    <use xlink:href="#favorite_2" />
-                  </svg>
-                </button>
-                <div class="card__add-cart-block"><button class="js-fast-look card__add-cart" type="button" data-src="#fast-look">добавить в корзину</button></div>
-              </div>
-              <p class="card__colors">
-                <img src="images/content/catalog/colors/img_1.jpg" alt="Серый">
-                <img src="images/content/catalog/colors/img_2.jpg" alt="Черный">
-              </p>
-              <p class="card__title"><a href="catalog-detail.html">Базовый комплект термобелья</a></p>
-              <p class="card__price-block">
-                <span class="card__price">15 000 ₽</span>
-                <span class="card__price card__price--old">20 000 ₽</span>
-              </p>
-            </div>
-          </div>
-          <div class="catalog-list__item catalog-list__item--banner catalog-list__item--banner_3">
-            <div class="banner-wrapper"><a class="catalog-banner" href="#" style="background-image: url('images/content/catalog/banner_3.jpg')" title="Тайтл">Тайтл</a></div>
-          </div>
-          <div class="catalog-list__item">
-            <div class="card">
-              <div class="card__top">
-                <a class="card__image-block" href="catalog-detail.html">
-                  <img class="card__image" src="images/content/catalog/img_1.jpg" alt="alt">
-                  <img class="card__image card__image--second" src="images/content/catalog/img_2.jpg" alt="alt">
-                </a>
-                <p class="card__labels">
-                  <span class="card__label">limited</span>
-                  <span class="card__label">sale</span>
-                  <span class="card__label">new</span>
-                </p>
-                <button class="card__fav" type="button" title="Добавить в избранное">
-                  <svg class="card__fav-icon" aria-hidden="true">
-                    <use xlink:href="#favorite_2" />
-                  </svg>
-                </button>
-                <div class="card__add-cart-block"><button class="js-fast-look card__add-cart" type="button" data-src="#fast-look">добавить в корзину</button></div>
-              </div>
-              <p class="card__colors">
-                <img src="images/content/catalog/colors/img_1.jpg" alt="Серый">
-                <img src="images/content/catalog/colors/img_2.jpg" alt="Черный">
-              </p>
-              <p class="card__title"><a href="catalog-detail.html">Базовый комплект термобелья</a></p>
-              <p class="card__price-block">
-                <span class="card__price">15 000 ₽</span>
-                <span class="card__price card__price--old">20 000 ₽</span>
-              </p>
-            </div>
-          </div>
-          <div class="catalog-list__item catalog-list__item--banner catalog-list__item--banner_1">
-            <div class="banner-wrapper"><a class="catalog-banner" href="#" style="background-image: url('images/content/catalog/banner_1.jpg')" title="Тайтл">Тайтл</a></div>
-          </div>
-          <div class="catalog-list__item">
-            <div class="card">
-              <div class="card__top">
-                <a class="card__image-block" href="catalog-detail.html">
-                  <img class="card__image" src="images/content/catalog/img_2.jpg" alt="alt">
-                  <img class="card__image card__image--second" src="images/content/catalog/img_1.jpg" alt="alt">
-                </a>
-                <p class="card__labels">
-                  <span class="card__label">limited</span>
-                </p>
-                <button class="card__fav is-active" type="button" title="Убрать из избранного">
-                  <svg class="card__fav-icon" aria-hidden="true">
-                    <use xlink:href="#favorite_2" />
-                  </svg>
-                </button>
-                <div class="card__add-cart-block"><button class="js-fast-look card__add-cart" type="button" data-src="#fast-look">добавить в корзину</button></div>
-              </div>
-              <p class="card__colors">
-                <img src="images/content/catalog/colors/img_1.jpg" alt="Серый">
-                <img src="images/content/catalog/colors/img_2.jpg" alt="Черный">
-              </p>
-              <p class="card__title"><a href="catalog-detail.html">Базовый комплект термобелья</a></p>
-              <p class="card__price-block">
-                <span class="card__price">15 000 ₽</span>
-                <span class="card__price card__price--old">20 000 ₽</span>
-              </p>
-            </div>
-          </div>
-          <div class="catalog-list__item">
-            <div class="card">
-              <div class="card__top">
-                <a class="card__image-block" href="catalog-detail.html">
-                  <img class="card__image" src="images/content/catalog/img_2.jpg" alt="alt">
-                  <img class="card__image card__image--second" src="images/content/catalog/img_1.jpg" alt="alt">
-                </a>
-                <p class="card__labels">
-                  <span class="card__label">limited</span>
-                </p>
-                <button class="card__fav is-active" type="button" title="Убрать из избранного">
-                  <svg class="card__fav-icon" aria-hidden="true">
-                    <use xlink:href="#favorite_2" />
-                  </svg>
-                </button>
-                <div class="card__add-cart-block"><button class="js-fast-look card__add-cart" type="button" data-src="#fast-look">добавить в корзину</button></div>
-              </div>
-              <p class="card__colors">
-                <img src="images/content/catalog/colors/img_1.jpg" alt="Серый">
-                <img src="images/content/catalog/colors/img_2.jpg" alt="Черный">
-              </p>
-              <p class="card__title"><a href="catalog-detail.html">Базовый комплект термобелья</a></p>
-              <p class="card__price-block">
-                <span class="card__price">15 000 ₽</span>
-                <span class="card__price card__price--old">20 000 ₽</span>
-              </p>
-            </div>
-          </div>
-          <div class="catalog-list__item">
-            <div class="card">
-              <div class="card__top">
-                <a class="card__image-block" href="catalog-detail.html">
-                  <img class="card__image" src="images/content/catalog/img_1.jpg" alt="alt">
-                  <img class="card__image card__image--second" src="images/content/catalog/img_2.jpg" alt="alt">
-                </a>
-                <p class="card__labels">
-                  <span class="card__label">limited</span>
-                  <span class="card__label">sale</span>
-                  <span class="card__label">new</span>
-                </p>
-                <button class="card__fav" type="button" title="Добавить в избранное">
-                  <svg class="card__fav-icon" aria-hidden="true">
-                    <use xlink:href="#favorite_2" />
-                  </svg>
-                </button>
-                <div class="card__add-cart-block"><button class="js-fast-look card__add-cart" type="button" data-src="#fast-look">добавить в корзину</button></div>
-              </div>
-              <p class="card__colors">
-                <img src="images/content/catalog/colors/img_1.jpg" alt="Серый">
-                <img src="images/content/catalog/colors/img_2.jpg" alt="Черный">
-              </p>
-              <p class="card__title"><a href="catalog-detail.html">Базовый комплект термобелья</a></p>
-              <p class="card__price-block">
-                <span class="card__price">15 000 ₽</span>
-                <span class="card__price card__price--old">20 000 ₽</span>
-              </p>
-            </div>
-          </div>
-          <div class="catalog-list__item">
-            <div class="card">
-              <div class="card__top">
-                <a class="card__image-block" href="catalog-detail.html">
-                  <img class="card__image" src="images/content/catalog/img_2.jpg" alt="alt">
-                  <img class="card__image card__image--second" src="images/content/catalog/img_1.jpg" alt="alt">
-                </a>
-                <p class="card__labels">
-                  <span class="card__label">limited</span>
-                </p>
-                <button class="card__fav is-active" type="button" title="Убрать из избранного">
-                  <svg class="card__fav-icon" aria-hidden="true">
-                    <use xlink:href="#favorite_2" />
-                  </svg>
-                </button>
-                <div class="card__add-cart-block"><button class="js-fast-look card__add-cart" type="button" data-src="#fast-look">добавить в корзину</button></div>
-              </div>
-              <p class="card__colors">
-                <img src="images/content/catalog/colors/img_1.jpg" alt="Серый">
-                <img src="images/content/catalog/colors/img_2.jpg" alt="Черный">
-              </p>
-              <p class="card__title"><a href="catalog-detail.html">Базовый комплект термобелья</a></p>
-              <p class="card__price-block">
-                <span class="card__price">15 000 ₽</span>
-                <span class="card__price card__price--old">20 000 ₽</span>
-              </p>
-            </div>
-          </div>
-          <div class="catalog-list__item catalog-list__item--banner catalog-list__item--banner_2">
-            <div class="banner-wrapper"><a class="catalog-banner" href="#" style="background-image: url('images/content/catalog/banner_2.jpg')" title="Тайтл">Тайтл</a></div>
-          </div>
-          <div class="catalog-list__item">
-            <div class="card">
-              <div class="card__top">
-                <a class="card__image-block" href="catalog-detail.html">
-                  <img class="card__image" src="images/content/catalog/img_1.jpg" alt="alt">
-                  <img class="card__image card__image--second" src="images/content/catalog/img_2.jpg" alt="alt">
-                </a>
-                <p class="card__labels">
-                  <span class="card__label">limited</span>
-                  <span class="card__label">sale</span>
-                  <span class="card__label">new</span>
-                </p>
-                <button class="card__fav" type="button" title="Добавить в избранное">
-                  <svg class="card__fav-icon" aria-hidden="true">
-                    <use xlink:href="#favorite_2" />
-                  </svg>
-                </button>
-                <div class="card__add-cart-block"><button class="js-fast-look card__add-cart" type="button" data-src="#fast-look">добавить в корзину</button></div>
-              </div>
-              <p class="card__colors">
-                <img src="images/content/catalog/colors/img_1.jpg" alt="Серый">
-                <img src="images/content/catalog/colors/img_2.jpg" alt="Черный">
-              </p>
-              <p class="card__title"><a href="catalog-detail.html">Базовый комплект термобелья</a></p>
-              <p class="card__price-block">
-                <span class="card__price">15 000 ₽</span>
-                <span class="card__price card__price--old">20 000 ₽</span>
-              </p>
-            </div>
-          </div>
-          <div class="catalog-list__item">
-            <div class="card">
-              <div class="card__top">
-                <a class="card__image-block" href="catalog-detail.html">
-                  <img class="card__image" src="images/content/catalog/img_2.jpg" alt="alt">
-                  <img class="card__image card__image--second" src="images/content/catalog/img_1.jpg" alt="alt">
-                </a>
-                <p class="card__labels">
-                  <span class="card__label">limited</span>
-                </p>
-                <button class="card__fav is-active" type="button" title="Убрать из избранного">
-                  <svg class="card__fav-icon" aria-hidden="true">
-                    <use xlink:href="#favorite_2" />
-                  </svg>
-                </button>
-                <div class="card__add-cart-block"><button class="js-fast-look card__add-cart" type="button" data-src="#fast-look">добавить в корзину</button></div>
-              </div>
-              <p class="card__colors">
-                <img src="images/content/catalog/colors/img_1.jpg" alt="Серый">
-                <img src="images/content/catalog/colors/img_2.jpg" alt="Черный">
-              </p>
-              <p class="card__title"><a href="catalog-detail.html">Базовый комплект термобелья</a></p>
-              <p class="card__price-block">
-                <span class="card__price">15 000 ₽</span>
-                <span class="card__price card__price--old">20 000 ₽</span>
-              </p>
-            </div>
+            <ul class="detail__features">
+              <li>Бесплатная доставка от 5 000 руб.</li>
+              <li>Свое производство</li>
+              <li>Современные технологии изготовления</li>
+            </ul>
+            <ul class="detail__tabs-nav">
+              <li class="detail__tabs-nav-item"><a class="js-tab detail__tabs-nav-button is-active" href="javascript:void(0)" data-href="tab_1">Описание</a></li>
+              <li class="detail__tabs-nav-item"><a class="js-tab detail__tabs-nav-button" href="javascript:void(0)" data-href="tab_2">Детали</a></li>
+              <li class="detail__tabs-nav-item"><a class="js-tab detail__tabs-nav-button" href="javascript:void(0)" data-href="tab_3">Таблица размеров</a></li>
+            </ul>
           </div>
         </div>
-        <p class="show-more">
-          <a class="show-more__button" href="javascript:void(0)">Показать ещё</a>
-        </p>
+        <div class="detail-tabs">
+          <div class="detail-tab is-active" data-target="tab_1">
+            <div class="two-cols">
+              <div class="two-cols__col two-cols__col--type_2">
+                <p style="max-width: 560px">Kомбинезон Cool Zone KITE - специализированный комбинезон для сноукайтинга. Эргономичный крой. Рукав реглан, дополнительные складки на спине для большей свободы движений, адаптированный вход в карманы под сидячую трапецию и высокий воротник для защиты от ветра. Вентиляция на штанах, рукавах и воротнике. Запатентованная съемная деталь для вывода крюка от трапеции, позволяющая крюку свободно двигаться и защищающая от попадания снега внутрь комбинезона. Усиление колен, внутренней части и низа штанин тканью Cordura. Горизонтальная молния для технических нужд.</p>
+              </div>
+              <div class="two-cols__col two-cols__col--type_3">
+                <ul class="unstyled-list">
+                  <li><span class="fw_400">Мембрана:</span> 15000 мм/10000 гр/м2/24ч</li>
+                  <li><span class="fw_400">Утеплитель:</span> 60 гр/м2</li>
+                  <li><span class="fw_400">Производитель:</span> Россия/Russia</li>
+                  <li><span class="fw_400">Сезон:</span> 2019-20 г</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="detail-tab" data-target="tab_2">
+            <div class="two-cols">
+              <div class="two-cols__col">
+                <h2>ЗАЩИТА</h2>
+                <ul style="max-width: 560px">
+                  <li>Центральная планка на магнитах</li>
+                  <li>Снегозащитная юбка на ботинок с крючком</li>
+                  <li>Три бегунка на центральной молнии</li>
+                  <li>Спинка и задняя часть штанов из флиса</li>
+                  <li>Молнии YKK</li>
+                  <li>Запатентованная съемная деталь для вывода крюка от трапеции, позволяющая крюку свободно двигаться и защищающая от попадания снега внутрь комбинезона</li>
+                  <li>Внутренний эластичный манжет рукава для защиты от снега</li>
+                  <li>Проклеенные швы</li>
+                  <li>Низ штанин усилены тканью Cordura для защиты от истирания</li>
+                </ul>
+              </div>
+              <div class="two-cols__col">
+                <h2>КОМФОРТ</h2>
+                <ul style="max-width: 560px">
+                  <li>Влагозащитная горизонтальная молния для технических нужд</li>
+                  <li>Съемные подтяжки</li>
+                  <li>Рукава и капюшон выполнены с утеплителем Isosoft 60 гр/м2 для облегчения модели</li>
+                  <li>Возможность увеличения ширины штанин на ботинке</li>
+                  <li>Карабин для крепления ключей и перчаток</li>
+                  <li>Вентиляция на штанах и рукавах</li>
+                  <li>Эргономичный капюшон с регулировкой объема</li>
+                  <li>Основной утеплитель Isosoft 100 гр/м2</li>
+                  <li>Регулировка длины штанин</li>
+                  <li>Салфетка для протирания оптики</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="detail-tab" data-target="tab_3">
+            таблица размеров
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -1171,19 +821,8 @@
   <script type="text/javascript" src="js/jquery.fancybox.min.js"></script>
   <script type="text/javascript" src="js/swiper.min.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
+  <script src="js/detail.js"></script>
 
-  <script type="text/javascript" src="js/ion.rangeSlider.min.js"></script>
-  <script>
-    $(".js-filter-range-slider").ionRangeSlider({
-      skin: 'round',
-      type: "double",
-      min: 350,
-      max: 62000,
-      from: 350,
-      to: 62000,
-      grid: false
-    });
-  </script>
 </body>
 
 </html>
