@@ -1,5 +1,5 @@
 .detail
-  @media(min-width: 1200px)
+  @media(min-width: 992px)
     display: flex
     margin-left: -20px
     margin-right: -20px
@@ -13,16 +13,39 @@
     margin-left: -100px
     margin-right: -100px
 
+  &--no_slider
+    .detail__images
+      @media(min-width: 1200px)
+        min-width: 50%
+        width: 50%
+
+    .detail__images-slider
+      img
+        max-width: initial
+        width: 100%
+
+    .detail__images-nav
+      display: none
+
+    .detail__info
+      @media(min-width: 1200px)
+        min-width: 50%
+        width: 50%
+
   &__images
     margin-left: -20px
     margin-right: -20px
     margin-bottom: 30px
     position: relative
 
-    @media(min-width: 1200px)
+    @media(min-width: 992px)
       margin-left: 0
       margin-right: 0
       margin-bottom: 0
+      min-width: 50%
+      width: 50%
+
+    @media(min-width: 1200px)
       min-width: 60.55555%
       width: 60.55555%
 
@@ -30,12 +53,15 @@
       min-width: 57.34375%
       width: 57.34375%
 
-    .swiper-button-prev,
-    .swiper-button-next
+    .button-prev,
+    .button-next
+      align-items: center
       background-color: transparent
       border: none
       cursor: pointer
+      display: flex
       height: 34px
+      justify-content: center
       margin-top: 0
       padding: 0
       position: static
@@ -61,20 +87,30 @@
           height: 22px
           width: 22px
 
-    .swiper-pagination-progressbar
-      background-color: rgba($button-color, 0.25)
-      height: 2px
-      overflow: hidden
-      position: relative
-      width: 110px
+    .progress
+      flex-grow: 1
 
-      @media(min-width: 2500px)
-        width: 150px
+      @media(min-width: 1200px)
+        width: 110px
 
-    .swiper-pagination-progressbar-fill
-      background-color: $button-color
+  &__images-slider
+    display: flex
+    overflow-x: auto
 
-  &__slider-nav-block
+    &.slick-initialized
+      .slick-list
+        min-width: 100%
+        width: 100%
+
+      .detail__images-slide
+        min-width: 0
+        width: auto
+
+  &__images-slide
+    min-width: 50%
+    width: 50%
+
+  &__images-nav-block
     bottom: 0
     display: flex
     left: 0
@@ -133,7 +169,7 @@
       margin-bottom: 6px
       width: 19px
 
-  &__slider-nav
+  &__images-nav
     align-items: center
     background-color: rgba(#fff, 0.65)
     display: flex
@@ -187,11 +223,14 @@
       padding: 3px 5px
 
   &__info
-    @media(min-width: 1200px)
+    @media(min-width: 992px)
       display: flex
-      flex-direction: column
       padding-left: 50px
       padding-right: 50px
+      min-width: 50%
+      width: 50%
+
+    @media(min-width: 1200px)
       min-width: 39.44445%
       width: 39.44445%
 
@@ -207,6 +246,17 @@
       padding-left: 8.51562%
       padding-right: 11.64062%
       width: 42.65625%
+
+  &__info-inner
+    height: 100%
+    width: 100%
+
+    @media(min-width: 992px)
+      display: flex
+      flex-direction: column
+      margin-left: auto
+      margin-right: auto
+      max-width: 576px
 
   &__art
     color: $grey-color
@@ -399,12 +449,9 @@
     text-align: center
 
   &__buttons
-    //height: 62px
-    //margin-bottom: 13px
     margin-bottom: 25px
 
     @media(min-width: 1200px)
-      //height: auto
       margin-bottom: 35px
 
     @media(min-width: 2500px)
@@ -413,24 +460,6 @@
   &__buttons-inner
     align-items: center
     display: flex
-    //padding-top: 8px
-    //padding-bottom: 8px
-
-    //@media(min-width: 1200px)
-      padding-top: 0
-      padding-bottom: 0
-
-    //&.scrolled
-      @media(max-width: 1199px)
-        background-color: rgba(#fff, 0.75)
-        bottom: 0
-        left: 0
-        position: fixed
-        padding-left: 20px
-        padding-right: 20px
-        right: 0
-        top: auto
-        z-index: 1
 
   &__add-cart
     flex-grow: 1
@@ -495,27 +524,31 @@
 
       &:nth-child(2),
       &:nth-child(3)
-        @media(max-width: 1199px)
+        @media(max-width: 991px)
           display: none
+
+  &__tabs-nav-block
+    text-align: center
+
+    @media(min-width: 992px)
+      margin-top: auto
 
   &__tabs-nav
     background-color: #fff
-    display: flex
+    display: inline-flex
     font-size: 15px
     justify-content: center
     line-height: 18px
     margin-left: auto
     margin-right: auto
-    max-width: 575px
-    width: 100%
-
-    @media(min-width: 1200px)
-      margin-top: auto
 
     @media(min-width: 1400px)
       font-size: 18px
       padding-left: 8px
       padding-right: 8px
+
+    @media(min-width: 1900px)
+      width: 100%
 
     @media(min-width: 2500px)
       font-size: 20px
@@ -533,7 +566,7 @@
     @media(min-width: 1200px)
       padding: 20px 25px
 
-    @media(min-width: 2500px)
+    @media(min-width: 1900px)
       padding: 32px 35px
 
     &:hover,
@@ -542,6 +575,8 @@
 
     &.is-active
       font-weight: 500
+      position: relative
+      z-index: 1
 
 .detail-tabs
   margin-left: -20px
@@ -561,9 +596,11 @@
   padding-top: 30px
   padding-left: 20px
   padding-right: 20px
-  padding-bottom: 50px
+  padding-bottom: 30px
 
   @media(min-width: 1200px)
+    padding-top: 90px
+    padding-bottom: 90px
     padding-left: 100px
     padding-right: 100px
 
@@ -573,3 +610,161 @@
 
   &.is-active
     display: block
+
+  .two-cols
+    &:not(:last-child)
+      margin-bottom: 30px
+
+      @media(min-width: 1200px)
+        margin-bottom: 90px
+
+.add-slider
+  overflow: hidden
+  position: relative
+
+  @media(min-width: 1200px)
+    margin-left: -50px
+    margin-right: -50px
+
+  @media(min-width: 2500px)
+    margin-left: -200px
+    margin-right: -200px
+
+  .button-prev,
+  .button-next
+    align-items: center
+    background-color: transparent
+    border: none
+    cursor: pointer
+    display: flex
+    height: 34px
+    justify-content: center
+    padding: 0
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    width: 34px
+    z-index: 1
+
+    @media(min-width: 1200px)
+      height: 44px
+      width: 44px
+
+    &::after
+      position: absolute
+      height: 1px
+      overflow: hidden
+      clip: rect(0 0 0 0)
+      width: 1px
+
+    .icon
+      fill: $button-color
+      height: 20px
+      width: 20px
+
+      @media(min-width: 1200px)
+        height: 24px
+        width: 24px
+
+  .button-prev
+    left: 0
+
+    @media(min-width: 1200px)
+      left: 14px
+
+  .button-next
+    left: auto
+    right: 0
+
+    @media(min-width: 1200px)
+      right: 14px
+
+  &--overbounds
+    margin-left: -20px
+    margin-right: -20px
+
+    .add-slider__slide
+      margin-right: 10px
+
+      @media(min-width: 1200px)
+        margin-right: 20px
+
+  &--fixed_height
+    .slick-list,
+    .slick-track
+      height: calc(59.4vw)
+      width: 100%
+
+      @media(min-width: 992px)
+        height: 440px
+
+    .add-slider__slide
+      height: 100%
+      width: auto
+
+      a
+        height: 100%
+
+      img
+        height: 100%
+        width: auto
+
+  &--simple
+    .slick-slider
+      margin-left: -5px
+      margin-right: -5px
+
+      @media(min-width: 1200px)
+        margin-left: -10px
+        margin-right: -10px
+
+    .button-prev
+      left: 5px
+
+      @media(min-width: 1200px)
+        left: 19px
+
+    .button-next
+      left: auto
+      right: 5px
+
+      @media(min-width: 1200px)
+        right: 19px
+
+    .add-slider__slide
+      padding-left: 5px
+      padding-right: 5px
+
+      @media(min-width: 1200px)
+        padding-left: 10px
+        padding-right: 10px
+
+  &__progress
+    margin-top: 15px
+    padding-left: 20px
+    padding-right: 20px
+
+    @media(min-width: 992px)
+      margin-top: 38px
+      margin-left: auto
+      margin-right: auto
+      max-width: 660px
+      padding: 0
+
+    @media(min-width: 2500px)
+      margin-top: 63px
+
+    .progress
+      margin-left: auto
+      margin-right: auto
+      max-width: 660px
+
+.progress
+  display: block
+  height: 2px
+  overflow: hidden
+  background-color: rgba($button-color, 0.25)
+  background-image: linear-gradient(to right, $button-color, $button-color)
+  background-repeat: no-repeat
+  background-size: 0 100%
+  transition: background-size 0.3s ease-in-out

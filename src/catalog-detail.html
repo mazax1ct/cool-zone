@@ -32,111 +32,98 @@
         </ol>
         <div class="detail">
           <div class="detail__images">
-            <div class="js-detail-slider swiper-container">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="images/content/catalog/detail/img_1.jpg" alt="alt"></div>
-                <div class="swiper-slide"><img src="images/content/catalog/detail/img_2.jpg" alt="alt"></div>
-                <div class="swiper-slide"><img src="images/content/catalog/detail/img_1.jpg" alt="alt"></div>
-                <div class="swiper-slide"><img src="images/content/catalog/detail/img_2.jpg" alt="alt"></div>
-              </div>
-              <div class="detail__slider-nav-block">
-                <a class="detail__video-button" href="#">
-                  <svg class="detail__video-button-icon" aria-hidden="true">
-                    <use xlink:href="#video" />
-                  </svg>
-                  ВИДЕО
-                </a>
-                <div class="detail__slider-nav">
-                  <button class="swiper-button-prev">
-                    <svg class="icon" aria-hidden="true">
-                      <use xlink:href="#slider_prev" />
-                    </svg>
-                  </button>
-                  <div class="swiper-pagination"></div>
-                  <button class="swiper-button-next">
-                    <svg class="icon" aria-hidden="true">
-                      <use xlink:href="#slider_next" />
-                    </svg>
-                  </button>
-                </div>
-              </div>
+            <div class="js-detail-slider-1 detail__images-slider" data-progress="1">
+              <div class="detail__images-slide"><a class="js-giant-image" href="images/content/detail/img_1.jpg"><img src="images/content/detail/img_1.jpg" alt="alt"></a></div>
+              <div class="detail__images-slide"><a class="js-giant-image" href="images/content/detail/img_2.jpg"><img src="images/content/detail/img_2.jpg" alt="alt"></a></div>
+              <div class="detail__images-slide"><a class="js-giant-image" href="images/content/detail/img_1.jpg"><img src="images/content/detail/img_1.jpg" alt="alt"></a></div>
+              <div class="detail__images-slide"><a class="js-giant-image" href="images/content/detail/img_2.jpg"><img src="images/content/detail/img_2.jpg" alt="alt"></a></div>
             </div>
             <p class="detail__labels">
               <span class="detail__label">limited</span>
               <span class="detail__label">sale</span>
               <span class="detail__label">new</span>
             </p>
-          </div>
-          <div class="detail__info">
-            <p class="detail__art">Артикул: 123456</p>
-            <h1 class="detail__title">Полукомбинезон РК2102/34 Морской</h1>
-            <p class="detail__price-block"><span class="detail__price">12 000 ₽</span> <span class="detail__price--old">15 000 ₽</span></p>
-            <p class="detail__colors-title">ЦВЕТ: <span>Фиолетовый</span></p>
-            <div class="detail__colors">
-              <label class="detail__color" for="color_1">
-                <input id="color_1" type="radio" name="color" value="1" checked>
-                <span class="detail__color-image"><img src="images/content/catalog/colors/img_3.jpg" alt="Фиолетовый"></span>
-              </label>
-              <label class="detail__color" for="color_2">
-                <input id="color_2" type="radio" name="color" value="2">
-                <span class="detail__color-image"><img src="images/content/catalog/colors/img_4.jpg" alt="Оранжевый"></span>
-              </label>
-              <label class="detail__color" for="color_3">
-                <input id="color_3" type="radio" name="color" value="3">
-                <span class="detail__color-image"><img src="images/content/catalog/colors/img_5.jpg" alt="Черно-зелёный"></span>
-              </label>
-            </div>
-            <p class="detail__sizes-title"><span>РАЗМЕРЫ</span> <a href="#">Таблица размеров</a></p>
-            <div class="detail__sizes">
-              <label class="detail__size" for="size_xxs_">
-                <input id="size_xxs_" type="radio" name="size_" value="xxs">
-                <span class="detail__size-text">XXS</span>
-              </label>
-              <label class="detail__size" for="size_xs_">
-                <input id="size_xs_" type="radio" name="size_" value="xs">
-                <span class="detail__size-text">XS</span>
-              </label>
-              <label class="detail__size" for="size_s_">
-                <input id="size_s_" type="radio" name="size_" value="s">
-                <span class="detail__size-text">S</span>
-              </label>
-              <label class="detail__size" for="size_m_">
-                <input id="size_m_" type="radio" name="size_" value="m">
-                <span class="detail__size-text">M</span>
-              </label>
-              <label class="detail__size" for="size_l_">
-                <input id="size_l_" type="radio" name="size_" value="l">
-                <span class="detail__size-text">L</span>
-              </label>
-              <label class="detail__size" for="size_xl_">
-                <input id="size_xl_" type="radio" name="size_" value="xl">
-                <span class="detail__size-text">XL</span>
-              </label>
-              <label class="detail__size" for="size_xxl_">
-                <input id="size_xxl_" type="radio" name="size_" value="xxl">
-                <span class="detail__size-text">XXL</span>
-              </label>
-            </div>
-            <div class="detail__buttons">
-              <div class="detail__buttons-inner">
-                <a class="detail__add-cart button button--type_2 button--type_3" href="javascript:void(0)">Добавить в корзину</a>
-                <button class="detail__favorite" type="button" title="Добавить в избранное">
-                  <svg class="detail__favorite-icon" aria-hidden="true">
-                    <use xlink:href="#favorite_2" />
-                  </svg>
-                </button>
+            <div class="detail__images-nav-block">
+              <a class="detail__video-button" href="#"><svg class="detail__video-button-icon" aria-hidden="true"><use xlink:href="#video" /></svg> ВИДЕО</a>
+              <div class="detail__images-nav">
+                <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" data-progress="1"></div>
               </div>
             </div>
-            <ul class="detail__features">
-              <li>Бесплатная доставка от 5 000 руб.</li>
-              <li>Свое производство</li>
-              <li>Современные технологии изготовления</li>
-            </ul>
-            <ul class="detail__tabs-nav">
-              <li class="detail__tabs-nav-item"><a class="js-tab detail__tabs-nav-button is-active" href="javascript:void(0)" data-href="tab_1">Описание</a></li>
-              <li class="detail__tabs-nav-item"><a class="js-tab detail__tabs-nav-button" href="javascript:void(0)" data-href="tab_2">Детали</a></li>
-              <li class="detail__tabs-nav-item"><a class="js-tab detail__tabs-nav-button" href="javascript:void(0)" data-href="tab_3">Таблица размеров</a></li>
-            </ul>
+          </div>
+          <div class="detail__info">
+            <div class="detail__info-inner">
+              <p class="detail__art">Артикул: 123456</p>
+              <h1 class="detail__title">Полукомбинезон РК2102/34 Морской</h1>
+              <p class="detail__price-block"><span class="detail__price">12 000 ₽</span> <span class="detail__price--old">15 000 ₽</span></p>
+              <p class="detail__colors-title">ЦВЕТ: <span>Фиолетовый</span></p>
+              <div class="detail__colors">
+                <label class="detail__color" for="color_1">
+                  <input id="color_1" type="radio" name="color" value="1" checked>
+                  <span class="detail__color-image"><img src="images/content/catalog/colors/img_3.jpg" alt="Фиолетовый"></span>
+                </label>
+                <label class="detail__color" for="color_2">
+                  <input id="color_2" type="radio" name="color" value="2">
+                  <span class="detail__color-image"><img src="images/content/catalog/colors/img_4.jpg" alt="Оранжевый"></span>
+                </label>
+                <label class="detail__color" for="color_3">
+                  <input id="color_3" type="radio" name="color" value="3">
+                  <span class="detail__color-image"><img src="images/content/catalog/colors/img_5.jpg" alt="Черно-зелёный"></span>
+                </label>
+              </div>
+              <p class="detail__sizes-title"><span>РАЗМЕРЫ</span> <a href="#">Таблица размеров</a></p>
+              <div class="detail__sizes">
+                <label class="detail__size" for="size_xxs_">
+                  <input id="size_xxs_" type="radio" name="size_" value="xxs">
+                  <span class="detail__size-text">XXS</span>
+                </label>
+                <label class="detail__size" for="size_xs_">
+                  <input id="size_xs_" type="radio" name="size_" value="xs">
+                  <span class="detail__size-text">XS</span>
+                </label>
+                <label class="detail__size" for="size_s_">
+                  <input id="size_s_" type="radio" name="size_" value="s">
+                  <span class="detail__size-text">S</span>
+                </label>
+                <label class="detail__size" for="size_m_">
+                  <input id="size_m_" type="radio" name="size_" value="m">
+                  <span class="detail__size-text">M</span>
+                </label>
+                <label class="detail__size" for="size_l_">
+                  <input id="size_l_" type="radio" name="size_" value="l">
+                  <span class="detail__size-text">L</span>
+                </label>
+                <label class="detail__size" for="size_xl_">
+                  <input id="size_xl_" type="radio" name="size_" value="xl">
+                  <span class="detail__size-text">XL</span>
+                </label>
+                <label class="detail__size" for="size_xxl_">
+                  <input id="size_xxl_" type="radio" name="size_" value="xxl">
+                  <span class="detail__size-text">XXL</span>
+                </label>
+              </div>
+              <div class="detail__buttons">
+                <div class="detail__buttons-inner">
+                  <a class="detail__add-cart button button--type_2 button--type_3" href="javascript:void(0)">Добавить в корзину</a>
+                  <button class="detail__favorite" type="button" title="Добавить в избранное">
+                    <svg class="detail__favorite-icon" aria-hidden="true">
+                      <use xlink:href="#favorite_2" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <ul class="detail__features">
+                <li>Бесплатная доставка от 5 000 руб.</li>
+                <li>Свое производство</li>
+                <li>Современные технологии изготовления</li>
+              </ul>
+              <div class="detail__tabs-nav-block">
+                <ul class="detail__tabs-nav">
+                  <li class="detail__tabs-nav-item"><a class="js-tab detail__tabs-nav-button is-active" href="javascript:void(0)" data-href="tab_1">Описание</a></li>
+                  <li class="detail__tabs-nav-item"><a class="js-tab detail__tabs-nav-button" href="javascript:void(0)" data-href="tab_2">Детали</a></li>
+                  <li class="detail__tabs-nav-item"><a class="js-tab detail__tabs-nav-button" href="javascript:void(0)" data-href="tab_3">Таблица размеров</a></li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
         <div class="detail-tabs">
@@ -153,6 +140,17 @@
                   <li><span class="fw_400">Сезон:</span> 2019-20 г</li>
                 </ul>
               </div>
+            </div>
+            <div class="add-slider add-slider--overbounds add-slider--fixed_height">
+              <div class="js-detail-slider-2" data-progress="2">
+                <div class="add-slider__slide"><a href="images/content/detail/img_3.jpg" data-fancybox="images_1"><img src="images/content/detail/img_3.jpg" alt="alt"></a></div>
+                <div class="add-slider__slide"><a href="images/content/detail/img_4.jpg" data-fancybox="images_1"><img src="images/content/detail/img_4.jpg" alt="alt"></a></div>
+                <div class="add-slider__slide"><a href="images/content/detail/img_5.jpg" data-fancybox="images_1"><img src="images/content/detail/img_5.jpg" alt="alt"></a></div>
+                <div class="add-slider__slide"><a href="images/content/detail/img_3.jpg" data-fancybox="images_1"><img src="images/content/detail/img_3.jpg" alt="alt"></a></div>
+                <div class="add-slider__slide"><a href="images/content/detail/img_4.jpg" data-fancybox="images_1"><img src="images/content/detail/img_4.jpg" alt="alt"></a></div>
+                <div class="add-slider__slide"><a href="images/content/detail/img_5.jpg" data-fancybox="images_1"><img src="images/content/detail/img_5.jpg" alt="alt"></a></div>
+              </div>
+              <div class="add-slider__progress"><div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" data-progress="2"></div></div>
             </div>
           </div>
           <div class="detail-tab" data-target="tab_2">
@@ -187,6 +185,21 @@
                 </ul>
               </div>
             </div>
+            <div class="add-slider add-slider--simple">
+              <div class="js-detail-slider-3" data-progress="3">
+                <div class="add-slider__slide"><a href="images/content/detail/img_6.jpg" data-fancybox="images_2"><img src="images/content/detail/img_6.jpg" alt="alt"></a></div>
+                <div class="add-slider__slide"><a href="images/content/detail/img_7.jpg" data-fancybox="images_2"><img src="images/content/detail/img_7.jpg" alt="alt"></a></div>
+                <div class="add-slider__slide"><a href="images/content/detail/img_6.jpg" data-fancybox="images_2"><img src="images/content/detail/img_6.jpg" alt="alt"></a></div>
+                <div class="add-slider__slide"><a href="images/content/detail/img_8.jpg" data-fancybox="images_2"><img src="images/content/detail/img_8.jpg" alt="alt"></a></div>
+                <div class="add-slider__slide"><a href="images/content/detail/img_7.jpg" data-fancybox="images_2"><img src="images/content/detail/img_7.jpg" alt="alt"></a></div>
+                <div class="add-slider__slide"><a href="images/content/detail/img_6.jpg" data-fancybox="images_2"><img src="images/content/detail/img_6.jpg" alt="alt"></a></div>
+                <div class="add-slider__slide"><a href="images/content/detail/img_7.jpg" data-fancybox="images_2"><img src="images/content/detail/img_7.jpg" alt="alt"></a></div>
+                <div class="add-slider__slide"><a href="images/content/detail/img_6.jpg" data-fancybox="images_2"><img src="images/content/detail/img_6.jpg" alt="alt"></a></div>
+                <div class="add-slider__slide"><a href="images/content/detail/img_8.jpg" data-fancybox="images_2"><img src="images/content/detail/img_8.jpg" alt="alt"></a></div>
+                <div class="add-slider__slide"><a href="images/content/detail/img_7.jpg" data-fancybox="images_2"><img src="images/content/detail/img_7.jpg" alt="alt"></a></div>
+              </div>
+              <div class="add-slider__progress"><div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" data-progress="3"></div></div>
+            </div>
           </div>
           <div class="detail-tab" data-target="tab_3">
             таблица размеров
@@ -202,7 +215,7 @@
 
   //= template/scripts.html
   <script src="js/detail.js"></script>
-
+  
 </body>
 
 </html>

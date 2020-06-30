@@ -1,3 +1,8 @@
+//fancybox меняем defaults настройки
+$.fancybox.defaults.hash = false;
+$.fancybox.defaults.autoFocus = false;
+$.fancybox.defaults.backFocus = false;
+
 //функция навешивания класса на шапку и фильтр каталога
 var resize_scroll = function(e) {
   var h = $(".header");
@@ -16,18 +21,14 @@ var resize_scroll = function(e) {
       $(".catalog-topbar__float").removeClass('scrolled');
     }
   }
-
-  /*if($(".detail__buttons").length) {
-    var f = $(".detail__buttons");
-    var fOffsetTop = f.offset().top + f.innerHeight() - $(window).height();
-    if($(window).scrollTop() > fOffsetTop) {
-      $(".detail__buttons-inner").addClass('scrolled');
-    } else {
-      $(".detail__buttons-inner").removeClass('scrolled');
-    }
-    console.log(fOffsetTop);
-  }*/
 };
+
+//прогресс-бар
+function setProgress(index, slider) {
+  var calc = ((index + 1) / (slider.slick('getSlick').slideCount)) * 100;
+
+  $('.progress[data-progress="'+ slider.attr("data-progress") +'"]').css('background-size', `${calc}% 100%`).attr('aria-valuenow', calc);
+}
 
 //проверка на тач-устройства
 function isTouchDevice () {
@@ -35,7 +36,7 @@ function isTouchDevice () {
 }
 
 //переменная для слайдера быстрого просмотра
-var fastLookSlider;
+var fastLookSlider = $('.js-fast-look-slider');
 
 //переменная для проверки открытия корзины
 var cartOpen = false;
@@ -60,26 +61,31 @@ $(document).ready(function () {
     });
   }
 
-  //кастомный скролл в мини-корзине
+  //кастомный скролл
   $('.js-custom-scroll').each(function(index, element) {
     new SimpleBar(element, { autoHide: false })
   });
 
   //слайдер в попапе быстрого просмотра
-  fastLookSlider = new Swiper ('.js-fast-look-slider', {
-    direction: 'horizontal',
-    loop: true,
+  if (fastLookSlider.length) {
+    fastLookSlider.slick({
+      mobileFirst: true,
+      dots: false,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 1,
+      appendArrows: $('.fast-look__slider-nav'),
+      prevArrow: '<button class="button-prev" title="Назад"><svg class="icon" aria-hidden="true"><use xlink:href="#slider_prev" /></svg></button>',
+      nextArrow: '<button class="button-next" title="Вперед"><svg class="icon" aria-hidden="true"><use xlink:href="#slider_next" /></svg></button>',
+      draggable: true
+    });
 
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'progressbar',
-    },
+    fastLookSlider.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+      setProgress(nextSlide, fastLookSlider);
+    });
 
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    }
-  });
+    setProgress(0, fastLookSlider);
+  }
 });
 
 //перезапуск функции навешивания класса на шапку при скролле и ресайзе
@@ -322,7 +328,7 @@ $(document).on('click', '.js-fast-look', function () {
           arrows: false,
           infobar: false,
       		afterShow: function() {
-            fastLookSlider.update();
+            fastLookSlider.slick('setPosition');
       		}
         }
     	}
