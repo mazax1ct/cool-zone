@@ -107,8 +107,12 @@
         width: auto
 
   &__images-slide
-    min-width: 50%
-    width: 50%
+    min-width: 100%
+    width: 100%
+    
+    @media(min-width: 1200px)
+      min-width: 50%
+      width: 50%
 
   &__images-nav-block
     bottom: 0
