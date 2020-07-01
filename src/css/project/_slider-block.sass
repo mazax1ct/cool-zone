@@ -1,0 +1,121 @@
+.slider-block
+  padding-top: 40px
+  padding-bottom: 40px
+
+  @media(min-width: 1200px)
+    padding-top: 90px
+    padding-bottom: 90px
+
+  &:last-child
+    margin-bottom: -50px
+
+  &--type_1
+    background-color: #fff
+
+  &--type_2
+    background-color: #F8F8F9
+
+  &__inner
+    @media(min-width: 1200px)
+      display: flex
+
+  &__title-block
+    @media(min-width: 1200px)
+      min-width: 25px
+      width: 25%
+
+  &__title
+    font-size: 16px
+    font-weight: 600
+    line-height: 22px
+    text-transform: uppercase
+
+    @media(min-width: 1200px)
+      font-size: 22px
+      line-height: 32px
+      margin-bottom: 35px
+      max-width: 245px
+
+    @media(min-width: 2500px)
+      font-size: 26px
+      line-height: 35px
+
+  &__nav
+    align-items: flex-end
+    display: flex
+    margin-left: -12px
+    margin-right: -12px
+    margin-bottom: 30px
+
+    @media(min-width: 1200px)
+      max-width: 225px
+
+    @media(min-width: 2500px)
+      max-width: 290px
+
+    .button-prev,
+    .button-next
+      align-items: center
+      background-color: transparent
+      border: none
+      cursor: pointer
+      display: flex
+      height: 34px
+      justify-content: center
+      margin-top: 0
+      padding: 0
+      position: static
+      width: 34px
+
+      @media(min-width: 2500px)
+        height: 44px
+        width: 44px
+
+      &::after
+        position: absolute
+        height: 1px
+        overflow: hidden
+        clip: rect(0 0 0 0)
+        width: 1px
+
+      .icon
+        fill: $button-color
+        height: 17px
+        width: 17px
+
+        @media(min-width: 2500px)
+          height: 22px
+          width: 22px
+
+    .progress
+      flex-grow: 1
+      margin-bottom: 10px
+
+  &__slider-block
+    overflow: hidden
+
+    @media(min-width: 1200px)
+      width: 75%
+
+.slider
+  display: flex
+  margin-left: -7px
+  margin-right: -7px
+  overflow-x: auto
+
+  @media(min-width: 1200px)
+    margin-left: -10px
+    margin-right: -10px
+
+  &__slide
+    padding-left: 7px
+    padding-right: 7px
+    width: 50%
+
+    @media(min-width: 1200px)
+      padding-left: 10px
+      padding-right: 10px
+      width: 33.33333%
+
+    @media(min-width: 2500px)
+      width: 25%

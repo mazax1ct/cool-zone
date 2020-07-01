@@ -1,0 +1,12 @@
+.progress
+  display: block
+  height: 2px
+  overflow: hidden
+  background-color: rgba($button-color, 0.25)
+  background-image: linear-gradient(to right, $button-color, $button-color)
+  background-repeat: no-repeat
+  background-size: 0 100%
+  transition: background-size 0.3s ease-in-out
+
+  &.hidden
+    opacity: 0

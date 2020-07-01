@@ -32,7 +32,7 @@ function setProgress(index, slider) {
 
 //проверка на тач-устройства
 function isTouchDevice () {
-    return true == ("ontouchstart" in window || window.DocumentTouch && document instanceof DocumentTouch);
+  return true == ("ontouchstart" in window || window.DocumentTouch && document instanceof DocumentTouch);
 }
 
 //переменная для слайдера быстрого просмотра

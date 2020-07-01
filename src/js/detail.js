@@ -1,17 +1,83 @@
 var slider_1 = $('.js-detail-slider-1');
+var slider_1_qnt = slider_1.find('.detail__images-slide').length;
 
 var slider_2 = $('.js-detail-slider-2');
 
 var slider_3 = $('.js-detail-slider-3');
+var slider_3_qnt = slider_3.find('.add-slider__slide').length;
 
-//прогресс-бар
-function setProgress(index, slider) {
-  var calc = ((index + 1) / (slider.slick('getSlick').slideCount)) * 100;
+function detailHideProgress() {
+  if($('body').width() < 600) {
+    if(slider_3_qnt < 2) {
+      $('.progress[data-progress="3"]').addClass('hidden');
+    } else {
+      $('.progress[data-progress="3"]').removeClass('hidden');
+    }
+  }
 
-  $('.progress[data-progress="'+ slider.attr("data-progress") +'"]').css('background-size', `${calc}% 100%`).attr('aria-valuenow', calc);
+  if($('body').width() > 599) {
+    if(slider_3_qnt < 3) {
+      $('.progress[data-progress="3"]').addClass('hidden');
+    } else {
+      $('.progress[data-progress="3"]').removeClass('hidden');
+    }
+  }
+
+  if($('body').width() < 1300) {
+    if(slider_1_qnt < 2) {
+      $('.progress[data-progress="1"]').addClass('hidden');
+    } else {
+      $('.progress[data-progress="1"]').removeClass('hidden');
+    }
+  }
+
+  if($('body').width() > 1299) {
+    if(slider_1_qnt < 3) {
+      $('.detail__images-nav').addClass('hidden');
+    } else {
+      $('.detail__images-nav').removeClass('hidden');
+    }
+  }
+
+  if($('body').width() > 1399) {
+    if(slider_3_qnt < 5) {
+      $('.progress[data-progress="3"]').addClass('hidden');
+    } else {
+      $('.progress[data-progress="3"]').removeClass('hidden');
+    }
+  }
+
+  if($('body').width() > 2499) {
+    if(slider_3_qnt < 6) {
+      $('.progress[data-progress="3"]').addClass('hidden');
+    } else {
+      $('.progress[data-progress="3"]').removeClass('hidden');
+    }
+  }
+}
+
+function sizesTable() {
+  $('.js-tab').removeClass('is-active');
+  $('.js-tab[data-href="tab_3"]').addClass('is-active');
+  $('.detail-tab').removeClass('is-active');
+  $('.detail-tab[data-target="tab_3"]').addClass('is-active');
+  var offsetTop = $('.js-tab[data-href="tab_3"]').offset().top - 60;
+  $('html, body').animate({scrollTop:offsetTop}, '500');
 }
 
 $(document).ready(function () {
+  if(window.location.hash) {
+    var hash = window.location.hash.substring(1);
+    if(hash == 'size_table') {
+      setTimeout(function() {
+        sizesTable();
+      },300);
+    }
+  }
+
+  //убираем прогресс-бар если недостаточно элементов
+  detailHideProgress();
+
   //главный слайдер картинок
   if (slider_1.length) {
     slider_1.slick({
@@ -26,10 +92,10 @@ $(document).ready(function () {
       draggable: true,
       responsive: [
         {
-          breakpoint: 1199,
+          breakpoint: 1299,
           settings: {
             slidesToShow: 2,
-            slidesToScroll: 2
+            slidesToScroll: 1
           }
         }
       ]
@@ -79,28 +145,28 @@ $(document).ready(function () {
           breakpoint: 599,
           settings: {
             slidesToShow: 2,
-            slidesToScroll: 2
+            slidesToScroll: 1
           }
         },
         {
           breakpoint: 1199,
           settings: {
             slidesToShow: 3,
-            slidesToScroll: 3
+            slidesToScroll: 1
           }
         },
         {
           breakpoint: 1399,
           settings: {
             slidesToShow: 4,
-            slidesToScroll: 4
+            slidesToScroll: 1
           }
         },
         {
           breakpoint: 2499,
           settings: {
             slidesToShow: 5,
-            slidesToScroll: 5
+            slidesToScroll: 1
           }
         }
       ]
@@ -114,6 +180,17 @@ $(document).ready(function () {
   }
 });
 
+$(window).resize(function() {
+  //убираем прогресс-бар если недостаточно элементов
+  detailHideProgress();
+});
+
+$(window).on("orientationchange", function(event) {
+  //убираем прогресс-бар если недостаточно элементов
+  detailHideProgress();
+});
+
+//переключение табов
 $(document).on('click', '.js-tab', function () {
   $('.js-tab').removeClass('is-active');
   $(this).addClass('is-active');
@@ -122,4 +199,11 @@ $(document).on('click', '.js-tab', function () {
   //апдейтим slick после того как он был скрыт
   slider_2.slick('setPosition');
   slider_3.slick('setPosition');
+  return false;
+});
+
+//переключение на таблицу размеров и скролл к ней
+$(document).on('click', '.js-sizes-table', function () {
+  sizesTable();
+  return false;
 });
