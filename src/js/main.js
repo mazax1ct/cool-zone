@@ -2,6 +2,8 @@
 $.fancybox.defaults.hash = false;
 $.fancybox.defaults.autoFocus = false;
 $.fancybox.defaults.backFocus = false;
+//$.fancybox.defaults.closeExisting = true;
+
 
 //функция навешивания класса на шапку и фильтр каталога
 var resize_scroll = function(e) {

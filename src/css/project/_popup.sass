@@ -1,0 +1,114 @@
+.popup
+  background-color: #fff
+  display: none
+  max-width: 584px
+  min-height: 325px
+  position: relative
+  width: 100%
+
+  @media(min-width: 1200px)
+    font-size: 16px
+    line-height: 20px
+
+  &.fancybox-content
+    padding: 40px 20px
+
+    @media(min-width: 590px)
+      padding-top: 55px
+      padding-bottom: 75px
+      padding-left: 75px
+      padding-right: 75px
+
+  &__close
+    align-items: center
+    background-color: transparent
+    border: none
+    cursor: pointer
+    display: flex
+    height: 40px
+    justify-content: center
+    left: auto
+    position: absolute
+    padding: 0
+    right: 10px
+    top: 10px
+    width: 40px
+    z-index: 1
+
+    &:hover
+      .popup__close-icon
+        fill: $text-color
+
+  &__close-icon
+    fill: $grey-color
+    height: 17px
+    transition: fill 0.3s
+    width: 17px
+
+  &__title
+    font-size: 20px
+    font-weight: 600
+    line-height: 24px
+    margin-bottom: 15px
+    text-align: center
+
+    @media(min-width: 590px)
+      font-size: 24px
+      line-height: 30px
+      margin-bottom: 30px
+
+  .fancybox-close-small
+    display: none
+
+.auth
+  &:not(:last-child)
+    margin-bottom: 30px
+
+    @media(min-width: 590px)
+      margin-bottom: 50px
+
+  &__forgot
+    margin-bottom: 15px
+    text-align: right
+
+    @media(min-width: 590px)
+      font-size: 16px
+      line-height: 18px
+
+  &__buttons
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+
+    .button
+      margin-bottom: 10px
+      min-width: 207px
+      width: 100%
+
+      @media(min-width: 590px)
+        margin-bottom: 0
+        width: auto
+
+.forgot
+  &__buttons
+    margin-top: 35px
+    text-align: center
+
+    .button
+      max-width: 285px
+      width: 100%
+
+.register
+  &:not(:last-child)
+    margin-bottom: 30px
+
+    @media(min-width: 590px)
+      margin-bottom: 50px
+
+  &__buttons
+    margin-top: 35px
+    text-align: center
+
+    .button
+      max-width: 285px
+      width: 100%

@@ -1,0 +1,138 @@
+<div id="auth" class="popup">
+  <button class="js-popup-close popup__close" type="button" title="Закрыть">
+    <svg class="popup__close-icon" aria-hidden="true">
+      <use xlink:href="#close" />
+    </svg>
+  </button>
+  <p class="popup__title">Вход</p>
+  <form class="auth" action="">
+    <label class="form-label">
+      <span class="form-label__text">Email</span>
+      <input class="input" type="text" value="">
+    </label>
+    <label class="form-label">
+      <span class="form-label__text">Пароль</span>
+      <input class="input" type="password" value="">
+    </label>
+    <p class="auth__forgot"><a href="javascript:void(0)" data-src="#forgot" data-fancybox="forgot">Забыли пароль?</a></p>
+    <div class="auth__buttons">
+      <button class="button" type="button" data-src="#register" data-fancybox="register">Регистрация</button>
+      <button class="button button--type_2" type="button">Войти</button>
+    </div>
+  </form>
+  <div class="solial-auth">
+    <p class="social-auth__title">Авторизуйтесь в один клик</p>
+    <div class="social-auth__list">
+      <a class="social-auth-link" href="#" title="Вконтакте">
+        <svg class="social-auth-link__icon" aria-hidden="true">
+          <use xlink:href="#vk" />
+        </svg>
+      </a>
+      <a class="social-auth-link" href="#" title="Facebook">
+        <svg class="social-auth-link__icon" aria-hidden="true">
+          <use xlink:href="#fb" />
+        </svg>
+      </a>
+      <a class="social-auth-link" href="#" title="Instagram">
+        <svg class="social-auth-link__icon" aria-hidden="true">
+          <use xlink:href="#inst" />
+        </svg>
+      </a>
+      <a class="social-auth-link" href="#" title="Google+">
+        <svg class="social-auth-link__icon" aria-hidden="true">
+          <use xlink:href="#gplus" />
+        </svg>
+      </a>
+      <a class="social-auth-link" href="#" title="Одноклассники">
+        <svg class="social-auth-link__icon" aria-hidden="true">
+          <use xlink:href="#ok" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div id="forgot" class="popup">
+  <button class="js-popup-close popup__close" type="button" title="Закрыть">
+    <svg class="popup__close-icon" aria-hidden="true">
+      <use xlink:href="#close" />
+    </svg>
+  </button>
+  <p class="popup__title">Восстановление пароля</p>
+  <form class="forgot" action="">
+    <label class="form-label">
+      <span class="form-label__text">Email</span>
+      <input class="input" type="text" value="">
+    </label>
+    <div class="forgot__buttons">
+      <button class="button button--type_2" type="button" data-src="#recovery" data-fancybox="recovery">Восстановить пароль</button>
+    </div>
+  </form>
+</div>
+
+<div id="recovery" class="popup">
+  <button class="js-popup-close popup__close" type="button" title="Закрыть">
+    <svg class="popup__close-icon" aria-hidden="true">
+      <use xlink:href="#close" />
+    </svg>
+  </button>
+  <p class="popup__title">Восстановление пароля</p>
+  <p class="text-center fw_400">Ссылка на восстановление пароля отправлена вам на почту</p>
+</div>
+
+<div id="register" class="popup">
+  <button class="js-popup-close popup__close" type="button" title="Закрыть">
+    <svg class="popup__close-icon" aria-hidden="true">
+      <use xlink:href="#close" />
+    </svg>
+  </button>
+  <p class="popup__title">Регистрация</p>
+  <form class="register" action="">
+    <label class="form-label">
+      <span class="form-label__text">Email</span>
+      <input class="input" type="text" value="">
+    </label>
+    <label class="form-label error">
+      <span class="form-label__text">ФИО</span>
+      <input class="input error" type="text" value="">
+      <span class="error-text">является обязательным для заполнения</span>
+    </label>
+    <label class="form-label">
+      <span class="form-label__text">Телефон</span>
+      <input class="input" type="text" value="">
+    </label>
+    <div class="register__buttons">
+      <button class="button button--type_2" type="button">Зарегистрироваться</button>
+    </div>
+  </form>
+  <div class="solial-auth">
+    <p class="social-auth__title">Авторизуйтесь в один клик</p>
+    <div class="social-auth__list">
+      <a class="social-auth-link" href="#" title="Вконтакте">
+        <svg class="social-auth-link__icon" aria-hidden="true">
+          <use xlink:href="#vk" />
+        </svg>
+      </a>
+      <a class="social-auth-link" href="#" title="Facebook">
+        <svg class="social-auth-link__icon" aria-hidden="true">
+          <use xlink:href="#fb" />
+        </svg>
+      </a>
+      <a class="social-auth-link" href="#" title="Instagram">
+        <svg class="social-auth-link__icon" aria-hidden="true">
+          <use xlink:href="#inst" />
+        </svg>
+      </a>
+      <a class="social-auth-link" href="#" title="Google+">
+        <svg class="social-auth-link__icon" aria-hidden="true">
+          <use xlink:href="#gplus" />
+        </svg>
+      </a>
+      <a class="social-auth-link" href="#" title="Одноклассники">
+        <svg class="social-auth-link__icon" aria-hidden="true">
+          <use xlink:href="#ok" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</div>
