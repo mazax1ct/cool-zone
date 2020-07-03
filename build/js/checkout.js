@@ -5,26 +5,29 @@ $(document).on('click', '.js-go-checkout', function () {
 });
 
 function cartListHeight() {
-  var containerH = $('.checkout__right').innerHeight();
-  var topH = $('.cart__top').innerHeight();
-  var innerH = $('.cart__list-block .cart__qnt').innerHeight();
-  $('.cart__list').height(containerH - topH - innerH - 30);
+  if($('body').width() > 991) {
+    var containerH = $('.checkout__right').innerHeight();
+    var topH = $('.cart__top').innerHeight();
+    var botH = $('.cart__bottom').innerHeight();
+    var innerH = $('.cart__list-block .cart__qnt').innerHeight();
+    $('.cart__list').height(containerH - topH - botH - innerH - 30);
+  } else {
+    $('.cart__list').height('');
+  }
 }
 
 $(document).ready(function () {
-  if($('body').width() > 991) {
-    cartListHeight();
-  }
+  cartListHeight();
+
+  $('.js-cart-custom-scroll').each(function(index, element) {
+    new SimpleBar(element, { autoHide: false })
+  });
 });
 
 $(window).resize(function() {
-  if($('body').width() > 991) {
-    cartListHeight();
-  }
+  cartListHeight();
 });
 
 $(window).on("orientationchange", function(event) {
-  if($('body').width() > 991) {
-    cartListHeight();
-  }
+  cartListHeight();
 });

@@ -11,13 +11,17 @@
   @media(min-width: 2500px)
     padding-top: 106px
 
+  &--reverse
+    .checkout__inner
+      @media(min-width: 992px)
+        flex-direction: row-reverse
+
   &__inner
     padding-right: 0
     padding-left: 0
 
     @media(min-width: 992px)
       display: flex
-      flex-direction: row-reverse
       height: 100%
       width: 100%
 
@@ -162,6 +166,12 @@
   @media(min-width: 992px)
     padding-bottom: 0
 
+  &--make_order
+    padding-bottom: 105px
+
+    @media(min-width: 992px)
+      padding-bottom: 0
+
   &__top
     padding-top: 25px
     padding-bottom: 20px
@@ -179,9 +189,13 @@
       display: none
 
   &__total-block
-    font-size: 16px
+    font-size: 15px
     font-weight: 400
-    line-height: 20px
+    line-height: 18px
+
+    @media(min-width: 1200px)
+      font-size: 16px
+      line-height: 20px
 
     p
       display: flex
@@ -199,6 +213,27 @@
     @media(min-width: 1200px)
       font-size: 18px
 
+  &__user-data
+    font-size: 15px
+    font-weight: 400
+    line-height: 18px
+    margin-top: 18px
+    margin-bottom: 18px
+
+    &:last-child
+      margin-bottom: 15px
+
+      @media(min-width: 992px)
+        margin-bottom: 0
+
+    @media(min-width: 1200px)
+      font-size: 16px
+      line-height: 20px
+
+    p
+      &:not(:last-child)
+        margin-bottom: 8px
+
   &__go-checkout
     margin-top: 15px
 
@@ -208,6 +243,12 @@
   &__list-block
     border-top: 1px solid #E4E7EB
     padding-top: 20px
+
+    &--floated
+      display: none
+
+      @media(min-width: 992px)
+        display: block
 
     @media(min-width: 992px)
       padding-top: 0
@@ -252,6 +293,54 @@
       opacity: 1
       right: auto
       width: 2px
+
+  &__float-block
+    background-color: #F8F8F9
+    box-shadow: 0 -5px 15px 0 rgba(#000, 0.06), 0 -2px 5px 0 rgba(#000, 0.03)
+    bottom: 0
+    height: 80px
+    left: 0
+    position: fixed
+    top: auto
+    width: 100%
+    z-index: 1
+
+    @media(min-width: 992px)
+      display: none
+
+  &__bottom
+    @media(min-width: 992px)
+      border-top: 1px solid #E4E7EB
+      margin-left: -40px
+      margin-right: -50px
+      padding-top: 20px
+      padding-left: 40px
+      padding-right: 50px
+
+  &__bottom-buttons
+    margin-bottom: 20px
+
+    @media(min-width: 500px)
+      display: flex
+      justify-content: space-between
+      margin-bottom: 12px
+
+    .button
+      width: 100%
+
+      @media(min-width: 500px)
+        width: calc(50% - 5px)
+
+      &:not(:last-child)
+        margin-bottom: 15px
+
+        @media(min-width: 500px)
+          margin-bottom: 0
+
+  &__bottom-note
+    font-size: 13px
+    font-weight: 400
+    line-height: 20px
 
 .cart-item
   display: flex
@@ -375,3 +464,111 @@
   .quantity-block__button
     &:hover
       background-color: rgba($grey-color, 0.25)
+
+.float-cart
+  cursor: pointer
+  overflow: hidden
+
+  @media(min-width: 992px)
+    display: none
+
+  &__list
+    display: flex
+    overflow: hidden
+    padding: 11px 20px
+
+  &__list-item
+    min-width: 58px
+    margin-right: 16px
+    width: 58px
+
+    img
+      border-radius: 50%
+
+  &__total-block
+    background-color: #F8F8F9
+    box-shadow: 0 0 30px 30px #F8F8F9
+    display: flex
+    font-size: 14px
+    font-weight: 400
+    flex-direction: column
+    height: 100%
+    justify-content: center
+    line-height: 18px
+    left: auto
+    position: absolute
+    padding-right: 20px
+    padding-left: 15px
+    right: 0
+    top: 0
+    text-align: right
+    z-index: 1
+
+    &::before
+      background-image: url("data:image/svg+xml,%3Csvg width='13' height='6' viewBox='0 0 11 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 5L5.60465 1L1 5' stroke='%23828990' stroke-linecap='round'/%3E%3C/svg%3E%0A")
+      background-repeat: no-repeat
+      background-position: 0 0
+      background-color: transparent
+      content: ''
+      display: block
+      height: 6px
+      margin-bottom: 11px
+      margin-left: auto
+      width: 13px
+
+    p
+      margin-bottom: 0
+
+  &__total
+    font-weight: 600
+    white-space: nowrap
+
+.order
+  max-width: 660px
+
+  @media(min-height: 700px)
+    padding-top: 44px
+    padding-bottom: 44px
+
+  &__section
+    padding-bottom: 40px
+
+    @media(min-height: 700px)
+      padding-bottom: 55px
+
+    &:last-child
+      border-bottom: 1px solid #E4E7EB
+
+      @media(min-width: 992px)
+        border-bottom: none
+        padding-bottom: 0
+
+  &__section-title
+    align-items: center
+    display: flex
+    font-size: 16px
+    font-weight: 500
+    justify-content: space-between
+    line-height: 20px
+    margin-bottom: 20px
+
+    @media(min-width: 1200px)
+      font-size: 20px
+      line-height: 26px
+      margin-bottom: 25px
+
+  &__save-button
+    background-color: transparent
+    border: none
+    font-size: 16px
+    cursor: pointer
+    line-height: 20px
+    padding: 0
+    text-decoration: underline
+
+    @media(min-width: 1200px)
+      font-size: 16px
+      line-height: 26px
+
+  &__user-form
+    max-width: 434px
