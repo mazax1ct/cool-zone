@@ -175,7 +175,7 @@ $(document).on('click', '.js-cart-close', function () {
 });
 
 //закрытие корзины
-$(document).on('mouseenter', '.page-content, .main-menu, .footer', function () {
+$(document).on('mouseenter', '.page-content, .checkout, .main-menu, .footer', function () {
   if(cartOpen == true) {
     $('.mini-cart').removeClass('fadeIn');
     setTimeout(function() {

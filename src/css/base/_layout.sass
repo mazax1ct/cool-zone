@@ -25,12 +25,14 @@ body
 
   &.overlay
     .page-content,
+    .checkout,
     .footer
       &::after
         display: block
 
   &.overlay.overlay-fadeIn
     .page-content,
+    .checkout,
     .page-top,
     .footer
       &::after
@@ -67,9 +69,18 @@ body
   &.giant-is-open
     overflow: hidden
 
+  &.checkout-page
+    .wrapper
+      @media(min-width: 992px)
+        height: 100%
+
+    @media(min-width: 992px)
+      overflow-y: hidden
+
 .page-content,
 .page-top,
-.footer
+.footer,
+.checkout
   &::after
     background-color: rgba($text-color, 0.2)
     content: ''

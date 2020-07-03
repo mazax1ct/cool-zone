@@ -122,9 +122,6 @@
     <symbol id="video" viewBox="0 0 12 13">
       <path d="M1.6,12.4c-0.1,0-0.3,0-0.4-0.1c-0.3-0.1-0.4-0.4-0.4-0.7V1.4c0-0.3,0.2-0.6,0.4-0.7c0.3-0.1,0.6-0.1,0.8,0l8.8,5.1c0.3,0.1,0.4,0.4,0.4,0.7S11,7.1,10.8,7.2l0,0L2,12.3C1.9,12.3,1.7,12.4,1.6,12.4z M2,2.2v8.7l7.5-4.3L2,2.2z M10.1,6.1C10.1,6.1,10.1,6.1,10.1,6.1L10.1,6.1z"/>
     </symbol>
-    <symbol id="back" viewBox="0 0 4 7">
-      <path d="M3.5,7C3.4,7,3.3,7,3.2,6.9L0,3.4l3.2-3.3C3.4,0,3.7,0,3.9,0.1C4,0.3,4,0.6,3.9,0.7L1.2,3.4l2.6,2.8C4,6.5,4,6.7,3.8,6.9C3.8,7,3.7,7,3.5,7z"/>
-    </symbol>
   </svg>
 
   <div class="wrapper">
@@ -151,7 +148,7 @@
           </button>
           <div class="header__mobile-duplicate">
             <div class="header__links">
-              <a class="header__link" href="#" title="Личный кабинет">
+              <a class="header__link" href="#" title="Войти" data-src="#auth" data-fancybox="auth_2">
                 <svg class="header__link-icon header__link-icon--user" aria-hidden="true">
                   <use xlink:href="#user" />
                 </svg>
@@ -336,15 +333,20 @@
               </button>
             </form>
             <div class="search-bar__dropdown">
-              <ol class="search-bar__suggests">
-                <li><button class="js-search-option search-bar__suggest" type="button">Комбинезон</button></li>
-                <li><button class="js-search-option search-bar__suggest" type="button">Комбинезон утеплённый</button></li>
-                <li><button class="js-search-option search-bar__suggest" type="button">Комбинезон горнолыжный</button></li>
-                <li><button class="js-search-option search-bar__suggest" type="button">Комбинезон стёганный</button></li>
-              </ol>
+              <p class="search-bar__dropdown-title">Возможно, вас заинтересуют:</p>
+              <div class="search-bar__vars">
+                <button class="js-search-option search-bar__var" type="button">Комбинезоны</button>
+                <button class="js-search-option search-bar__var" type="button">Куртки</button>
+                <button class="js-search-option search-bar__var" type="button">Брюки</button>
+                <button class="js-search-option search-bar__var" type="button">Балаклавы</button>
+                <button class="js-search-option search-bar__var" type="button">Термобельё</button>
+                <button class="js-search-option search-bar__var" type="button">Пончо</button>
+                <button class="js-search-option search-bar__var" type="button">Перчатки и варежки</button>
+                <button class="js-search-option search-bar__var" type="button">Средства по уходу</button>
+              </div>
             </div>
           </div>
-          <a class="header__link header__link--no_mobile" href="#" title="Личный кабинет">
+          <a class="header__link header__link--no_mobile" href="javascript:void(0)" title="Войти" data-src="#auth" data-fancybox="auth">
             <svg class="header__link-icon header__link-icon--user" aria-hidden="true">
               <use xlink:href="#user" />
             </svg>
@@ -354,7 +356,7 @@
               <use xlink:href="#favorite" />
             </svg>
           </a>
-          <a class="js-cart-open header__link cart-link" href="checkout_1.html" title="Корзина">
+          <a class="js-cart-open header__link cart-link" href="#" title="Корзина">
             <svg class="header__link-icon header__link-icon--cart" aria-hidden="true">
               <use xlink:href="#cart" />
             </svg>
@@ -497,344 +499,170 @@
     </header>
 
     <div class="page-content">
-      <div class="page-top">
-        <div class="container">
-          <h1 class="search-title"><span class="fw_500">К сожалению, по вашему поисковому запросу ничего не найдено.</span><br> Попробуйте изменить название товара или введите другие критерии поиска</h1>
+      <div class="container">
+        <h1>Заголовок типа h1</h1>
+        <p><a href="#">Душа моя озарена неземной радостью</a>, как эти чудесные весенние утра, которыми я наслаждаюсь от всего сердца.</p>
+        <p>Я совсем один и блаженствую в здешнем краю, словно созданном для таких, как я. Я так счастлив, мой друг, так упоен ощущением покоя, что искусство мое страдает от этого. Ни одного штриха не мог бы я сделать, а никогда не был таким большим
+          художником, как в эти минуты. Когда от милой моей долины поднимается пар и полдневное солнце стоит над непроницаемой чащей темного леса и лишь редкий луч проскальзывает в его святая святых, а я лежу в высокой траве у быстрого ручья и,
+          прильнув к земле, вижу тысячи всевозможных былинок и чувствую, как близок моему сердцу крошечный мирок, что снует между стебельками, наблюдаю эти неисчислимые, непостижимые разновидности червяков и мошек и чувствую близость всемогущего,
+          создавшего нас по своему подобию, веяние вселюбящего, судившего нам парить в вечном блаженстве, когда взор мой туманится и все вокруг меня и небо надо мной запечатлены в моей душе, точно образ возлюбленной, - тогда, дорогой друг, меня
+          часто томит мысль: "Ах! Как бы выразить, как бы вдохнуть в рисунок то, что так полно, так трепетно живет во мне, запечатлеть отражение моей души, как душа моя - отражение предвечного бога!"</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate quasi sed, voluptates assumenda, labore ipsum cumque fugiat odit quas in velit nostrum cupiditate architecto maiores inventore rem vitae unde quis?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat adipisci, debitis dolorum cum cupiditate consectetur minus, minima blanditiis necessitatibus quas. Deserunt molestias est, voluptates ab, quasi delectus architecto in laboriosam!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat adipisci, debitis dolorum cum cupiditate consectetur minus, minima blanditiis necessitatibus quas. Deserunt molestias est, voluptates ab, quasi delectus architecto in laboriosam!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat adipisci, debitis dolorum cum cupiditate consectetur minus, minima blanditiis necessitatibus quas. Deserunt molestias est, voluptates ab, quasi delectus architecto in laboriosam!</p>
+        <h2>Заголовок типа h2</h2>
+        <p>Я совсем один и блаженствую в здешнем краю, словно созданном для таких, как я. Я так счастлив, мой друг, так упоен ощущением покоя, что искусство мое страдает от этого. Ни одного штриха не мог бы я сделать, а никогда не был таким большим
+          художником, как в эти минуты. Когда от милой моей долины поднимается пар и полдневное солнце стоит над непроницаемой чащей темного леса и лишь редкий луч проскальзывает в его святая святых, а я лежу в высокой траве у быстрого ручья и,
+          прильнув к земле, вижу тысячи всевозможных былинок и чувствую, как близок моему сердцу крошечный мирок, что снует между стебельками, наблюдаю эти неисчислимые, непостижимые разновидности червяков и мошек и чувствую близость всемогущего,
+          создавшего нас по своему подобию, веяние вселюбящего, судившего нам парить в вечном блаженстве, когда взор мой туманится и все вокруг меня и небо надо мной запечатлены в моей душе, точно образ возлюбленной, - тогда, дорогой друг, меня
+          часто томит мысль: "Ах! Как бы выразить, как бы вдохнуть в рисунок то, что так полно, так трепетно живет во мне, запечатлеть отражение моей души, как душа моя - отражение предвечного бога!"</p>
+        <h3>Заголовок типа h3</h3>
+        <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные члены предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни.</p>
+        <h2>КОМФОРТ</h2>
+        <ul>
+          <li>маркированный список</li>
+          <li>маркированный список</li>
+          <li>маркированный список</li>
+        </ul>
+        <h2>ЗАЩИТА</h2>
+        <ol>
+          <li>нумерованный список</li>
+          <li>нумерованный список</li>
+          <li>нумерованный список</li>
+        </ol>
+        <div class="incut">
+          <p>Эргономичный крой. Рукав реглан, дополнительные складки на спине для большей свободы движений, адаптированный вход в карманы под сидячую трапецию и высокий воротник для защиты от ветра. Вентиляция на штанах, рукавах и воротнике.</p>
         </div>
-      </div>
-      <div class="slider-block slider-block--type_1">
-        <div class="slider-block__inner container">
-          <div class="slider-block__title-block">
-            <h2 class="slider-block__title">Бестселлеры</h2>
-            <div class="slider-block__nav" data-nav="4">
-              <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" data-progress="4"></div>
-            </div>
-          </div>
-          <div class="slider-block__slider-block">
-            <div class="js-slider-type1 slider" data-progress="4">
-              <div class="slider__slide">
-                <div class="card">
-                  <div class="card__top">
-                    <a class="card__image-block" href="catalog-detail.html">
-                      <picture class="card__image">
-                        <source srcset="images/content/catalog/card/img_2@1x.webp 1x, images/content/catalog/card/img_2@2x.webp 2x" type="image/webp">
-                        <img src="images/content/catalog/card/img_2@1x.jpg 1x" srcset="images/content/catalog/card/img_2@2x.jpg 2x" alt="alt">
-                      </picture>
-                      <picture class="card__image card__image--second">
-                        <source srcset="images/content/catalog/card/img_1@1x.webp 1x, images/content/catalog/card/img_1@2x.webp 2x" type="image/webp">
-                        <img src="images/content/catalog/card/img_1@1x.jpg 1x" srcset="images/content/catalog/card/img_1@2x.jpg 2x" alt="alt">
-                      </picture>
-                    </a>
-                    <p class="card__labels">
-                      <span class="card__label">limited</span>
-                    </p>
-                    <button class="card__fav is-active" type="button" title="Убрать из избранного">
-                      <svg class="card__fav-icon" aria-hidden="true">
-                        <use xlink:href="#favorite_2" />
-                      </svg>
-                    </button>
-                    <div class="card__add-cart-block"><button class="js-fast-look card__add-cart" type="button" data-src="#fast-look">добавить в корзину</button></div>
-                  </div>
-                  <p class="card__colors">
-                    <img src="images/content/catalog/colors/img_1.jpg" alt="Серый">
-                    <img src="images/content/catalog/colors/img_2.jpg" alt="Черный">
-                  </p>
-                  <p class="card__title"><a href="catalog-detail.html">Базовый комплект термобелья</a></p>
-                  <p class="card__price-block">
-                    <span class="card__price">15 000 ₽</span>
-                    <span class="card__price card__price--old">20 000 ₽</span>
-                  </p>
-                </div>
-              </div>
-              <div class="slider__slide">
-                <div class="card">
-                  <div class="card__top">
-                    <a class="card__image-block" href="catalog-detail.html">
-                      <picture class="card__image">
-                        <source srcset="images/content/catalog/card/img_1@1x.webp 1x, images/content/catalog/card/img_1@2x.webp 2x" type="image/webp">
-                        <img src="images/content/catalog/card/img_1@1x.jpg 1x" srcset="images/content/catalog/card/img_1@2x.jpg 2x" alt="alt">
-                      </picture>
-                      <picture class="card__image card__image--second">
-                        <source srcset="images/content/catalog/card/img_2@1x.webp 1x, images/content/catalog/card/img_2@2x.webp 2x" type="image/webp">
-                        <img src="images/content/catalog/card/img_2@1x.jpg 1x" srcset="images/content/catalog/card/img_2@2x.jpg 2x" alt="alt">
-                      </picture>
-                    </a>
-                    <p class="card__labels">
-                      <span class="card__label">limited</span>
-                    </p>
-                    <button class="card__fav is-active" type="button" title="Убрать из избранного">
-                      <svg class="card__fav-icon" aria-hidden="true">
-                        <use xlink:href="#favorite_2" />
-                      </svg>
-                    </button>
-                    <div class="card__add-cart-block"><button class="js-fast-look card__add-cart" type="button" data-src="#fast-look">добавить в корзину</button></div>
-                  </div>
-                  <p class="card__colors">
-                    <img src="images/content/catalog/colors/img_1.jpg" alt="Серый">
-                    <img src="images/content/catalog/colors/img_2.jpg" alt="Черный">
-                  </p>
-                  <p class="card__title"><a href="catalog-detail.html">Базовый комплект термобелья</a></p>
-                  <p class="card__price-block">
-                    <span class="card__price">15 000 ₽</span>
-                    <span class="card__price card__price--old">20 000 ₽</span>
-                  </p>
-                </div>
-              </div>
-              <div class="slider__slide">
-                <div class="card">
-                  <div class="card__top">
-                    <a class="card__image-block" href="catalog-detail.html">
-                      <picture class="card__image">
-                        <source srcset="images/content/catalog/card/img_2@1x.webp 1x, images/content/catalog/card/img_2@2x.webp 2x" type="image/webp">
-                        <img src="images/content/catalog/card/img_2@1x.jpg 1x" srcset="images/content/catalog/card/img_2@2x.jpg 2x" alt="alt">
-                      </picture>
-                      <picture class="card__image card__image--second">
-                        <source srcset="images/content/catalog/card/img_1@1x.webp 1x, images/content/catalog/card/img_1@2x.webp 2x" type="image/webp">
-                        <img src="images/content/catalog/card/img_1@1x.jpg 1x" srcset="images/content/catalog/card/img_1@2x.jpg 2x" alt="alt">
-                      </picture>
-                    </a>
-                    <p class="card__labels">
-                      <span class="card__label">limited</span>
-                    </p>
-                    <button class="card__fav is-active" type="button" title="Убрать из избранного">
-                      <svg class="card__fav-icon" aria-hidden="true">
-                        <use xlink:href="#favorite_2" />
-                      </svg>
-                    </button>
-                    <div class="card__add-cart-block"><button class="js-fast-look card__add-cart" type="button" data-src="#fast-look">добавить в корзину</button></div>
-                  </div>
-                  <p class="card__colors">
-                    <img src="images/content/catalog/colors/img_1.jpg" alt="Серый">
-                    <img src="images/content/catalog/colors/img_2.jpg" alt="Черный">
-                  </p>
-                  <p class="card__title"><a href="catalog-detail.html">Базовый комплект термобелья</a></p>
-                  <p class="card__price-block">
-                    <span class="card__price">15 000 ₽</span>
-                    <span class="card__price card__price--old">20 000 ₽</span>
-                  </p>
-                </div>
-              </div>
-              <div class="slider__slide">
-                <div class="card">
-                  <div class="card__top">
-                    <a class="card__image-block" href="catalog-detail.html">
-                      <picture class="card__image">
-                        <source srcset="images/content/catalog/card/img_1@1x.webp 1x, images/content/catalog/card/img_1@2x.webp 2x" type="image/webp">
-                        <img src="images/content/catalog/card/img_1@1x.jpg 1x" srcset="images/content/catalog/card/img_1@2x.jpg 2x" alt="alt">
-                      </picture>
-                      <picture class="card__image card__image--second">
-                        <source srcset="images/content/catalog/card/img_2@1x.webp 1x, images/content/catalog/card/img_2@2x.webp 2x" type="image/webp">
-                        <img src="images/content/catalog/card/img_2@1x.jpg 1x" srcset="images/content/catalog/card/img_2@2x.jpg 2x" alt="alt">
-                      </picture>
-                    </a>
-                    <p class="card__labels">
-                      <span class="card__label">limited</span>
-                    </p>
-                    <button class="card__fav is-active" type="button" title="Убрать из избранного">
-                      <svg class="card__fav-icon" aria-hidden="true">
-                        <use xlink:href="#favorite_2" />
-                      </svg>
-                    </button>
-                    <div class="card__add-cart-block"><button class="js-fast-look card__add-cart" type="button" data-src="#fast-look">добавить в корзину</button></div>
-                  </div>
-                  <p class="card__colors">
-                    <img src="images/content/catalog/colors/img_1.jpg" alt="Серый">
-                    <img src="images/content/catalog/colors/img_2.jpg" alt="Черный">
-                  </p>
-                  <p class="card__title"><a href="catalog-detail.html">Базовый комплект термобелья</a></p>
-                  <p class="card__price-block">
-                    <span class="card__price">15 000 ₽</span>
-                    <span class="card__price card__price--old">20 000 ₽</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="slider-block slider-block--type_2">
-        <div class="slider-block__inner container">
-          <div class="slider-block__title-block">
-            <h2 class="slider-block__title">Вы недавно смотрели</h2>
-            <div class="slider-block__nav" data-nav="5">
-              <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" data-progress="5"></div>
-            </div>
-          </div>
-          <div class="slider-block__slider-block">
-            <div class="js-slider-type2 slider" data-progress="5">
-              <div class="slider__slide">
-                <div class="card">
-                  <div class="card__top">
-                    <a class="card__image-block" href="catalog-detail.html">
-                      <picture class="card__image">
-                        <source srcset="images/content/catalog/card/img_2@1x.webp 1x, images/content/catalog/card/img_2@2x.webp 2x" type="image/webp">
-                        <img src="images/content/catalog/card/img_2@1x.jpg 1x" srcset="images/content/catalog/card/img_2@2x.jpg 2x" alt="alt">
-                      </picture>
-                      <picture class="card__image card__image--second">
-                        <source srcset="images/content/catalog/card/img_1@1x.webp 1x, images/content/catalog/card/img_1@2x.webp 2x" type="image/webp">
-                        <img src="images/content/catalog/card/img_1@1x.jpg 1x" srcset="images/content/catalog/card/img_1@2x.jpg 2x" alt="alt">
-                      </picture>
-                    </a>
-                    <p class="card__labels">
-                      <span class="card__label">limited</span>
-                    </p>
-                    <button class="card__fav is-active" type="button" title="Убрать из избранного">
-                      <svg class="card__fav-icon" aria-hidden="true">
-                        <use xlink:href="#favorite_2" />
-                      </svg>
-                    </button>
-                    <div class="card__add-cart-block"><button class="js-fast-look card__add-cart" type="button" data-src="#fast-look">добавить в корзину</button></div>
-                  </div>
-                  <p class="card__colors">
-                    <img src="images/content/catalog/colors/img_1.jpg" alt="Серый">
-                    <img src="images/content/catalog/colors/img_2.jpg" alt="Черный">
-                  </p>
-                  <p class="card__title"><a href="catalog-detail.html">Базовый комплект термобелья</a></p>
-                  <p class="card__price-block">
-                    <span class="card__price">15 000 ₽</span>
-                    <span class="card__price card__price--old">20 000 ₽</span>
-                  </p>
-                </div>
-              </div>
-              <div class="slider__slide">
-                <div class="card">
-                  <div class="card__top">
-                    <a class="card__image-block" href="catalog-detail.html">
-                      <picture class="card__image">
-                        <source srcset="images/content/catalog/card/img_1@1x.webp 1x, images/content/catalog/card/img_1@2x.webp 2x" type="image/webp">
-                        <img src="images/content/catalog/card/img_1@1x.jpg 1x" srcset="images/content/catalog/card/img_1@2x.jpg 2x" alt="alt">
-                      </picture>
-                      <picture class="card__image card__image--second">
-                        <source srcset="images/content/catalog/card/img_2@1x.webp 1x, images/content/catalog/card/img_2@2x.webp 2x" type="image/webp">
-                        <img src="images/content/catalog/card/img_2@1x.jpg 1x" srcset="images/content/catalog/card/img_2@2x.jpg 2x" alt="alt">
-                      </picture>
-                    </a>
-                    <p class="card__labels">
-                      <span class="card__label">limited</span>
-                    </p>
-                    <button class="card__fav is-active" type="button" title="Убрать из избранного">
-                      <svg class="card__fav-icon" aria-hidden="true">
-                        <use xlink:href="#favorite_2" />
-                      </svg>
-                    </button>
-                    <div class="card__add-cart-block"><button class="js-fast-look card__add-cart" type="button" data-src="#fast-look">добавить в корзину</button></div>
-                  </div>
-                  <p class="card__colors">
-                    <img src="images/content/catalog/colors/img_1.jpg" alt="Серый">
-                    <img src="images/content/catalog/colors/img_2.jpg" alt="Черный">
-                  </p>
-                  <p class="card__title"><a href="catalog-detail.html">Базовый комплект термобелья</a></p>
-                  <p class="card__price-block">
-                    <span class="card__price">15 000 ₽</span>
-                    <span class="card__price card__price--old">20 000 ₽</span>
-                  </p>
-                </div>
-              </div>
-              <div class="slider__slide">
-                <div class="card">
-                  <div class="card__top">
-                    <a class="card__image-block" href="catalog-detail.html">
-                      <picture class="card__image">
-                        <source srcset="images/content/catalog/card/img_2@1x.webp 1x, images/content/catalog/card/img_2@2x.webp 2x" type="image/webp">
-                        <img src="images/content/catalog/card/img_2@1x.jpg 1x" srcset="images/content/catalog/card/img_2@2x.jpg 2x" alt="alt">
-                      </picture>
-                      <picture class="card__image card__image--second">
-                        <source srcset="images/content/catalog/card/img_1@1x.webp 1x, images/content/catalog/card/img_1@2x.webp 2x" type="image/webp">
-                        <img src="images/content/catalog/card/img_1@1x.jpg 1x" srcset="images/content/catalog/card/img_1@2x.jpg 2x" alt="alt">
-                      </picture>
-                    </a>
-                    <p class="card__labels">
-                      <span class="card__label">limited</span>
-                    </p>
-                    <button class="card__fav is-active" type="button" title="Убрать из избранного">
-                      <svg class="card__fav-icon" aria-hidden="true">
-                        <use xlink:href="#favorite_2" />
-                      </svg>
-                    </button>
-                    <div class="card__add-cart-block"><button class="js-fast-look card__add-cart" type="button" data-src="#fast-look">добавить в корзину</button></div>
-                  </div>
-                  <p class="card__colors">
-                    <img src="images/content/catalog/colors/img_1.jpg" alt="Серый">
-                    <img src="images/content/catalog/colors/img_2.jpg" alt="Черный">
-                  </p>
-                  <p class="card__title"><a href="catalog-detail.html">Базовый комплект термобелья</a></p>
-                  <p class="card__price-block">
-                    <span class="card__price">15 000 ₽</span>
-                    <span class="card__price card__price--old">20 000 ₽</span>
-                  </p>
-                </div>
-              </div>
-              <div class="slider__slide">
-                <div class="card">
-                  <div class="card__top">
-                    <a class="card__image-block" href="catalog-detail.html">
-                      <picture class="card__image">
-                        <source srcset="images/content/catalog/card/img_1@1x.webp 1x, images/content/catalog/card/img_1@2x.webp 2x" type="image/webp">
-                        <img src="images/content/catalog/card/img_1@1x.jpg 1x" srcset="images/content/catalog/card/img_1@2x.jpg 2x" alt="alt">
-                      </picture>
-                      <picture class="card__image card__image--second">
-                        <source srcset="images/content/catalog/card/img_2@1x.webp 1x, images/content/catalog/card/img_2@2x.webp 2x" type="image/webp">
-                        <img src="images/content/catalog/card/img_2@1x.jpg 1x" srcset="images/content/catalog/card/img_2@2x.jpg 2x" alt="alt">
-                      </picture>
-                    </a>
-                    <p class="card__labels">
-                      <span class="card__label">limited</span>
-                    </p>
-                    <button class="card__fav is-active" type="button" title="Убрать из избранного">
-                      <svg class="card__fav-icon" aria-hidden="true">
-                        <use xlink:href="#favorite_2" />
-                      </svg>
-                    </button>
-                    <div class="card__add-cart-block"><button class="js-fast-look card__add-cart" type="button" data-src="#fast-look">добавить в корзину</button></div>
-                  </div>
-                  <p class="card__colors">
-                    <img src="images/content/catalog/colors/img_1.jpg" alt="Серый">
-                    <img src="images/content/catalog/colors/img_2.jpg" alt="Черный">
-                  </p>
-                  <p class="card__title"><a href="catalog-detail.html">Базовый комплект термобелья</a></p>
-                  <p class="card__price-block">
-                    <span class="card__price">15 000 ₽</span>
-                    <span class="card__price card__price--old">20 000 ₽</span>
-                  </p>
-                </div>
-              </div>
-              <div class="slider__slide">
-                <div class="card">
-                  <div class="card__top">
-                    <a class="card__image-block" href="catalog-detail.html">
-                      <picture class="card__image">
-                        <source srcset="images/content/catalog/card/img_2@1x.webp 1x, images/content/catalog/card/img_2@2x.webp 2x" type="image/webp">
-                        <img src="images/content/catalog/card/img_2@1x.jpg 1x" srcset="images/content/catalog/card/img_2@2x.jpg 2x" alt="alt">
-                      </picture>
-                      <picture class="card__image card__image--second">
-                        <source srcset="images/content/catalog/card/img_1@1x.webp 1x, images/content/catalog/card/img_1@2x.webp 2x" type="image/webp">
-                        <img src="images/content/catalog/card/img_1@1x.jpg 1x" srcset="images/content/catalog/card/img_1@2x.jpg 2x" alt="alt">
-                      </picture>
-                    </a>
-                    <p class="card__labels">
-                      <span class="card__label">limited</span>
-                    </p>
-                    <button class="card__fav is-active" type="button" title="Убрать из избранного">
-                      <svg class="card__fav-icon" aria-hidden="true">
-                        <use xlink:href="#favorite_2" />
-                      </svg>
-                    </button>
-                    <div class="card__add-cart-block"><button class="js-fast-look card__add-cart" type="button" data-src="#fast-look">добавить в корзину</button></div>
-                  </div>
-                  <p class="card__colors">
-                    <img src="images/content/catalog/colors/img_1.jpg" alt="Серый">
-                    <img src="images/content/catalog/colors/img_2.jpg" alt="Черный">
-                  </p>
-                  <p class="card__title"><a href="catalog-detail.html">Базовый комплект термобелья</a></p>
-                  <p class="card__price-block">
-                    <span class="card__price">15 000 ₽</span>
-                    <span class="card__price card__price--old">20 000 ₽</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <h2>СТЕПЕНЬ ЖИРНОСТИ ТЕКСТА</h2>
+        <ul>
+          <li>маркированный список</li>
+          <li class="fw_400">маркированный список</li>
+          <li class="fw_500">маркированный список</li>
+          <li class="fw_600">маркированный список</li>
+          <li><b>маркированный список</b></li>
+        </ul>
+        <ul class="unstyled-list">
+          <li><span class="fw_400">Мембрана:</span> 15000 мм/10000 гр/м2/24ч</li>
+          <li><span class="fw_400">Утеплитель:</span> 60 гр/м2</li>
+          <li><span class="fw_400">Производитель:</span> Россия/Russia</li>
+          <li><span class="fw_400">Сезон:</span> 2019-20 г</li>
+        </ul>
+        <form method="post" class="form" action="index.html">
+          <label class="form-label">
+            <span class="form-label__text">Email</span>
+            <input class="input" type="text" value=""/>
+          </label>
+          <label class="form-label">
+            <span class="form-label__text">Пароль</span>
+            <input class="input" type="password" value=""/>
+          </label>
+          <label class="form-label">
+            <span class="form-label__text">Имя (не активно)</span>
+            <input class="input" type="text" value="" disabled/>
+          </label>
+          <label class="form-label error">
+            <span class="form-label__text">Имя</span>
+            <input class="input error" type="text" value="" />
+            <span class="error-text">является обязательным для заполнения</span>
+          </label>
+          <label class="form-label">
+            <span class="form-label__text">Комментарии</span>
+            <textarea class="textarea"></textarea>
+          </label>
+          <label class="form-label">
+            <span class="form-label__text">Комментарии (не активно)</span>
+            <textarea class="textarea" disabled></textarea>
+          </label>
+          <label class="form-label error">
+            <span class="form-label__text">Комментарии</span>
+            <textarea class="textarea error"></textarea>
+            <span class="error-text">является обязательным для заполнения</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox"/>
+            <span class="checkbox-icon"></span>
+            <span class="checkbox-text">Чекбокс</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" checked/>
+            <span class="checkbox-icon"></span>
+            <span class="checkbox-text">Чекбокс</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" disabled/>
+            <span class="checkbox-icon"></span>
+            <span class="checkbox-text">Чекбокс</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" checked disabled/>
+            <span class="checkbox-icon"></span>
+            <span class="checkbox-text">Чекбокс</span>
+          </label>
+          <label class="radio-label">
+            <input id="radio1" type="radio" name="radio" value="1" checked/>
+            <span class="radio-icon"></span>
+            <span class="radio-text">Радио</span>
+          </label>
+          <label class="radio-label">
+            <input id="radio2" type="radio" name="radio" value="2"/>
+            <span class="radio-icon"></span>
+            <span class="radio-text">Радио</span>
+          </label>
+          <label class="radio-label">
+            <input id="radio2" type="radio" name="radio" value="3" disabled/>
+            <span class="radio-icon"></span>
+            <span class="radio-text">Радио</span>
+          </label>
+          <p>
+            <a class="button disabled" href="javascript:void(0)" tabindex="-1">Я кнопка!</a>
+            <button class="button" type="button">Нет я кнопка!</button>
+            <input class="button" type="button" value="Акститесь!">
+          </p>
+          <p>
+            <a class="button button--type_2 disabled" href="javascript:void(0)" tabindex="-1">Я кнопка!</a>
+            <button class="button button--type_2" type="button">Нет я кнопка!</button>
+            <input class="button button--type_2" type="button" value="Акститесь!">
+          </p>
+          <p>
+            <a class="button button--type_3 disabled" href="javascript:void(0)" tabindex="-1">Я кнопка!</a>
+            <button class="button button--type_3" type="button">Нет я кнопка!</button>
+            <input class="button button--type_3" type="button" value="Акститесь!">
+          </p>
+          <p>
+            <a class="button button--type_2 button--type_3 disabled" href="javascript:void(0)" tabindex="-1">Я кнопка!</a>
+            <button class="button button--type_2 button--type_3" type="button">Нет я кнопка!</button>
+            <input class="button button--type_2 button--type_3" type="button" value="Акститесь!">
+          </p>
+          <label class="select" for="select">
+            <select id="select">
+              <option value="1">Вариант 1</option>
+              <option value="1">Вариант 2</option>
+              <option value="1">Вариант 3</option>
+            </select>
+          </label>
+        </form>
+        <br>
+        <table>
+          <tr>
+            <th>Заголовок таблицы</th>
+            <th>Заголовок таблицы</th>
+            <th>Заголовок таблицы</th>
+          </tr>
+          <tr>
+            <td>ячейка таблицы</td>
+            <td>ячейка таблицы</td>
+            <td>ячейка таблицы</td>
+          </tr>
+          <tr>
+            <td>ячейка таблицы</td>
+            <td>ячейка таблицы</td>
+            <td>ячейка таблицы</td>
+          </tr>
+          <tr>
+            <td>ячейка таблицы</td>
+            <td>ячейка таблицы</td>
+            <td>ячейка таблицы</td>
+          </tr>
+        </table>
       </div>
     </div>
   </div>
@@ -911,105 +739,141 @@
     </div>
   </footer>
 
-  <div id="fast-look" class="fast-look">
-    <button class="js-popup-close fast-look__close" type="button" title="Закрыть">
-      <svg class="fast-look__close-icon" aria-hidden="true">
+  <div id="auth" class="popup">
+    <button class="js-popup-close popup__close" type="button" title="Закрыть">
+      <svg class="popup__close-icon" aria-hidden="true">
         <use xlink:href="#close" />
       </svg>
     </button>
-    <div class="fast-look__inner">
-      <div class="fast-look__images">
-        <div class="js-fast-look-slider fast-look__slider" data-progress="fast-look">
-          <div>
-            <picture>
-              <source srcset="images/content/catalog/fast-look/img_3@1x.webp 1x, images/content/catalog/fast-look/img_3@2x.webp 2x" type="image/webp">
-              <img src="images/content/catalog/fast-look/img_3@1x.jpg 1x" srcset="images/content/catalog/fast-look/img_3@2x.jpg 2x" alt="alt">
-            </picture>
-          </div>
-          <div>
-            <picture>
-              <source srcset="images/content/catalog/fast-look/img_3@1x.webp 1x, images/content/catalog/fast-look/img_3@2x.webp 2x" type="image/webp">
-              <img src="images/content/catalog/fast-look/img_3@1x.jpg 1x" srcset="images/content/catalog/fast-look/img_3@2x.jpg 2x" alt="alt">
-            </picture>
-          </div>
-          <div>
-            <picture>
-              <source srcset="images/content/catalog/fast-look/img_3@1x.webp 1x, images/content/catalog/fast-look/img_3@2x.webp 2x" type="image/webp">
-              <img src="images/content/catalog/fast-look/img_3@1x.jpg 1x" srcset="images/content/catalog/fast-look/img_3@2x.jpg 2x" alt="alt">
-            </picture>
-          </div>
-        </div>
-        <div class="fast-look__slider-nav">
-          <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" data-progress="fast-look"></div>
-        </div>
+    <p class="popup__title">Вход</p>
+    <form class="auth" action="">
+      <label class="form-label">
+        <span class="form-label__text">Email</span>
+        <input class="input" type="text" value="">
+      </label>
+      <label class="form-label">
+        <span class="form-label__text">Пароль</span>
+        <input class="input" type="password" value="">
+      </label>
+      <p class="auth__forgot"><a href="javascript:void(0)" data-src="#forgot" data-fancybox="forgot">Забыли пароль?</a></p>
+      <div class="auth__buttons">
+        <button class="button" type="button" data-src="#register" data-fancybox="register">Регистрация</button>
+        <button class="button button--type_2" type="button">Войти</button>
       </div>
-      <div class="fast-look__info">
-        <p class="fast-look__title"><a href="catalog-detail.html">Полукомбинезон РК2102/3456 Морской</a></p>
-        <p class="fast-look__price-block"><span class="fast-look__price">62 000 ₽</span> <span class="fast-look__price fast-look__price--old">75 000 ₽</span></p>
-        <div class="fast-look__preview-text">
-          <p>Kомбинезон Cool Zone KITE - специализированный комбинезон для сноукайтинга. Эргономичный крой. Рукав реглан, дополнительные складки на спине для большей свободы движений, адаптированный вход в карманы под сидячую трапецию и высокий воротник для защиты от ветра.</p>
-          <p><span class="fw_400">Мембрана:</span> 15000 мм/10000 гр/м2/24ч</p>
-          <p><span class="fw_400">Утеплитель:</span> 60 гр/м2</p>
-        </div>
-        <div class="fast-look__bottom">
-          <p class="fast-look__prop"><span class="fast-look__prop-title">ЦВЕТ:</span> <span class="fast-look__prop-color">Фиолетовый</span></p>
-          <div class="fast-look__colors">
-            <label class="fast-look__color" for="color_1_">
-              <input id="color_1_" type="radio" name="color_" value="1" checked>
-              <span class="fast-look__color-image"><img src="images/content/catalog/colors/img_3.jpg" alt="Фиолетовый"></span>
-            </label>
-            <label class="fast-look__color" for="color_2_">
-              <input id="color_2_" type="radio" name="color_" value="2">
-              <span class="fast-look__color-image"><img src="images/content/catalog/colors/img_4.jpg" alt="Оранжевый"></span>
-            </label>
-            <label class="fast-look__color" for="color_3_">
-              <input id="color_3_" type="radio" name="color_" value="3">
-              <span class="fast-look__color-image"><img src="images/content/catalog/colors/img_5.jpg" alt="Черно-зелёный"></span>
-            </label>
-          </div>
-          <p class="fast-look__size-title-block">
-            <span class="fast-look__size-title">Размеры</span> <a href="catalog-detail.html#size_table">Таблица размеров</a>
-          </p>
-          <div class="fast-look__sizes">
-            <label class="fast-look__size" for="size_xxs">
-              <input id="size_xxs" type="radio" name="size" value="xxs" disabled>
-              <span class="fast-look__size-text">XXS</span>
-            </label>
-            <label class="fast-look__size" for="size_xs">
-              <input id="size_xs" type="radio" name="size" value="xs" disabled>
-              <span class="fast-look__size-text">XS</span>
-            </label>
-            <label class="fast-look__size" for="size_s">
-              <input id="size_s" type="radio" name="size" value="s">
-              <span class="fast-look__size-text">S</span>
-            </label>
-            <label class="fast-look__size" for="size_m">
-              <input id="size_m" type="radio" name="size" value="m">
-              <span class="fast-look__size-text">M</span>
-            </label>
-            <label class="fast-look__size" for="size_l">
-              <input id="size_l" type="radio" name="size" value="l">
-              <span class="fast-look__size-text">L</span>
-            </label>
-            <label class="fast-look__size" for="size_xl">
-              <input id="size_xl" type="radio" name="size" value="xl">
-              <span class="fast-look__size-text">XL</span>
-            </label>
-            <label class="fast-look__size" for="size_xxl">
-              <input id="size_xxl" type="radio" name="size" value="xxl">
-              <span class="fast-look__size-text">XXL</span>
-            </label>
-          </div>
-          <div class="fast-look__buttons">
-            <a class="fast-look__add-cart button button--type_2 button--type_3" href="cart.html">Добавить в корзину</a>
-            <button class="fast-look__favorite" type="button" title="Добавить в избранное">
-              <svg class="fast-look__favorite-icon" aria-hidden="true">
-                <use xlink:href="#favorite_2" />
-              </svg>
-            </button>
-          </div>
-          <a class="fast-look__to-detail" href="catalog-detail.html">Подробнее о товаре</a>
-        </div>
+    </form>
+    <div class="solial-auth">
+      <p class="social-auth__title">Авторизуйтесь в один клик</p>
+      <div class="social-auth__list">
+        <a class="social-auth-link" href="#" title="Вконтакте">
+          <svg class="social-auth-link__icon" aria-hidden="true">
+            <use xlink:href="#vk" />
+          </svg>
+        </a>
+        <a class="social-auth-link" href="#" title="Facebook">
+          <svg class="social-auth-link__icon" aria-hidden="true">
+            <use xlink:href="#fb" />
+          </svg>
+        </a>
+        <a class="social-auth-link" href="#" title="Instagram">
+          <svg class="social-auth-link__icon" aria-hidden="true">
+            <use xlink:href="#inst" />
+          </svg>
+        </a>
+        <a class="social-auth-link" href="#" title="Google+">
+          <svg class="social-auth-link__icon" aria-hidden="true">
+            <use xlink:href="#gplus" />
+          </svg>
+        </a>
+        <a class="social-auth-link" href="#" title="Одноклассники">
+          <svg class="social-auth-link__icon" aria-hidden="true">
+            <use xlink:href="#ok" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <div id="forgot" class="popup">
+    <button class="js-popup-close popup__close" type="button" title="Закрыть">
+      <svg class="popup__close-icon" aria-hidden="true">
+        <use xlink:href="#close" />
+      </svg>
+    </button>
+    <p class="popup__title">Восстановление пароля</p>
+    <form class="forgot" action="">
+      <label class="form-label">
+        <span class="form-label__text">Email</span>
+        <input class="input" type="text" value="">
+      </label>
+      <div class="forgot__buttons">
+        <button class="button button--type_2" type="button" data-src="#recovery" data-fancybox="recovery">Восстановить пароль</button>
+      </div>
+    </form>
+  </div>
+  
+  <div id="recovery" class="popup">
+    <button class="js-popup-close popup__close" type="button" title="Закрыть">
+      <svg class="popup__close-icon" aria-hidden="true">
+        <use xlink:href="#close" />
+      </svg>
+    </button>
+    <p class="popup__title">Восстановление пароля</p>
+    <p class="text-center fw_400">Ссылка на восстановление пароля отправлена вам на почту</p>
+  </div>
+  
+  <div id="register" class="popup">
+    <button class="js-popup-close popup__close" type="button" title="Закрыть">
+      <svg class="popup__close-icon" aria-hidden="true">
+        <use xlink:href="#close" />
+      </svg>
+    </button>
+    <p class="popup__title">Регистрация</p>
+    <form class="register" action="">
+      <label class="form-label">
+        <span class="form-label__text">Email</span>
+        <input class="input" type="text" value="">
+      </label>
+      <label class="form-label error">
+        <span class="form-label__text">ФИО</span>
+        <input class="input error" type="text" value="">
+        <span class="error-text">является обязательным для заполнения</span>
+      </label>
+      <label class="form-label">
+        <span class="form-label__text">Телефон</span>
+        <input class="input" type="text" value="">
+      </label>
+      <div class="register__buttons">
+        <button class="button button--type_2" type="button">Зарегистрироваться</button>
+      </div>
+    </form>
+    <div class="solial-auth">
+      <p class="social-auth__title">Авторизуйтесь в один клик</p>
+      <div class="social-auth__list">
+        <a class="social-auth-link" href="#" title="Вконтакте">
+          <svg class="social-auth-link__icon" aria-hidden="true">
+            <use xlink:href="#vk" />
+          </svg>
+        </a>
+        <a class="social-auth-link" href="#" title="Facebook">
+          <svg class="social-auth-link__icon" aria-hidden="true">
+            <use xlink:href="#fb" />
+          </svg>
+        </a>
+        <a class="social-auth-link" href="#" title="Instagram">
+          <svg class="social-auth-link__icon" aria-hidden="true">
+            <use xlink:href="#inst" />
+          </svg>
+        </a>
+        <a class="social-auth-link" href="#" title="Google+">
+          <svg class="social-auth-link__icon" aria-hidden="true">
+            <use xlink:href="#gplus" />
+          </svg>
+        </a>
+        <a class="social-auth-link" href="#" title="Одноклассники">
+          <svg class="social-auth-link__icon" aria-hidden="true">
+            <use xlink:href="#ok" />
+          </svg>
+        </a>
       </div>
     </div>
   </div>
@@ -1019,8 +883,6 @@
   <script type="text/javascript" src="js/jquery.fancybox.min.js"></script>
   <script type="text/javascript" src="js/slick.min.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
-  <script src="js/progress-bar.js"></script>
-  <script src="js/sliders.js"></script>
 </body>
 
 </html>

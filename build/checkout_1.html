@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="css/style.css"/>
 </head>
 
-<body>
+<body class="checkout-page">
   <svg aria-hidden="true" style="width: 0px; height: 0px; overflow: hidden; position: absolute;" xmlns="http://www.w3.org/2000/svg">
     <symbol id="burger" viewBox="0 0 27 18">
       <g>
@@ -151,7 +151,7 @@
           </button>
           <div class="header__mobile-duplicate">
             <div class="header__links">
-              <a class="header__link" href="#" title="Личный кабинет">
+              <a class="header__link" href="#" title="Войти" data-src="#auth" data-fancybox="auth_2">
                 <svg class="header__link-icon header__link-icon--user" aria-hidden="true">
                   <use xlink:href="#user" />
                 </svg>
@@ -336,15 +336,20 @@
               </button>
             </form>
             <div class="search-bar__dropdown">
-              <ol class="search-bar__suggests">
-                <li><button class="js-search-option search-bar__suggest" type="button">Комбинезон</button></li>
-                <li><button class="js-search-option search-bar__suggest" type="button">Комбинезон утеплённый</button></li>
-                <li><button class="js-search-option search-bar__suggest" type="button">Комбинезон горнолыжный</button></li>
-                <li><button class="js-search-option search-bar__suggest" type="button">Комбинезон стёганный</button></li>
-              </ol>
+              <p class="search-bar__dropdown-title">Возможно, вас заинтересуют:</p>
+              <div class="search-bar__vars">
+                <button class="js-search-option search-bar__var" type="button">Комбинезоны</button>
+                <button class="js-search-option search-bar__var" type="button">Куртки</button>
+                <button class="js-search-option search-bar__var" type="button">Брюки</button>
+                <button class="js-search-option search-bar__var" type="button">Балаклавы</button>
+                <button class="js-search-option search-bar__var" type="button">Термобельё</button>
+                <button class="js-search-option search-bar__var" type="button">Пончо</button>
+                <button class="js-search-option search-bar__var" type="button">Перчатки и варежки</button>
+                <button class="js-search-option search-bar__var" type="button">Средства по уходу</button>
+              </div>
             </div>
           </div>
-          <a class="header__link header__link--no_mobile" href="#" title="Личный кабинет">
+          <a class="header__link header__link--no_mobile" href="javascript:void(0)" title="Войти" data-src="#auth" data-fancybox="auth">
             <svg class="header__link-icon header__link-icon--user" aria-hidden="true">
               <use xlink:href="#user" />
             </svg>
@@ -496,520 +501,449 @@
       </div>
     </header>
 
-    <div class="page-content">
-      <div class="page-top">
-        <div class="container">
-          <h1 class="search-title"><span class="fw_500">К сожалению, по вашему поисковому запросу ничего не найдено.</span><br> Попробуйте изменить название товара или введите другие критерии поиска</h1>
+    <div class="checkout">
+      <div class="checkout__inner container">
+        <div class="checkout__right">
+          <div class="cart">
+            <div class="cart__top">
+              <p class="cart__qnt">Ваш заказ (6)</p>
+              <div class="cart__total-block">
+                <p class="cart__total"><span>Итого</span> <span>125 000 ₽</span></p>
+                <p><span>Скидка</span> <span>-5 000 ₽</span></p>
+              </div>
+              <a class="js-go-checkout cart__go-checkout button button--type_2 button--wide" href="#">Перейти к оформлению</a>
+            </div>
+            <div class="cart__list-block">
+              <p class="cart__qnt">Ваш заказ (6)</p>
+              <div class="js-custom-scroll cart__list">
+                <div class="cart-item">
+                  <button class="cart-item__delete" type="button" title="Удалить">
+                    <svg class="cart-item__delete-icon" aria-hidden="true">
+                      <use xlink:href="#delete" />
+                    </svg>
+                  </button>
+                  <p class="cart-item__title">
+                    <a href="#">
+                      <picture class="cart-item__image">
+                        <source srcset="images/content/header/img_2@1x.webp 1x, images/content/header/img_2@2x.webp 2x" type="image/webp">
+                        <img src="images/content/header/img_2@1x.jpg 1x" srcset="images/content/header/img_2@2x.jpg 2x" alt="alt">
+                      </picture>
+                      Полукомбинезон РК2102/3456 Морской
+                    </a>
+                  </p>
+                  <p class="cart-item__prop"><span class="cart-item__prop-title">ЦВЕТ:</span> <span class="cart-item__prop-color">Оранжевый</span></p>
+                  <p class="cart-item__prop">
+                    <span class="fw_500">РАЗМЕР:</span>
+                    <button class="cart-item__prop-size" type="button">S</button>
+                    <button class="cart-item__prop-size is-active" type="button">M</button>
+                    <button class="cart-item__prop-size" type="button">L</button>
+                    <button class="cart-item__prop-size" type="button">XL</button>
+                  </p>
+                  <div class="cart-item__bottom">
+                    <div class="quantity-block">
+                      <button class="quantity-block__button" type="button" title="Уменьшить">
+                        <svg class="quantity-block__button-icon" aria-hidden="true">
+                          <use xlink:href="#minus" />
+                        </svg>
+                      </button>
+                      <input class="quantity-block__input" type="text" value="1">
+                      <button class="quantity-block__button" type="button" title="Увеличить">
+                        <svg class="quantity-block__button-icon" aria-hidden="true">
+                          <use xlink:href="#plus" />
+                        </svg>
+                      </button>
+                    </div>
+                    <p class="cart-item__price-block"><span class="cart-item__price">62 000 ₽</span> <span class="cart-item__price cart-item__price--old">75 000 ₽</span></p>
+                  </div>
+                </div>
+                <div class="cart-item">
+                  <button class="cart-item__delete" type="button" title="Удалить">
+                    <svg class="cart-item__delete-icon" aria-hidden="true">
+                      <use xlink:href="#delete" />
+                    </svg>
+                  </button>
+                  <p class="cart-item__title">
+                    <a href="#">
+                      <picture class="cart-item__image">
+                        <source srcset="images/content/header/img_3@1x.webp 1x, images/content/header/img_3@2x.webp 2x" type="image/webp">
+                        <img src="images/content/header/img_3@1x.jpg 1x" srcset="images/content/header/img_3@2x.jpg 2x" alt="alt">
+                      </picture>
+                      Утеплённый комбинезон
+                    </a>
+                  </p>
+                  <p class="cart-item__prop"><span class="cart-item__prop-title">ЦВЕТ:</span> <span class="cart-item__prop-color">Красный</span></p>
+                  <p class="cart-item__prop">
+                    <span class="fw_500">РАЗМЕР:</span>
+                    <button class="cart-item__prop-size is-active" type="button">M</button>
+                  </p>
+                  <div class="cart-item__bottom">
+                    <div class="quantity-block">
+                      <button class="quantity-block__button" type="button" title="Уменьшить">
+                        <svg class="quantity-block__button-icon" aria-hidden="true">
+                          <use xlink:href="#minus" />
+                        </svg>
+                      </button>
+                      <input class="quantity-block__input" type="text" value="1">
+                      <button class="quantity-block__button" type="button" title="Увеличить">
+                        <svg class="quantity-block__button-icon" aria-hidden="true">
+                          <use xlink:href="#plus" />
+                        </svg>
+                      </button>
+                    </div>
+                    <p class="cart-item__price-block"><span class="cart-item__price">22 000 ₽</span></p>
+                  </div>
+                </div>
+                <div class="cart-item">
+                  <button class="cart-item__delete" type="button" title="Удалить">
+                    <svg class="cart-item__delete-icon" aria-hidden="true">
+                      <use xlink:href="#delete" />
+                    </svg>
+                  </button>
+                  <p class="cart-item__title">
+                    <a href="#">
+                      <picture class="cart-item__image">
+                        <source srcset="images/content/header/img_2@1x.webp 1x, images/content/header/img_2@2x.webp 2x" type="image/webp">
+                        <img src="images/content/header/img_2@1x.jpg 1x" srcset="images/content/header/img_2@2x.jpg 2x" alt="alt">
+                      </picture>
+                      Полукомбинезон РК2102/3456 Морской
+                    </a>
+                  </p>
+                  <p class="cart-item__prop"><span class="cart-item__prop-title">ЦВЕТ:</span> <span class="cart-item__prop-color">Оранжевый</span></p>
+                  <p class="cart-item__prop">
+                    <span class="fw_500">РАЗМЕР:</span>
+                    <button class="cart-item__prop-size" type="button">S</button>
+                    <button class="cart-item__prop-size is-active" type="button">M</button>
+                    <button class="cart-item__prop-size" type="button">L</button>
+                    <button class="cart-item__prop-size" type="button">XL</button>
+                  </p>
+                  <div class="cart-item__bottom">
+                    <div class="quantity-block">
+                      <button class="quantity-block__button" type="button" title="Уменьшить">
+                        <svg class="quantity-block__button-icon" aria-hidden="true">
+                          <use xlink:href="#minus" />
+                        </svg>
+                      </button>
+                      <input class="quantity-block__input" type="text" value="1">
+                      <button class="quantity-block__button" type="button" title="Увеличить">
+                        <svg class="quantity-block__button-icon" aria-hidden="true">
+                          <use xlink:href="#plus" />
+                        </svg>
+                      </button>
+                    </div>
+                    <p class="cart-item__price-block"><span class="cart-item__price">62 000 ₽</span> <span class="cart-item__price cart-item__price--old">75 000 ₽</span></p>
+                  </div>
+                </div>
+                <div class="cart-item">
+                  <button class="cart-item__delete" type="button" title="Удалить">
+                    <svg class="cart-item__delete-icon" aria-hidden="true">
+                      <use xlink:href="#delete" />
+                    </svg>
+                  </button>
+                  <p class="cart-item__title">
+                    <a href="#">
+                      <picture class="cart-item__image">
+                        <source srcset="images/content/header/img_2@1x.webp 1x, images/content/header/img_2@2x.webp 2x" type="image/webp">
+                        <img src="images/content/header/img_2@1x.jpg 1x" srcset="images/content/header/img_2@2x.jpg 2x" alt="alt">
+                      </picture>
+                      Полукомбинезон РК2102/3456 Морской
+                    </a>
+                  </p>
+                  <p class="cart-item__prop"><span class="cart-item__prop-title">ЦВЕТ:</span> <span class="cart-item__prop-color">Оранжевый</span></p>
+                  <p class="cart-item__prop">
+                    <span class="fw_500">РАЗМЕР:</span>
+                    <button class="cart-item__prop-size" type="button">S</button>
+                    <button class="cart-item__prop-size is-active" type="button">M</button>
+                    <button class="cart-item__prop-size" type="button">L</button>
+                    <button class="cart-item__prop-size" type="button">XL</button>
+                  </p>
+                  <div class="cart-item__bottom">
+                    <div class="quantity-block">
+                      <button class="quantity-block__button" type="button" title="Уменьшить">
+                        <svg class="quantity-block__button-icon" aria-hidden="true">
+                          <use xlink:href="#minus" />
+                        </svg>
+                      </button>
+                      <input class="quantity-block__input" type="text" value="1">
+                      <button class="quantity-block__button" type="button" title="Увеличить">
+                        <svg class="quantity-block__button-icon" aria-hidden="true">
+                          <use xlink:href="#plus" />
+                        </svg>
+                      </button>
+                    </div>
+                    <p class="cart-item__price-block"><span class="cart-item__price">62 000 ₽</span> <span class="cart-item__price cart-item__price--old">75 000 ₽</span></p>
+                  </div>
+                </div>
+                <div class="cart-item">
+                  <button class="cart-item__delete" type="button" title="Удалить">
+                    <svg class="cart-item__delete-icon" aria-hidden="true">
+                      <use xlink:href="#delete" />
+                    </svg>
+                  </button>
+                  <p class="cart-item__title">
+                    <a href="#">
+                      <picture class="cart-item__image">
+                        <source srcset="images/content/header/img_3@1x.webp 1x, images/content/header/img_3@2x.webp 2x" type="image/webp">
+                        <img src="images/content/header/img_3@1x.jpg 1x" srcset="images/content/header/img_3@2x.jpg 2x" alt="alt">
+                      </picture>
+                      Утеплённый комбинезон
+                    </a>
+                  </p>
+                  <p class="cart-item__prop"><span class="cart-item__prop-title">ЦВЕТ:</span> <span class="cart-item__prop-color">Красный</span></p>
+                  <p class="cart-item__prop">
+                    <span class="fw_500">РАЗМЕР:</span>
+                    <button class="cart-item__prop-size is-active" type="button">M</button>
+                  </p>
+                  <div class="cart-item__bottom">
+                    <div class="quantity-block">
+                      <button class="quantity-block__button" type="button" title="Уменьшить">
+                        <svg class="quantity-block__button-icon" aria-hidden="true">
+                          <use xlink:href="#minus" />
+                        </svg>
+                      </button>
+                      <input class="quantity-block__input" type="text" value="1">
+                      <button class="quantity-block__button" type="button" title="Увеличить">
+                        <svg class="quantity-block__button-icon" aria-hidden="true">
+                          <use xlink:href="#plus" />
+                        </svg>
+                      </button>
+                    </div>
+                    <p class="cart-item__price-block"><span class="cart-item__price">22 000 ₽</span></p>
+                  </div>
+                </div>
+                <div class="cart-item">
+                  <button class="cart-item__delete" type="button" title="Удалить">
+                    <svg class="cart-item__delete-icon" aria-hidden="true">
+                      <use xlink:href="#delete" />
+                    </svg>
+                  </button>
+                  <p class="cart-item__title">
+                    <a href="#">
+                      <picture class="cart-item__image">
+                        <source srcset="images/content/header/img_2@1x.webp 1x, images/content/header/img_2@2x.webp 2x" type="image/webp">
+                        <img src="images/content/header/img_2@1x.jpg 1x" srcset="images/content/header/img_2@2x.jpg 2x" alt="alt">
+                      </picture>
+                      Полукомбинезон РК2102/3456 Морской
+                    </a>
+                  </p>
+                  <p class="cart-item__prop"><span class="cart-item__prop-title">ЦВЕТ:</span> <span class="cart-item__prop-color">Оранжевый</span></p>
+                  <p class="cart-item__prop">
+                    <span class="fw_500">РАЗМЕР:</span>
+                    <button class="cart-item__prop-size" type="button">S</button>
+                    <button class="cart-item__prop-size is-active" type="button">M</button>
+                    <button class="cart-item__prop-size" type="button">L</button>
+                    <button class="cart-item__prop-size" type="button">XL</button>
+                  </p>
+                  <div class="cart-item__bottom">
+                    <div class="quantity-block">
+                      <button class="quantity-block__button" type="button" title="Уменьшить">
+                        <svg class="quantity-block__button-icon" aria-hidden="true">
+                          <use xlink:href="#minus" />
+                        </svg>
+                      </button>
+                      <input class="quantity-block__input" type="text" value="1">
+                      <button class="quantity-block__button" type="button" title="Увеличить">
+                        <svg class="quantity-block__button-icon" aria-hidden="true">
+                          <use xlink:href="#plus" />
+                        </svg>
+                      </button>
+                    </div>
+                    <p class="cart-item__price-block"><span class="cart-item__price">62 000 ₽</span> <span class="cart-item__price cart-item__price--old">75 000 ₽</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="slider-block slider-block--type_1">
-        <div class="slider-block__inner container">
-          <div class="slider-block__title-block">
-            <h2 class="slider-block__title">Бестселлеры</h2>
-            <div class="slider-block__nav" data-nav="4">
-              <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" data-progress="4"></div>
-            </div>
-          </div>
-          <div class="slider-block__slider-block">
-            <div class="js-slider-type1 slider" data-progress="4">
-              <div class="slider__slide">
-                <div class="card">
-                  <div class="card__top">
-                    <a class="card__image-block" href="catalog-detail.html">
-                      <picture class="card__image">
-                        <source srcset="images/content/catalog/card/img_2@1x.webp 1x, images/content/catalog/card/img_2@2x.webp 2x" type="image/webp">
-                        <img src="images/content/catalog/card/img_2@1x.jpg 1x" srcset="images/content/catalog/card/img_2@2x.jpg 2x" alt="alt">
-                      </picture>
-                      <picture class="card__image card__image--second">
-                        <source srcset="images/content/catalog/card/img_1@1x.webp 1x, images/content/catalog/card/img_1@2x.webp 2x" type="image/webp">
-                        <img src="images/content/catalog/card/img_1@1x.jpg 1x" srcset="images/content/catalog/card/img_1@2x.jpg 2x" alt="alt">
-                      </picture>
-                    </a>
-                    <p class="card__labels">
-                      <span class="card__label">limited</span>
-                    </p>
-                    <button class="card__fav is-active" type="button" title="Убрать из избранного">
-                      <svg class="card__fav-icon" aria-hidden="true">
-                        <use xlink:href="#favorite_2" />
-                      </svg>
-                    </button>
-                    <div class="card__add-cart-block"><button class="js-fast-look card__add-cart" type="button" data-src="#fast-look">добавить в корзину</button></div>
-                  </div>
-                  <p class="card__colors">
-                    <img src="images/content/catalog/colors/img_1.jpg" alt="Серый">
-                    <img src="images/content/catalog/colors/img_2.jpg" alt="Черный">
-                  </p>
-                  <p class="card__title"><a href="catalog-detail.html">Базовый комплект термобелья</a></p>
-                  <p class="card__price-block">
-                    <span class="card__price">15 000 ₽</span>
-                    <span class="card__price card__price--old">20 000 ₽</span>
-                  </p>
-                </div>
-              </div>
-              <div class="slider__slide">
-                <div class="card">
-                  <div class="card__top">
-                    <a class="card__image-block" href="catalog-detail.html">
-                      <picture class="card__image">
-                        <source srcset="images/content/catalog/card/img_1@1x.webp 1x, images/content/catalog/card/img_1@2x.webp 2x" type="image/webp">
-                        <img src="images/content/catalog/card/img_1@1x.jpg 1x" srcset="images/content/catalog/card/img_1@2x.jpg 2x" alt="alt">
-                      </picture>
-                      <picture class="card__image card__image--second">
-                        <source srcset="images/content/catalog/card/img_2@1x.webp 1x, images/content/catalog/card/img_2@2x.webp 2x" type="image/webp">
-                        <img src="images/content/catalog/card/img_2@1x.jpg 1x" srcset="images/content/catalog/card/img_2@2x.jpg 2x" alt="alt">
-                      </picture>
-                    </a>
-                    <p class="card__labels">
-                      <span class="card__label">limited</span>
-                    </p>
-                    <button class="card__fav is-active" type="button" title="Убрать из избранного">
-                      <svg class="card__fav-icon" aria-hidden="true">
-                        <use xlink:href="#favorite_2" />
-                      </svg>
-                    </button>
-                    <div class="card__add-cart-block"><button class="js-fast-look card__add-cart" type="button" data-src="#fast-look">добавить в корзину</button></div>
-                  </div>
-                  <p class="card__colors">
-                    <img src="images/content/catalog/colors/img_1.jpg" alt="Серый">
-                    <img src="images/content/catalog/colors/img_2.jpg" alt="Черный">
-                  </p>
-                  <p class="card__title"><a href="catalog-detail.html">Базовый комплект термобелья</a></p>
-                  <p class="card__price-block">
-                    <span class="card__price">15 000 ₽</span>
-                    <span class="card__price card__price--old">20 000 ₽</span>
-                  </p>
-                </div>
-              </div>
-              <div class="slider__slide">
-                <div class="card">
-                  <div class="card__top">
-                    <a class="card__image-block" href="catalog-detail.html">
-                      <picture class="card__image">
-                        <source srcset="images/content/catalog/card/img_2@1x.webp 1x, images/content/catalog/card/img_2@2x.webp 2x" type="image/webp">
-                        <img src="images/content/catalog/card/img_2@1x.jpg 1x" srcset="images/content/catalog/card/img_2@2x.jpg 2x" alt="alt">
-                      </picture>
-                      <picture class="card__image card__image--second">
-                        <source srcset="images/content/catalog/card/img_1@1x.webp 1x, images/content/catalog/card/img_1@2x.webp 2x" type="image/webp">
-                        <img src="images/content/catalog/card/img_1@1x.jpg 1x" srcset="images/content/catalog/card/img_1@2x.jpg 2x" alt="alt">
-                      </picture>
-                    </a>
-                    <p class="card__labels">
-                      <span class="card__label">limited</span>
-                    </p>
-                    <button class="card__fav is-active" type="button" title="Убрать из избранного">
-                      <svg class="card__fav-icon" aria-hidden="true">
-                        <use xlink:href="#favorite_2" />
-                      </svg>
-                    </button>
-                    <div class="card__add-cart-block"><button class="js-fast-look card__add-cart" type="button" data-src="#fast-look">добавить в корзину</button></div>
-                  </div>
-                  <p class="card__colors">
-                    <img src="images/content/catalog/colors/img_1.jpg" alt="Серый">
-                    <img src="images/content/catalog/colors/img_2.jpg" alt="Черный">
-                  </p>
-                  <p class="card__title"><a href="catalog-detail.html">Базовый комплект термобелья</a></p>
-                  <p class="card__price-block">
-                    <span class="card__price">15 000 ₽</span>
-                    <span class="card__price card__price--old">20 000 ₽</span>
-                  </p>
-                </div>
-              </div>
-              <div class="slider__slide">
-                <div class="card">
-                  <div class="card__top">
-                    <a class="card__image-block" href="catalog-detail.html">
-                      <picture class="card__image">
-                        <source srcset="images/content/catalog/card/img_1@1x.webp 1x, images/content/catalog/card/img_1@2x.webp 2x" type="image/webp">
-                        <img src="images/content/catalog/card/img_1@1x.jpg 1x" srcset="images/content/catalog/card/img_1@2x.jpg 2x" alt="alt">
-                      </picture>
-                      <picture class="card__image card__image--second">
-                        <source srcset="images/content/catalog/card/img_2@1x.webp 1x, images/content/catalog/card/img_2@2x.webp 2x" type="image/webp">
-                        <img src="images/content/catalog/card/img_2@1x.jpg 1x" srcset="images/content/catalog/card/img_2@2x.jpg 2x" alt="alt">
-                      </picture>
-                    </a>
-                    <p class="card__labels">
-                      <span class="card__label">limited</span>
-                    </p>
-                    <button class="card__fav is-active" type="button" title="Убрать из избранного">
-                      <svg class="card__fav-icon" aria-hidden="true">
-                        <use xlink:href="#favorite_2" />
-                      </svg>
-                    </button>
-                    <div class="card__add-cart-block"><button class="js-fast-look card__add-cart" type="button" data-src="#fast-look">добавить в корзину</button></div>
-                  </div>
-                  <p class="card__colors">
-                    <img src="images/content/catalog/colors/img_1.jpg" alt="Серый">
-                    <img src="images/content/catalog/colors/img_2.jpg" alt="Черный">
-                  </p>
-                  <p class="card__title"><a href="catalog-detail.html">Базовый комплект термобелья</a></p>
-                  <p class="card__price-block">
-                    <span class="card__price">15 000 ₽</span>
-                    <span class="card__price card__price--old">20 000 ₽</span>
-                  </p>
-                </div>
+        <div class="checkout__left">
+          <p class="back-link-block"><a class="back-link" href="search_2.html"><svg class="back-link__icon" aria-hidden="true"><use xlink:href="#back" /></svg>Вернуться к покупкам</a></p>
+          <div class="auth-form">
+            <p class="auth-form__title">Авторизуйтесь для оформления заказа</p>
+            <form class="auth" action="">
+              <label class="form-label">
+                <span class="form-label__text">Email</span>
+                <input class="input" type="text" value="">
+              </label>
+              <label class="form-label">
+                <span class="form-label__text">Пароль</span>
+                <input class="input" type="password" value="">
+              </label>
+              <p class="auth__forgot"><a href="javascript:void(0)" data-src="#forgot" data-fancybox="forgot_2">Забыли пароль?</a></p>
+              <button class="button button--type_2 button--wide" type="button">Войти</button>
+            </form>
+            <div class="solial-auth">
+              <p class="social-auth__title">Авторизуйтесь в один клик</p>
+              <div class="social-auth__list">
+                <a class="social-auth-link" href="#" title="Вконтакте">
+                  <svg class="social-auth-link__icon" aria-hidden="true">
+                    <use xlink:href="#vk" />
+                  </svg>
+                </a>
+                <a class="social-auth-link" href="#" title="Facebook">
+                  <svg class="social-auth-link__icon" aria-hidden="true">
+                    <use xlink:href="#fb" />
+                  </svg>
+                </a>
+                <a class="social-auth-link" href="#" title="Instagram">
+                  <svg class="social-auth-link__icon" aria-hidden="true">
+                    <use xlink:href="#inst" />
+                  </svg>
+                </a>
+                <a class="social-auth-link" href="#" title="Google+">
+                  <svg class="social-auth-link__icon" aria-hidden="true">
+                    <use xlink:href="#gplus" />
+                  </svg>
+                </a>
+                <a class="social-auth-link" href="#" title="Одноклассники">
+                  <svg class="social-auth-link__icon" aria-hidden="true">
+                    <use xlink:href="#ok" />
+                  </svg>
+                </a>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="slider-block slider-block--type_2">
-        <div class="slider-block__inner container">
-          <div class="slider-block__title-block">
-            <h2 class="slider-block__title">Вы недавно смотрели</h2>
-            <div class="slider-block__nav" data-nav="5">
-              <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" data-progress="5"></div>
-            </div>
-          </div>
-          <div class="slider-block__slider-block">
-            <div class="js-slider-type2 slider" data-progress="5">
-              <div class="slider__slide">
-                <div class="card">
-                  <div class="card__top">
-                    <a class="card__image-block" href="catalog-detail.html">
-                      <picture class="card__image">
-                        <source srcset="images/content/catalog/card/img_2@1x.webp 1x, images/content/catalog/card/img_2@2x.webp 2x" type="image/webp">
-                        <img src="images/content/catalog/card/img_2@1x.jpg 1x" srcset="images/content/catalog/card/img_2@2x.jpg 2x" alt="alt">
-                      </picture>
-                      <picture class="card__image card__image--second">
-                        <source srcset="images/content/catalog/card/img_1@1x.webp 1x, images/content/catalog/card/img_1@2x.webp 2x" type="image/webp">
-                        <img src="images/content/catalog/card/img_1@1x.jpg 1x" srcset="images/content/catalog/card/img_1@2x.jpg 2x" alt="alt">
-                      </picture>
-                    </a>
-                    <p class="card__labels">
-                      <span class="card__label">limited</span>
-                    </p>
-                    <button class="card__fav is-active" type="button" title="Убрать из избранного">
-                      <svg class="card__fav-icon" aria-hidden="true">
-                        <use xlink:href="#favorite_2" />
-                      </svg>
-                    </button>
-                    <div class="card__add-cart-block"><button class="js-fast-look card__add-cart" type="button" data-src="#fast-look">добавить в корзину</button></div>
-                  </div>
-                  <p class="card__colors">
-                    <img src="images/content/catalog/colors/img_1.jpg" alt="Серый">
-                    <img src="images/content/catalog/colors/img_2.jpg" alt="Черный">
-                  </p>
-                  <p class="card__title"><a href="catalog-detail.html">Базовый комплект термобелья</a></p>
-                  <p class="card__price-block">
-                    <span class="card__price">15 000 ₽</span>
-                    <span class="card__price card__price--old">20 000 ₽</span>
-                  </p>
-                </div>
-              </div>
-              <div class="slider__slide">
-                <div class="card">
-                  <div class="card__top">
-                    <a class="card__image-block" href="catalog-detail.html">
-                      <picture class="card__image">
-                        <source srcset="images/content/catalog/card/img_1@1x.webp 1x, images/content/catalog/card/img_1@2x.webp 2x" type="image/webp">
-                        <img src="images/content/catalog/card/img_1@1x.jpg 1x" srcset="images/content/catalog/card/img_1@2x.jpg 2x" alt="alt">
-                      </picture>
-                      <picture class="card__image card__image--second">
-                        <source srcset="images/content/catalog/card/img_2@1x.webp 1x, images/content/catalog/card/img_2@2x.webp 2x" type="image/webp">
-                        <img src="images/content/catalog/card/img_2@1x.jpg 1x" srcset="images/content/catalog/card/img_2@2x.jpg 2x" alt="alt">
-                      </picture>
-                    </a>
-                    <p class="card__labels">
-                      <span class="card__label">limited</span>
-                    </p>
-                    <button class="card__fav is-active" type="button" title="Убрать из избранного">
-                      <svg class="card__fav-icon" aria-hidden="true">
-                        <use xlink:href="#favorite_2" />
-                      </svg>
-                    </button>
-                    <div class="card__add-cart-block"><button class="js-fast-look card__add-cart" type="button" data-src="#fast-look">добавить в корзину</button></div>
-                  </div>
-                  <p class="card__colors">
-                    <img src="images/content/catalog/colors/img_1.jpg" alt="Серый">
-                    <img src="images/content/catalog/colors/img_2.jpg" alt="Черный">
-                  </p>
-                  <p class="card__title"><a href="catalog-detail.html">Базовый комплект термобелья</a></p>
-                  <p class="card__price-block">
-                    <span class="card__price">15 000 ₽</span>
-                    <span class="card__price card__price--old">20 000 ₽</span>
-                  </p>
-                </div>
-              </div>
-              <div class="slider__slide">
-                <div class="card">
-                  <div class="card__top">
-                    <a class="card__image-block" href="catalog-detail.html">
-                      <picture class="card__image">
-                        <source srcset="images/content/catalog/card/img_2@1x.webp 1x, images/content/catalog/card/img_2@2x.webp 2x" type="image/webp">
-                        <img src="images/content/catalog/card/img_2@1x.jpg 1x" srcset="images/content/catalog/card/img_2@2x.jpg 2x" alt="alt">
-                      </picture>
-                      <picture class="card__image card__image--second">
-                        <source srcset="images/content/catalog/card/img_1@1x.webp 1x, images/content/catalog/card/img_1@2x.webp 2x" type="image/webp">
-                        <img src="images/content/catalog/card/img_1@1x.jpg 1x" srcset="images/content/catalog/card/img_1@2x.jpg 2x" alt="alt">
-                      </picture>
-                    </a>
-                    <p class="card__labels">
-                      <span class="card__label">limited</span>
-                    </p>
-                    <button class="card__fav is-active" type="button" title="Убрать из избранного">
-                      <svg class="card__fav-icon" aria-hidden="true">
-                        <use xlink:href="#favorite_2" />
-                      </svg>
-                    </button>
-                    <div class="card__add-cart-block"><button class="js-fast-look card__add-cart" type="button" data-src="#fast-look">добавить в корзину</button></div>
-                  </div>
-                  <p class="card__colors">
-                    <img src="images/content/catalog/colors/img_1.jpg" alt="Серый">
-                    <img src="images/content/catalog/colors/img_2.jpg" alt="Черный">
-                  </p>
-                  <p class="card__title"><a href="catalog-detail.html">Базовый комплект термобелья</a></p>
-                  <p class="card__price-block">
-                    <span class="card__price">15 000 ₽</span>
-                    <span class="card__price card__price--old">20 000 ₽</span>
-                  </p>
-                </div>
-              </div>
-              <div class="slider__slide">
-                <div class="card">
-                  <div class="card__top">
-                    <a class="card__image-block" href="catalog-detail.html">
-                      <picture class="card__image">
-                        <source srcset="images/content/catalog/card/img_1@1x.webp 1x, images/content/catalog/card/img_1@2x.webp 2x" type="image/webp">
-                        <img src="images/content/catalog/card/img_1@1x.jpg 1x" srcset="images/content/catalog/card/img_1@2x.jpg 2x" alt="alt">
-                      </picture>
-                      <picture class="card__image card__image--second">
-                        <source srcset="images/content/catalog/card/img_2@1x.webp 1x, images/content/catalog/card/img_2@2x.webp 2x" type="image/webp">
-                        <img src="images/content/catalog/card/img_2@1x.jpg 1x" srcset="images/content/catalog/card/img_2@2x.jpg 2x" alt="alt">
-                      </picture>
-                    </a>
-                    <p class="card__labels">
-                      <span class="card__label">limited</span>
-                    </p>
-                    <button class="card__fav is-active" type="button" title="Убрать из избранного">
-                      <svg class="card__fav-icon" aria-hidden="true">
-                        <use xlink:href="#favorite_2" />
-                      </svg>
-                    </button>
-                    <div class="card__add-cart-block"><button class="js-fast-look card__add-cart" type="button" data-src="#fast-look">добавить в корзину</button></div>
-                  </div>
-                  <p class="card__colors">
-                    <img src="images/content/catalog/colors/img_1.jpg" alt="Серый">
-                    <img src="images/content/catalog/colors/img_2.jpg" alt="Черный">
-                  </p>
-                  <p class="card__title"><a href="catalog-detail.html">Базовый комплект термобелья</a></p>
-                  <p class="card__price-block">
-                    <span class="card__price">15 000 ₽</span>
-                    <span class="card__price card__price--old">20 000 ₽</span>
-                  </p>
-                </div>
-              </div>
-              <div class="slider__slide">
-                <div class="card">
-                  <div class="card__top">
-                    <a class="card__image-block" href="catalog-detail.html">
-                      <picture class="card__image">
-                        <source srcset="images/content/catalog/card/img_2@1x.webp 1x, images/content/catalog/card/img_2@2x.webp 2x" type="image/webp">
-                        <img src="images/content/catalog/card/img_2@1x.jpg 1x" srcset="images/content/catalog/card/img_2@2x.jpg 2x" alt="alt">
-                      </picture>
-                      <picture class="card__image card__image--second">
-                        <source srcset="images/content/catalog/card/img_1@1x.webp 1x, images/content/catalog/card/img_1@2x.webp 2x" type="image/webp">
-                        <img src="images/content/catalog/card/img_1@1x.jpg 1x" srcset="images/content/catalog/card/img_1@2x.jpg 2x" alt="alt">
-                      </picture>
-                    </a>
-                    <p class="card__labels">
-                      <span class="card__label">limited</span>
-                    </p>
-                    <button class="card__fav is-active" type="button" title="Убрать из избранного">
-                      <svg class="card__fav-icon" aria-hidden="true">
-                        <use xlink:href="#favorite_2" />
-                      </svg>
-                    </button>
-                    <div class="card__add-cart-block"><button class="js-fast-look card__add-cart" type="button" data-src="#fast-look">добавить в корзину</button></div>
-                  </div>
-                  <p class="card__colors">
-                    <img src="images/content/catalog/colors/img_1.jpg" alt="Серый">
-                    <img src="images/content/catalog/colors/img_2.jpg" alt="Черный">
-                  </p>
-                  <p class="card__title"><a href="catalog-detail.html">Базовый комплект термобелья</a></p>
-                  <p class="card__price-block">
-                    <span class="card__price">15 000 ₽</span>
-                    <span class="card__price card__price--old">20 000 ₽</span>
-                  </p>
-                </div>
-              </div>
-            </div>
+            <p class="no-register">
+              <span class="no-register__text">Вы также можете</span> <a class="no-register__button" href="#">оформить <span>заказ</span> без регистрации</a>
+            </p>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <footer class="footer">
-    <div class="footer__top container">
-      <div class="footer__top-inner">
-        <div class="footer__logo"><img width="66" height="75" src="images/logo.svg" alt="COOLZONE"></div>
-        <div class="footer__section">
-          <p class="js-footer-dropdown-toggler footer__section-title">Помощь в покупке</p>
-          <ul class="footer__section-dropdown footer-menu">
-            <li class="footer-menu__item"><a class="footer-menu__link" href="#">Доставка и оплата</a></li>
-            <li class="footer-menu__item"><a class="footer-menu__link" href="#">Как подобрать размер</a></li>
-            <li class="footer-menu__item"><a class="footer-menu__link" href="#">Возврат</a></li>
-          </ul>
-        </div>
-        <div class="footer__section">
-          <p class="js-footer-dropdown-toggler footer__section-title">О нас</p>
-          <ul class="footer__section-dropdown footer-menu">
-            <li class="footer-menu__item"><a class="footer-menu__link" href="#">Контакты</a></li>
-            <li class="footer-menu__item"><a class="footer-menu__link" href="#">История бренда</a></li>
-            <li class="footer-menu__item"><a class="footer-menu__link" href="#">Наша команда</a></li>
-            <li class="footer-menu__item"><a class="footer-menu__link" href="#">Наши дилеры</a></li>
-          </ul>
-        </div>
-        <div class="footer__section">
-          <p class="js-footer-dropdown-toggler footer__section-title">Наш шоурум</p>
-          <div class="footer__section-dropdown footer__contacts">
-            <p>г. Санкт-Петербург, Васильевский остров, 4‑ая&nbsp;линия,&nbsp;дом&nbsp;21</p>
-            <p>+7-960-256-60-62<br> Ежедневно с 11:00 до 21:00</p>
-          </div>
-        </div>
-        <div class="footer__section">
-          <p class="footer__section-title">Мы в социальных сетях</p>
-          <div class="footer__social-links social-links">
-            <a class="social-link" href="#" rel="noopener noreferrer" target="_blank" title="vk.com">
-              <svg class="social-link__icon" aria-hidden="true">
-                <use xlink:href="#vk" />
-              </svg>
-            </a>
-            <a class="social-link" href="#" rel="noopener noreferrer" target="_blank" title="facebook.com">
-              <svg class="social-link__icon" aria-hidden="true">
-                <use xlink:href="#fb" />
-              </svg>
-            </a>
-            <a class="social-link" href="#" rel="noopener noreferrer" target="_blank" title="instagram.com">
-              <svg class="social-link__icon" aria-hidden="true">
-                <use xlink:href="#inst" />
-              </svg>
-            </a>
-            <a class="social-link" href="#" rel="noopener noreferrer" target="_blank" title="pinterest.com">
-              <svg class="social-link__icon" aria-hidden="true">
-                <use xlink:href="#pinterest" />
-              </svg>
-            </a>
-          </div>
-          <div class="footer__links">
-            <p>Телефон: <a href="tel:+79602566062">+7-960-256-60-62</a></p>
-            <p>Email: <a href="mailto:coolzoneshop@gmail.com">coolzoneshop@gmail.com</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="footer__bottom container">
-      <div class="footer__pay-systems">
-        <img width="120" height="35" src="images/icons/footer/paykeeper.svg" alt="PayKeeper">
-        <img width="120" height="35" src="images/icons/footer/mastercard.svg" alt="MasterCard">
-        <img width="120" height="35" src="images/icons/footer/visa.svg" alt="VISA">
-        <img width="120" height="35" src="images/icons/footer/mir.svg" alt="МИР">
-      </div>
-      <div class="footer__copyright">
-        <span>© 2020 COOLZONE.SHOP</span> Все права охраняются законом
-      </div>
-    </div>
-  </footer>
-
-  <div id="fast-look" class="fast-look">
-    <button class="js-popup-close fast-look__close" type="button" title="Закрыть">
-      <svg class="fast-look__close-icon" aria-hidden="true">
+  <div id="auth" class="popup">
+    <button class="js-popup-close popup__close" type="button" title="Закрыть">
+      <svg class="popup__close-icon" aria-hidden="true">
         <use xlink:href="#close" />
       </svg>
     </button>
-    <div class="fast-look__inner">
-      <div class="fast-look__images">
-        <div class="js-fast-look-slider fast-look__slider" data-progress="fast-look">
-          <div>
-            <picture>
-              <source srcset="images/content/catalog/fast-look/img_3@1x.webp 1x, images/content/catalog/fast-look/img_3@2x.webp 2x" type="image/webp">
-              <img src="images/content/catalog/fast-look/img_3@1x.jpg 1x" srcset="images/content/catalog/fast-look/img_3@2x.jpg 2x" alt="alt">
-            </picture>
-          </div>
-          <div>
-            <picture>
-              <source srcset="images/content/catalog/fast-look/img_3@1x.webp 1x, images/content/catalog/fast-look/img_3@2x.webp 2x" type="image/webp">
-              <img src="images/content/catalog/fast-look/img_3@1x.jpg 1x" srcset="images/content/catalog/fast-look/img_3@2x.jpg 2x" alt="alt">
-            </picture>
-          </div>
-          <div>
-            <picture>
-              <source srcset="images/content/catalog/fast-look/img_3@1x.webp 1x, images/content/catalog/fast-look/img_3@2x.webp 2x" type="image/webp">
-              <img src="images/content/catalog/fast-look/img_3@1x.jpg 1x" srcset="images/content/catalog/fast-look/img_3@2x.jpg 2x" alt="alt">
-            </picture>
-          </div>
-        </div>
-        <div class="fast-look__slider-nav">
-          <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" data-progress="fast-look"></div>
-        </div>
+    <p class="popup__title">Вход</p>
+    <form class="auth" action="">
+      <label class="form-label">
+        <span class="form-label__text">Email</span>
+        <input class="input" type="text" value="">
+      </label>
+      <label class="form-label">
+        <span class="form-label__text">Пароль</span>
+        <input class="input" type="password" value="">
+      </label>
+      <p class="auth__forgot"><a href="javascript:void(0)" data-src="#forgot" data-fancybox="forgot">Забыли пароль?</a></p>
+      <div class="auth__buttons">
+        <button class="button" type="button" data-src="#register" data-fancybox="register">Регистрация</button>
+        <button class="button button--type_2" type="button">Войти</button>
       </div>
-      <div class="fast-look__info">
-        <p class="fast-look__title"><a href="catalog-detail.html">Полукомбинезон РК2102/3456 Морской</a></p>
-        <p class="fast-look__price-block"><span class="fast-look__price">62 000 ₽</span> <span class="fast-look__price fast-look__price--old">75 000 ₽</span></p>
-        <div class="fast-look__preview-text">
-          <p>Kомбинезон Cool Zone KITE - специализированный комбинезон для сноукайтинга. Эргономичный крой. Рукав реглан, дополнительные складки на спине для большей свободы движений, адаптированный вход в карманы под сидячую трапецию и высокий воротник для защиты от ветра.</p>
-          <p><span class="fw_400">Мембрана:</span> 15000 мм/10000 гр/м2/24ч</p>
-          <p><span class="fw_400">Утеплитель:</span> 60 гр/м2</p>
-        </div>
-        <div class="fast-look__bottom">
-          <p class="fast-look__prop"><span class="fast-look__prop-title">ЦВЕТ:</span> <span class="fast-look__prop-color">Фиолетовый</span></p>
-          <div class="fast-look__colors">
-            <label class="fast-look__color" for="color_1_">
-              <input id="color_1_" type="radio" name="color_" value="1" checked>
-              <span class="fast-look__color-image"><img src="images/content/catalog/colors/img_3.jpg" alt="Фиолетовый"></span>
-            </label>
-            <label class="fast-look__color" for="color_2_">
-              <input id="color_2_" type="radio" name="color_" value="2">
-              <span class="fast-look__color-image"><img src="images/content/catalog/colors/img_4.jpg" alt="Оранжевый"></span>
-            </label>
-            <label class="fast-look__color" for="color_3_">
-              <input id="color_3_" type="radio" name="color_" value="3">
-              <span class="fast-look__color-image"><img src="images/content/catalog/colors/img_5.jpg" alt="Черно-зелёный"></span>
-            </label>
-          </div>
-          <p class="fast-look__size-title-block">
-            <span class="fast-look__size-title">Размеры</span> <a href="catalog-detail.html#size_table">Таблица размеров</a>
-          </p>
-          <div class="fast-look__sizes">
-            <label class="fast-look__size" for="size_xxs">
-              <input id="size_xxs" type="radio" name="size" value="xxs" disabled>
-              <span class="fast-look__size-text">XXS</span>
-            </label>
-            <label class="fast-look__size" for="size_xs">
-              <input id="size_xs" type="radio" name="size" value="xs" disabled>
-              <span class="fast-look__size-text">XS</span>
-            </label>
-            <label class="fast-look__size" for="size_s">
-              <input id="size_s" type="radio" name="size" value="s">
-              <span class="fast-look__size-text">S</span>
-            </label>
-            <label class="fast-look__size" for="size_m">
-              <input id="size_m" type="radio" name="size" value="m">
-              <span class="fast-look__size-text">M</span>
-            </label>
-            <label class="fast-look__size" for="size_l">
-              <input id="size_l" type="radio" name="size" value="l">
-              <span class="fast-look__size-text">L</span>
-            </label>
-            <label class="fast-look__size" for="size_xl">
-              <input id="size_xl" type="radio" name="size" value="xl">
-              <span class="fast-look__size-text">XL</span>
-            </label>
-            <label class="fast-look__size" for="size_xxl">
-              <input id="size_xxl" type="radio" name="size" value="xxl">
-              <span class="fast-look__size-text">XXL</span>
-            </label>
-          </div>
-          <div class="fast-look__buttons">
-            <a class="fast-look__add-cart button button--type_2 button--type_3" href="cart.html">Добавить в корзину</a>
-            <button class="fast-look__favorite" type="button" title="Добавить в избранное">
-              <svg class="fast-look__favorite-icon" aria-hidden="true">
-                <use xlink:href="#favorite_2" />
-              </svg>
-            </button>
-          </div>
-          <a class="fast-look__to-detail" href="catalog-detail.html">Подробнее о товаре</a>
-        </div>
+    </form>
+    <div class="solial-auth">
+      <p class="social-auth__title">Авторизуйтесь в один клик</p>
+      <div class="social-auth__list">
+        <a class="social-auth-link" href="#" title="Вконтакте">
+          <svg class="social-auth-link__icon" aria-hidden="true">
+            <use xlink:href="#vk" />
+          </svg>
+        </a>
+        <a class="social-auth-link" href="#" title="Facebook">
+          <svg class="social-auth-link__icon" aria-hidden="true">
+            <use xlink:href="#fb" />
+          </svg>
+        </a>
+        <a class="social-auth-link" href="#" title="Instagram">
+          <svg class="social-auth-link__icon" aria-hidden="true">
+            <use xlink:href="#inst" />
+          </svg>
+        </a>
+        <a class="social-auth-link" href="#" title="Google+">
+          <svg class="social-auth-link__icon" aria-hidden="true">
+            <use xlink:href="#gplus" />
+          </svg>
+        </a>
+        <a class="social-auth-link" href="#" title="Одноклассники">
+          <svg class="social-auth-link__icon" aria-hidden="true">
+            <use xlink:href="#ok" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <div id="forgot" class="popup">
+    <button class="js-popup-close popup__close" type="button" title="Закрыть">
+      <svg class="popup__close-icon" aria-hidden="true">
+        <use xlink:href="#close" />
+      </svg>
+    </button>
+    <p class="popup__title">Восстановление пароля</p>
+    <form class="forgot" action="">
+      <label class="form-label">
+        <span class="form-label__text">Email</span>
+        <input class="input" type="text" value="">
+      </label>
+      <div class="forgot__buttons">
+        <button class="button button--type_2" type="button" data-src="#recovery" data-fancybox="recovery">Восстановить пароль</button>
+      </div>
+    </form>
+  </div>
+  
+  <div id="recovery" class="popup">
+    <button class="js-popup-close popup__close" type="button" title="Закрыть">
+      <svg class="popup__close-icon" aria-hidden="true">
+        <use xlink:href="#close" />
+      </svg>
+    </button>
+    <p class="popup__title">Восстановление пароля</p>
+    <p class="text-center fw_400">Ссылка на восстановление пароля отправлена вам на почту</p>
+  </div>
+  
+  <div id="register" class="popup">
+    <button class="js-popup-close popup__close" type="button" title="Закрыть">
+      <svg class="popup__close-icon" aria-hidden="true">
+        <use xlink:href="#close" />
+      </svg>
+    </button>
+    <p class="popup__title">Регистрация</p>
+    <form class="register" action="">
+      <label class="form-label">
+        <span class="form-label__text">Email</span>
+        <input class="input" type="text" value="">
+      </label>
+      <label class="form-label error">
+        <span class="form-label__text">ФИО</span>
+        <input class="input error" type="text" value="">
+        <span class="error-text">является обязательным для заполнения</span>
+      </label>
+      <label class="form-label">
+        <span class="form-label__text">Телефон</span>
+        <input class="input" type="text" value="">
+      </label>
+      <div class="register__buttons">
+        <button class="button button--type_2" type="button">Зарегистрироваться</button>
+      </div>
+    </form>
+    <div class="solial-auth">
+      <p class="social-auth__title">Авторизуйтесь в один клик</p>
+      <div class="social-auth__list">
+        <a class="social-auth-link" href="#" title="Вконтакте">
+          <svg class="social-auth-link__icon" aria-hidden="true">
+            <use xlink:href="#vk" />
+          </svg>
+        </a>
+        <a class="social-auth-link" href="#" title="Facebook">
+          <svg class="social-auth-link__icon" aria-hidden="true">
+            <use xlink:href="#fb" />
+          </svg>
+        </a>
+        <a class="social-auth-link" href="#" title="Instagram">
+          <svg class="social-auth-link__icon" aria-hidden="true">
+            <use xlink:href="#inst" />
+          </svg>
+        </a>
+        <a class="social-auth-link" href="#" title="Google+">
+          <svg class="social-auth-link__icon" aria-hidden="true">
+            <use xlink:href="#gplus" />
+          </svg>
+        </a>
+        <a class="social-auth-link" href="#" title="Одноклассники">
+          <svg class="social-auth-link__icon" aria-hidden="true">
+            <use xlink:href="#ok" />
+          </svg>
+        </a>
       </div>
     </div>
   </div>
@@ -1019,8 +953,7 @@
   <script type="text/javascript" src="js/jquery.fancybox.min.js"></script>
   <script type="text/javascript" src="js/slick.min.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
-  <script src="js/progress-bar.js"></script>
-  <script src="js/sliders.js"></script>
+  <script src="js/checkout.js"></script>
 </body>
 
 </html>

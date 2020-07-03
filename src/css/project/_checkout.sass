@@ -1,0 +1,377 @@
+.checkout
+  padding-top: 60px
+
+  @media(min-width: 992px)
+    display: flex
+    height: 100%
+
+  @media(min-width: 1200px)
+    padding-top: 96px
+
+  @media(min-width: 2500px)
+    padding-top: 106px
+
+  &__inner
+    padding-right: 0
+    padding-left: 0
+
+    @media(min-width: 992px)
+      display: flex
+      flex-direction: row-reverse
+      height: 100%
+      width: 100%
+
+    @media(min-width: 1400px)
+      padding-right: 0
+      padding-left: 0
+
+    @media(min-width: 1900px)
+      padding-right: 0
+      padding-left: 0
+
+  &__left
+    padding-left: 20px
+    padding-right: 20px
+    padding-top: 26px
+
+    @media(min-width: 992px)
+      height: 100%
+      overflow-y: auto
+      position: relative
+      width: calc(100% - 500px)
+      z-index: 1
+
+    @media(min-width: 1400px)
+      padding-right: 50px
+      padding-left: 50px
+
+    @media(min-width: 1900px)
+      padding-right: 100px
+      padding-left: 100px
+
+    & > *
+      &:last-child
+        margin-bottom: 26px
+
+  &__right
+    background-color: #F8F8F9
+    padding-left: 20px
+    padding-right: 20px
+
+    @media(min-width: 992px)
+      height: 100%
+      padding-left: 40px
+      padding-right: 50px
+      width: 500px
+
+.back-link-block
+  font-size: 14px
+  line-height: 14px
+  margin-bottom: 25px
+  text-align: center
+
+  @media(min-width: 992px)
+    margin-bottom: 35px
+    text-align: left
+
+.back-link
+  text-decoration: none
+
+  &:hover
+    .back-link__icon
+      fill: $grey-color
+
+  &__icon
+    fill: $text-color
+    height: 7px
+    margin-right: 8px
+    transition: fill 0.3s
+    width: 4px
+
+.auth-form
+  max-width: 434px
+  margin-left: auto
+  margin-right: auto
+
+  &__title
+    font-size: 16px
+    font-weight: 500
+    line-height: 20px
+    margin-bottom: 20px
+    text-align: center
+
+    @media(min-width: 1200px)
+      font-size: 20px
+      line-height: 26px
+      margin-bottom: 25px
+
+  .auth
+    &:not(:last-child)
+      margin-bottom: 40px
+
+.no-register
+  border-top: 1px solid #E4E7EB
+  font-weight: 400
+  margin-top: 40px
+  padding-top: 30px
+  text-align: center
+
+  @media(min-width: 1200px)
+    margin-top: 55px
+    padding-top: 40px
+
+  &__text
+    @media(max-width: 991px)
+      display: none
+
+  &__button
+    @media(max-width: 991px)
+      background-color: transparent
+      border: 1px solid $button-color
+      border-radius: 2px
+      color: $button-color
+      cursor: pointer
+      display: inline-block
+      font-family: $main-font
+      font-size: 14px
+      font-weight: 600
+      height: 38px
+      line-height: 22px
+      min-width: 155px
+      padding: 7px 15px 9px
+      text-decoration: none
+      text-align: center
+      transition: color 0.3s, background-color 0.3s
+      text-transform: uppercase
+      vertical-align: middle
+      width: 100%
+
+    &:hover,
+    &:active
+      @media(max-width: 991px)
+        background-color: $button-color
+        color: #FFFAFA
+
+    span
+      @media(max-width: 991px)
+        display: none
+
+.cart
+  padding-bottom: 25px
+
+  @media(min-width: 992px)
+    padding-bottom: 0
+
+  &__top
+    padding-top: 25px
+    padding-bottom: 20px
+
+    @media(min-height: 700px)
+      padding-top: 30px
+
+  &__qnt
+    font-size: 18px
+    font-weight: 500
+    line-height: 26px
+    margin-bottom: 15px
+
+    @media(min-width: 992px)
+      display: none
+
+  &__total-block
+    font-size: 16px
+    font-weight: 400
+    line-height: 20px
+
+    p
+      display: flex
+      justify-content: space-between
+
+      &:not(:last-child)
+        margin-bottom: 5px
+
+        @media(min-width: 1200px)
+          margin-bottom: 8px
+
+  &__total
+    font-weight: 500
+
+    @media(min-width: 1200px)
+      font-size: 18px
+
+  &__go-checkout
+    margin-top: 15px
+
+    @media(min-width: 992px)
+      display: none
+
+  &__list-block
+    border-top: 1px solid #E4E7EB
+    padding-top: 20px
+
+    @media(min-width: 992px)
+      padding-top: 0
+
+    .cart__qnt
+      display: none
+
+      @media(min-width: 992px)
+        display: block
+        margin-bottom: 0
+        padding-top: 20px
+        padding-bottom: 20px
+
+  &__list
+    @media(min-width: 992px)
+      padding-right: 30px
+      scrollbar-width: thin
+      scrollbar-color: rgba($text-color, 0.3) $text-color
+
+      &::-webkit-scrollbar
+        height: 2px
+        width: 2px
+
+      &::-webkit-scrollbar-track
+        background: rgba($text-color, 0.3)
+
+      &::-webkit-scrollbar-thumb
+        background: $text-color
+
+    .simplebar-track.simplebar-vertical
+      background-color: rgba($text-color, 0.3)
+      width: 2px
+
+    .simplebar-track.simplebar-vertical .simplebar-scrollbar::before
+      bottom: 0
+      top: 0
+
+    .simplebar-scrollbar::before
+      border-radius: 0
+      background-color: $text-color
+      left: 0
+      opacity: 1
+      right: auto
+      width: 2px
+
+.cart-item
+  display: flex
+  flex-direction: column
+  min-height: 104px
+  position: relative
+  padding-left: 100px
+
+  @media(min-width: 1200px)
+    min-height: 142px
+    padding-left: 130px
+
+  &:not(:last-child)
+    margin-bottom: 25px
+
+    @media(min-width: 1200px)
+      margin-bottom: 30px
+
+  &__delete
+    background-color: transparent
+    border: none
+    cursor: pointer
+    display: flex
+    height: 20px
+    left: auto
+    position: absolute
+    padding: 0
+    right: 0
+    top: 0
+    width: 20px
+
+    &:hover
+      .cart-item__delete-icon
+        fill: rgba($grey-color, 0.6)
+
+  &__delete-icon
+    fill: rgba($grey-color, 0.3)
+    height: 19px
+    transition: fill 0.3s
+    width: 19px
+
+  &__title
+    font-size: 15px
+    line-height: 18px
+    margin-bottom: 5px
+    padding-right: 25px
+
+    @media(min-width: 1200px)
+      margin-bottom: 10px
+
+    a
+      font-weight: 500
+      text-decoration: none
+
+  &__image
+    left: 0
+    position: absolute
+    top: 0
+    width: 80px
+
+    @media(min-width: 1200px)
+      width: 110px
+
+  &__prop
+    font-size: 14px
+    font-weight: 400
+    line-height: 18px
+    margin-bottom: 5px
+
+    @media(min-width: 1200px)
+      margin-bottom: 10px
+
+  &__prop-title
+    font-weight: 500
+
+  &__prop-color
+    color: $grey-color
+    margin-left: 5px
+
+  &__prop-size
+    background-color: transparent
+    border: none
+    cursor: pointer
+    margin-left: 3px
+    padding: 0 5px
+
+    &.is-active
+      text-decoration: underline
+
+  &__bottom
+    align-items: flex-end
+    display: flex
+    justify-content: space-between
+    margin-top: 5px
+
+    @media(min-width: 1200px)
+      align-items: center
+      margin-top: auto
+
+  &__price-block
+    display: flex
+    flex-wrap: wrap
+    justify-content: flex-end
+
+  &__price
+    font-size: 16px
+    font-weight: 500
+    line-height: 18px
+
+    &--old
+      font-size: 13px
+      font-weight: 400
+      line-height: 18px
+      margin-left: 10px
+      text-decoration: line-through
+
+  .quantity-block__button,
+  .quantity-block__input
+    background-color: rgba($grey-color, 0.15)
+
+  .quantity-block__button
+    &:hover
+      background-color: rgba($grey-color, 0.25)
