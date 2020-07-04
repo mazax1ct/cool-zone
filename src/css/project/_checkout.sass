@@ -42,8 +42,11 @@
       height: 100%
       overflow-y: auto
       position: relative
-      width: calc(100% - 500px)
+      width: calc(100% - 400px)
       z-index: 1
+
+    @media(min-width: 1200px)
+      width: calc(100% - 500px)
 
     @media(min-width: 1400px)
       padding-right: 50px
@@ -58,12 +61,15 @@
         margin-bottom: 26px
 
   &__right
-    background-color: #F8F8F9
     padding-left: 20px
     padding-right: 20px
 
     @media(min-width: 992px)
+      background-color: #F8F8F9
       height: 100%
+      width: 400px
+
+    @media(min-width: 1200px)
       padding-left: 40px
       padding-right: 50px
       width: 500px
@@ -161,6 +167,7 @@
         display: none
 
 .cart
+  max-width: 660px
   padding-bottom: 25px
 
   @media(min-width: 992px)
@@ -176,7 +183,7 @@
     padding-top: 25px
     padding-bottom: 20px
 
-    @media(min-height: 700px)
+    @media(min-height: 800px)
       padding-top: 30px
 
   &__qnt
@@ -244,12 +251,6 @@
     border-top: 1px solid #E4E7EB
     padding-top: 20px
 
-    &--floated
-      display: none
-
-      @media(min-width: 992px)
-        display: block
-
     @media(min-width: 992px)
       padding-top: 0
 
@@ -261,6 +262,48 @@
         margin-bottom: 0
         padding-top: 20px
         padding-bottom: 20px
+
+    &--floated
+      @media(max-width: 991px)
+        background-color: #F8F8F9
+        border-top: none
+        height: calc(100% - 60px)
+        left: 0
+        overflow-y: auto
+        padding-left: 20px
+        padding-right: 20px
+        padding-top: 25px
+        position: fixed
+        top: 60px
+        transform: translateY(100%)
+        transition: transform 0.3s
+        width: 100%
+        z-index: 2
+
+      &.is-open
+        @media(max-width: 991px)
+          transform: translateY(0)
+
+      .cart__qnt
+        display: block
+
+        @media(max-width: 991px)
+          background-image: url("data:image/svg+xml,%3Csvg width='13' height='8' viewBox='0 0 11 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 1L5.60465 5L1 1' stroke='%23282828' stroke-linecap='round'/%3E%3C/svg%3E%0A")
+          background-repeat: no-repeat
+          background-position: 100% 60%
+          cursor: pointer
+
+      .cart__total-block
+        border-bottom: 1px solid #E4E7EB
+        margin-bottom: 20px
+        padding-bottom: 20px
+
+        @media(min-width: 992px)
+          display: none
+
+      .cart__list
+        @media(max-width: 991px)
+          padding-bottom: 25px
 
   &__list
     @media(min-width: 992px)
@@ -311,9 +354,15 @@
   &__bottom
     @media(min-width: 992px)
       border-top: 1px solid #E4E7EB
+      padding-top: 20px
+      margin-left: -20px
+      margin-right: -20px
+      padding-left: 20px
+      padding-right: 20px
+
+    @media(min-width: 1200px)
       margin-left: -40px
       margin-right: -50px
-      padding-top: 20px
       padding-left: 40px
       padding-right: 50px
 
@@ -525,15 +574,20 @@
 
 .order
   max-width: 660px
+  margin-bottom: 4px !important
 
-  @media(min-height: 700px)
+  @media(min-width: 992px)
+    margin-bottom: 26px !important
+
+  @media(min-width: 1200px)
+    margin-bottom: 0 !important
     padding-top: 44px
     padding-bottom: 44px
 
   &__section
     padding-bottom: 40px
 
-    @media(min-height: 700px)
+    @media(min-height: 800px)
       padding-bottom: 55px
 
     &:last-child
@@ -572,3 +626,417 @@
 
   &__user-form
     max-width: 434px
+
+.order-tabs-nav
+  display: flex
+
+  &__button
+    align-items: center
+    display: flex
+    color: $grey-color
+    flex-grow: 1
+    font-size: 15px
+    font-weight: 400
+    line-height: 18px
+    justify-content: center
+    padding: 11px
+    transition: color 0.3s, background-color 0.3s
+    text-decoration: none
+    text-align: center
+
+    @media(min-width: 992px)
+      font-size: 18px
+      padding: 20px
+
+    &:hover
+      color: $text-color
+
+    &.is-active
+      background-color: $light-grey
+      color: $text-color
+      font-weight: 500
+
+.order-tab
+  background-color: $light-grey
+  display: none
+  min-height: 290px
+  padding: 20px 11px
+
+  @media(min-width: 660px)
+    padding: 20px
+
+  &.is-active
+    display: block
+
+.pickup
+  @media(min-width: 660px)
+    display: flex
+
+  &__text-block
+    font-weight: 400
+    margin-bottom: 25px
+
+    @media(min-width: 660px)
+      margin-bottom: 0
+      padding-right: 20px
+
+  &__title
+    color: $grey-color
+    font-size: 14px
+    line-height: 15px
+    margin-bottom: 5px
+
+  &__text
+    font-size: 16px
+    line-height: 20px
+    margin-bottom: 10px
+
+    @media(min-width: 1200px)
+      margin-bottom: 15px
+
+    & + .pickup__title
+      margin-top: 15px
+
+      @media(min-width: 1200px)
+        margin-top: 20px
+
+  &__map
+    min-height: 180px
+
+    @media(min-width: 660px)
+      min-height: 250px
+      min-width: 57.5%
+      width: 57.5%
+
+.mail
+  @media(min-width: 1200px)
+    padding-top: 20px
+    padding-bottom: 10px
+
+  &__inner
+    margin-bottom: 20px
+
+    @media(min-width: 660px)
+      display: flex
+      margin-left: -10px
+      margin-right: -10px
+
+  &__block
+    margin-bottom: 10px
+
+    @media(min-width: 660px)
+      margin-bottom: 0
+      padding-left: 10px
+      padding-right: 10px
+      width: 50%
+
+  .form-label
+    &:not(:last-child)
+      margin-bottom: 10px
+
+      @media(min-width: 1200px)
+        margin-bottom: 15px
+
+  .input,
+  .textarea
+    background-color: $light-grey
+
+  .textarea
+    height: 75px
+
+  &__cost
+    font-size: 15px
+    font-weight: 400
+    line-height: 18px
+
+    @media(min-width: 1200px)
+      font-size: 16px
+      line-height: 20px
+
+.post
+  @media(min-width: 1200px)
+    padding-top: 20px
+    padding-bottom: 10px
+
+  &__input
+    max-width: 300px
+
+    &:not(:last-child)
+      margin-bottom: 20px
+
+    .input
+      background-color: $light-grey
+
+  &__map
+    height: 350px
+    margin-bottom: 25px
+
+    @media(min-width: 660px)
+      height: 260px
+      margin-bottom: 30px
+
+  &__posts
+    @media(min-width: 660px)
+      display: flex
+
+  &__list
+    font-size: 14px
+    font-weight: 400
+    line-height: 18px
+    max-height: 200px
+    margin-bottom: 20px
+    overflow-y: auto
+    position: relative
+    z-index: 1
+    scrollbar-width: thin
+    scrollbar-color: rgba($text-color, 0.3) $text-color
+
+    @media(min-width: 660px)
+      max-height: 380px
+      margin-bottom: 0
+      min-width: 180px
+      width: 180px
+
+    &::-webkit-scrollbar
+      height: 2px
+      width: 2px
+
+    &::-webkit-scrollbar-track
+      background: rgba($text-color, 0.3)
+
+    &::-webkit-scrollbar-thumb
+      background: $text-color
+
+    .simplebar-content-wrapper
+      padding-right: 10px
+
+    .simplebar-track.simplebar-vertical
+      background-color: rgba($text-color, 0.3)
+      width: 2px
+
+    .simplebar-track.simplebar-vertical .simplebar-scrollbar::before
+      bottom: 0
+      top: 0
+
+    .simplebar-scrollbar::before
+      border-radius: 0
+      background-color: $text-color
+      left: 0
+      opacity: 1
+      right: auto
+      width: 2px
+
+  &__list-item
+    cursor: pointer
+    margin-bottom: 15px
+    transition: color 0.3s
+
+    &:hover
+      color: $grey-color
+
+    &.is-active
+      cursor: default
+      font-weight: 500
+
+      &:hover
+        color: $text-color
+
+  &__info-block
+
+  &__note
+    background-color: rgba($grey-color, 0.1)
+    background-image: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.5' d='M14.9327 17.42H13.1033V8.04933H14.9327V17.42ZM13.2153 20.4067C13.0038 20.1827 12.898 19.9151 12.898 19.604C12.898 19.2929 13.0038 19.0316 13.2153 18.82C13.4393 18.596 13.7069 18.484 14.018 18.484C14.3291 18.484 14.5905 18.596 14.802 18.82C15.026 19.0316 15.138 19.2929 15.138 19.604C15.138 19.9151 15.026 20.1827 14.802 20.4067C14.5905 20.6182 14.3291 20.724 14.018 20.724C13.7069 20.724 13.4393 20.6182 13.2153 20.4067Z' fill='%23828990'/%3E%3Ccircle opacity='0.5' cx='14' cy='14' r='13.125' stroke='%23828990' stroke-width='1.75'/%3E%3C/svg%3E")
+    background-repeat: no-repeat
+    background-position: 10px 50%
+    font-size: 16px
+    font-weight: 400
+    line-height: 16px
+    margin-bottom: 20px
+    padding-top: 10px
+    padding-bottom: 10px
+    padding-right: 10px
+    margin-left: -11px
+    margin-right: -11px
+    padding-left: 55px
+
+    @media(min-width: 660px)
+      margin-left: 0
+      margin-right: 0
+
+  &__info-block
+    @media(min-width: 660px)
+      flex-grow: 1
+      padding-left: 30px
+
+  &__info
+    font-size: 16px
+    font-weight: 400
+    line-height: 22px
+
+  &__info-text
+    margin-bottom: 10px
+
+  &__info-period
+    margin-top: 15px
+    margin-bottom: 25px
+
+  &__button
+    @media(max-width: 659px)
+      width: 100%
+
+.post-info
+  font-size: 16px
+  font-weight: 400
+  line-height: 22px
+  position: relative
+
+  &__button-block
+    margin-bottom: 15px
+    text-align: right
+
+    @media(min-width: 660px)
+      font-size: 16px
+      left: auto
+      line-height: 22px
+      margin: 0
+      position: absolute
+      right: 0
+      top: 0
+      z-index: 1
+
+  &__button
+    background-color: transparent
+    border: none
+    cursor: pointer
+    font-size: 14px
+    line-height: 18px
+    padding: 0
+    transition: color 0.3s
+    text-decoration: underline
+
+    &:hover
+      color: $grey-color
+
+  &__title
+    font-weight: 500
+    margin-bottom: 10px
+
+    @media(min-width: 660px)
+      margin-bottom: 5px
+      padding-right: 130px
+
+  &__cost
+    margin-bottom: 20px
+
+  &__info
+    margin-bottom: 18px
+
+    @media(min-width: 660px)
+      margin-bottom: 10px
+
+  &__work-time
+    margin-bottom: 10px
+
+    @media(min-width: 660px)
+      margin-bottom: 20px
+
+.payments-list
+  display: flex
+  flex-wrap: wrap
+  margin-left: -7px
+  margin-right: -7px
+  margin-bottom: -14px
+
+  &__item
+    margin-bottom: 14px
+    max-width: 169px
+    padding-left: 7px
+    padding-right: 7px
+    width: 50%
+
+  .payment
+    display: block
+    max-width: 155px
+    position: relative
+
+    input[type="radio"]
+      position: absolute
+      height: 1px
+      overflow: hidden
+      clip: rect(0 0 0 0)
+      width: 1px
+
+      &:checked + .payment__image
+        border-color: $text-color
+
+    &__image
+      align-items: center
+      border: 1px solid rgba($grey-color, 0.4)
+      border-radius: 2px
+      cursor: pointer
+      font-size: 14px
+      font-weight: 400
+      display: flex
+      height: 38px
+      justify-content: center
+      line-height: 20px
+      transition: border-color 0.3s
+
+      @media(min-width: 992px)
+        font-size: 18px
+        height: 45px
+
+      img
+        flex-shrink: 0
+
+.order-finish
+  margin-top: 50px
+  padding-left: 20px
+  padding-right: 20px
+  width: 100%
+
+  @media(min-width: 992px)
+    margin: 110px auto auto
+    padding-left: 0
+    padding-right: 0
+
+  &__inner
+    background-color: $light-grey
+    font-size: 16px
+    line-height: 20px
+    font-weight: 400
+    max-width: 886px
+    margin-left: auto
+    margin-right: auto
+    padding: 30px 15px
+    text-align: center
+    width: 100%
+
+    @media(min-width: 768px)
+      font-size: 18px
+      line-height: 26px
+      padding-top: 90px
+      padding-bottom: 90px
+
+  &__title
+    font-size: 18px
+    font-weight: 500
+    line-height: 26px
+    margin-bottom: 10px
+
+    @media(min-width: 768px)
+      font-size: 20px
+
+  &__text
+    margin-bottom: 25px
+    max-width: 464px
+    margin-left: auto
+    margin-right: auto
+
+    @media(min-width: 768px)
+      margin-bottom: 25px
+
+  .back-link__icon
+    @media(min-width: 768px)
+      height: 10px
+      width: 5px

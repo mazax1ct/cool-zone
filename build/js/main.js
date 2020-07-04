@@ -59,7 +59,7 @@ $(document).ready(function () {
       $(this).find('.main-menu__link').toggleClass('is-active');
       var sub = $(this).find('.sub-menu');
       sub.slideToggle();
-      return true;
+      return false;
     });
   }
 
