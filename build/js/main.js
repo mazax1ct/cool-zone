@@ -55,10 +55,10 @@ $(document).ready(function () {
 
   //меню второго уровня
   if(isTouchDevice() === true) {
-    $('.js-root').click(function() {
-      $(this).find('.main-menu__link').toggleClass('is-active');
-      var sub = $(this).find('.sub-menu');
-      sub.slideToggle();
+    $('.js-root .main-menu__link').click(function() {
+      $(this).toggleClass('is-active');
+      $(this).next('.sub-menu').slideToggle();
+      console.log('click');
       return false;
     });
   }
