@@ -196,6 +196,8 @@ $(document).on('click', '.js-tab', function () {
   $(this).addClass('is-active');
   $('.detail-tab').removeClass('is-active');
   $('.detail-tab[data-target="'+$(this).attr("data-href")+'"]').addClass('is-active');
+  var offsetTop = $('.detail__tabs-nav').offset().top - 60;
+  $('html, body').animate({scrollTop:offsetTop}, '500');
   //апдейтим slick после того как он был скрыт
   slider_2.slick('setPosition');
   slider_3.slick('setPosition');
