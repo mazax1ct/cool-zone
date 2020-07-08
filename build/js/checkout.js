@@ -43,6 +43,13 @@ $(document).on('click', '.js-scroll-to', function () {
   return false;
 });
 
+$(document).on('click', '.js-cart-total-dropdown', function () {
+  $(this).toggleClass('is-active');
+  $(this).next('.cart__total-dropdown').toggleClass('is-open');
+  cartListHeight();
+  return false;
+});
+
 //расчет высоты блока с товарами
 function cartListHeight() {
   if($('body').width() > 991) {
@@ -53,9 +60,9 @@ function cartListHeight() {
       botH = $('.cart__bottom').innerHeight();
     }
     var innerH = $('.cart__list-block .cart__qnt').innerHeight();
-    $('.cart__list').height(containerH - topH - botH - innerH - 30);
+    $('.cart__list').css('max-height', containerH - topH - botH - innerH - 20);
   } else {
-    $('.cart__list').height('');
+    $('.cart__list').css('max-height', '');
   }
 }
 
